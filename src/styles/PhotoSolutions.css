@@ -14,9 +14,9 @@
 .solutions-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr); /* Ensures 3 items per row */
-  gap: 75px; /* Adds consistent spacing between items */
+  gap: 70px; /* Adds consistent spacing between items */
   justify-content: flex-start; /* Centers the grid */
-  max-width: 1400px; /* Limits grid width */
+  max-width: 1300px; /* Limits grid width */
   margin: 0 auto; /* Centers the grid container */
   
 }

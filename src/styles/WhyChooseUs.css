@@ -1,67 +1,81 @@
 .why-choose-us {
+  display: flex;
+  flex-direction: column; /* Stack items by default */
   padding: 50px 20px;
   background-color: #FEF5E1;
-  gap: 30px; /* Adds spacing between flex items */
 }
 
 .choose-us-content {
-  flex: 1 1 50%; /* Flexible width */
+  flex: 1 1 50%;
   margin-left: 30px;
   margin-right: 20px;
+  text-align: center; /* Center the content */
 }
 
 .choose-us-content h2 {
-  font-size: 2.5rem;
-  display: flex;
-  justify-content: center;
-  color: #333;
+  font-size: 3rem;
+  font-family: 'Domine';
+  color: #954000;
   margin-bottom: 15px;
-  font-weight: 600;
 }
 
 .choose-us-content p {
-  font-size: 1.1rem;
-  display:flex;
-  justify-content: center;
-  color: #555;
+  font-size: 1.3rem;
+  font-family: 'Mulish';
+  color: #000000;
+  padding-left: 20px;
+  padding-right: 20px;
   line-height: 1.8;
-  margin-bottom: 20px;
+  text-align: center; /* Ensure it's centered on small screens */
+}
+
+.choose-us-image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 10%;
+  gap: 50px;
+  flex: 1 1 50%; /* Ensures the image takes up 50% of the space */
 }
 
 .choose-us-list {
   margin-top: 20px;
   list-style: none;
   padding: 0;
+  flex: 1 1 50%; /* Ensures the list takes up 50% of the space */
 }
 
 .choose-us-item {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   margin-bottom: 15px;
+  flex-wrap: wrap; /* Allows wrapping if space is tight */
 }
 
 .choose-us-number {
   font-size: 1.5rem;
-  font-weight: bold;
-  color: #f77d42;
+  font-family: 'Mulish';
+  color: #845616;
   margin-right: 15px;
 }
 
 .choose-us-title {
-  font-size: 1.1rem;
-  color: #333;
+  font-size: 1.5rem;
+  font-family: 'Mulish';
+  color: #845616;
+  margin-right: 15px;
 }
 
-.choose-us-image {
-  flex: 1 1 40%; /* Flexible width for image */
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.choose-us-description {
+  font-size: 1rem;
+  font-family: 'Arial';
+  margin-left: 20px;
+  color: #000000;
+  flex-basis: 100%; /* Ensures the description takes full width in small space */
 }
 
 .before-after-image {
   width: 100%;
-  margin-top: 10%;
   max-width: 350px;
   border-radius: 12px;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
@@ -71,7 +85,7 @@
 /* Responsive Design */
 @media (max-width: 768px) {
   .why-choose-us {
-    flex-direction: column; /* Stacks content vertically */
+    flex-direction: column; /* Stack items vertically on smaller screens */
     text-align: center;
   }
 
@@ -80,9 +94,19 @@
     flex: 1 1 100%; /* Full width */
   }
 
-  .choose-us-image {
-    margin-top: 20px;
-    flex: 1 1 100%; /* Full width */
+  .choose-us-image,
+  .choose-us-list {
+    flex: 1 1 100%; /* Full width for both image and list */
+    margin-top: 20px; /* Add space between items */
+  }
+
+  .choose-us-item {
+    flex-direction: column; /* Stack number, title, and description vertically on mobile */
+    align-items: center;
+  }
+
+  .choose-us-description {
+    margin-top: 5px; /* Adds spacing between title and description */
   }
 
   .before-after-image {
