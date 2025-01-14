@@ -1,0 +1,80 @@
+.header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+  background: linear-gradient(135deg, #FCE5D7 , #F1DBCE); /* Adjust colors and angle as needed */
+  max-height: 95%; /* Ensure the header takes full viewport height */
+}
+.header-content h1 {
+  font-size: 4.5rem;
+  max-width: 70%;
+  font-family: Domine;
+  margin-bottom: 20px;
+  margin-left: 10%;
+  color: #231701; /* Ensure text contrast */
+}
+
+.header-content p {
+  font-size: 1.2rem;
+  font-family: Mulish;
+  max-width: 50%;
+  color:#231701;
+  margin-left: 10%;
+  margin-bottom: 20px;
+}
+
+.cta-button {
+  background-color: #954000;
+  color: #FEFEFE;
+  border: none;
+  margin-left: 10%;
+  margin-bottom: 20px;
+  font-size: 1rem;
+  padding: 20px 20px;
+  font-family: Arial;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.header-slider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 45%;
+}
+
+.image-container {
+  position: relative;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  /* justify-content: space-between; */
+}
+
+.image-wrapper {
+  display: flex;
+  flex-direction: row;
+  /* gap: 10px; */
+}
+
+
+.slider-image {
+  width: 90%;
+  height: auto;
+  padding: 20px;
+ 
+}
+
+.image-label {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: rgba(0, 0, 0, 0.6);
+  color: white;
+  font-size: 0.9rem;
+  padding: 5px 10px;
+  border-radius: 5px;
+  text-transform: uppercase;
+}

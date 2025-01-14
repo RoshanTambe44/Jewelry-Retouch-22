@@ -1,0 +1,60 @@
+.jewelry-services {
+  background-color: #FAF8ED; /* Soft pastel green */
+  padding: 40px 10px;
+}
+
+.jewelry-services h2 {
+  font-family: Domine;
+  color: #000000;
+  font-size: 3.5rem;
+  margin-bottom: 10px;
+  margin-left:5%;
+}
+
+.jewelry-services p {
+  font-family: Mulish;
+  color: #000000;
+  font-size: 1.2rem;
+  margin-left:5%;
+  margin-bottom: 40px;
+}
+
+.service-list {
+  display: flex;
+  /* justify-content: space-between; */
+  /* flex-wrap: wrap; */
+   gap : 40px;
+   margin-left: 5%;
+}
+
+.service-item {
+  text-align: center;
+  padding: 10px 10px;
+  max-width: 550px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service-item:hover {
+  transform: translateY(15px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 1.15);
+}
+
+.service-item img {
+  width: 100%;
+  max-width: 200px;
+  border-radius: 50%;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.service-item img:hover {
+  transform: scale(1.05);
+}
+
+.service-item h3 {
+  margin-top: 15px;
+  font-family: 'Arial';
+  color: #000000;
+  font-size: 1.1rem;
+  font-weight: 600;
+}

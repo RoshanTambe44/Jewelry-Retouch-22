@@ -1,0 +1,85 @@
+/* General Section Styling */
+.jewelry-retouching-section {
+  padding: 40px 20px;
+  background-color: #f8f8f8;
+  text-align: center;
+}
+
+/* Header Section */
+.header-re {
+  margin-bottom: 40px;
+}
+.header h2 {
+  font-size: 2.5rem;
+  color: #333;
+  font-weight: bold;
+}
+
+/* Service Section Styling */
+.service-section {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  justify-content: center;
+  margin-bottom: 40px;
+}
+
+.service-column {
+  width: calc(28% - 30px);
+  box-sizing: border-box;
+}
+
+.service-box {
+  background-color: white;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 20px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service-box:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Image Styling */
+.service-image {
+  width: 65%;
+  height: auto;
+  border-radius: 8px;
+}
+
+/* Title and Description Styling */
+.service-title {
+  margin-top: 20px;
+  font-size: 1.25rem;
+}
+
+.service-title a {
+  color: #007bff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.service-title a:hover {
+  text-decoration: underline;
+}
+
+.service-description {
+  margin-top: 10px;
+  font-size: 1rem;
+  color: #777;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+  .service-column {
+    width: calc(50% - 20px);
+  }
+}
+
+@media (max-width: 480px) {
+  .service-column {
+    width: 100%;
+  }
+}

@@ -1,0 +1,70 @@
+.photo-solutions {
+  width:100vw;
+  background: linear-gradient(135deg, #FCE5D8, #FFFFFF); /* Adjust colors and angle as needed */
+}
+
+.photo-solutions h2 {
+  font-size: 3.5rem;
+  font-family: Domine;
+  padding-top: 50px;
+  margin-left: 5%;
+  color: #954000;
+}
+
+.solutions-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Ensures 3 items per row */
+  gap: 75px; /* Adds consistent spacing between items */
+  justify-content: flex-start; /* Centers the grid */
+  max-width: 1400px; /* Limits grid width */
+  margin: 0 auto; /* Centers the grid container */
+  
+}
+
+.solution-item {
+  padding: 30px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  background-color: #FAF8ED;
+  transition: transform 0.3s, box-shadow 0.3s;
+  text-align: center; /* Ensures text and images are centered */
+}
+
+.solution-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.solution-image {
+  width: 100%; /* Ensures images are responsive */
+  height: auto; /* Maintains image aspect ratio */
+  margin-bottom: 15px;
+  border-radius: 5px; /* Optional: Adds subtle rounded corners */
+}
+
+.solution-item h3 {
+  margin: 15px 0 10px;
+  font-size: 2rem;
+
+  color: #845616;
+}
+
+.solution-item p {
+  font-size: 1rem;
+  font-family: Arial;
+  color: #000000;
+  line-height: 1.5;
+}
+
+@media (max-width: 768px) {
+  .solutions-grid {
+    grid-template-columns: repeat(2, 1fr); /* Two items per row on smaller screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .solutions-grid {
+    grid-template-columns: 1fr; /* One item per row on very small screens */
+  }
+}
