@@ -1,5 +1,5 @@
 .photo-solutions {
-  width:100vw;
+  height: 1300px;
   background: linear-gradient(135deg, #FCE5D8, #FFFFFF); /* Adjust colors and angle as needed */
 }
 
@@ -37,7 +37,7 @@
 }
 
 .solution-image {
-  width: 100%; /* Ensures images are responsive */
+  width: 80%; /* Ensures images are responsive */
   height: auto; /* Maintains image aspect ratio */
   margin-bottom: 15px;
   border-radius: 5px; /* Optional: Adds subtle rounded corners */

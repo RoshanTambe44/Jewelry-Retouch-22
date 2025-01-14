@@ -17,8 +17,8 @@ const App = () => {
       <JewelryServices />
       <PhotoSolutions />
       <Retouching />
-      {/* <JewelryService /> */}
-      {/* <WhyChooseUs /> */}
+      <JewelryService />
+      <WhyChooseUs />
       {/* <Portfolio/> */}
 
       </>

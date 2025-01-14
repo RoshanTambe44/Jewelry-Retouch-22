@@ -1,4 +1,3 @@
-// WhyChooseUs.jsx
 import React from "react";
 import "../styles/WhyChooseUs.css";
 import beforeAfterImage from "../assets/choose.png"; // Replace with actual image
@@ -16,26 +15,31 @@ const WhyChooseUs = () => {
       <div className="choose-us-content">
         <h2>Why Choose Us?</h2>
         <p>
-          We provide artists with craftsmanship and skills to ensure stellar
-          value for businesses. Transform your business by providing excellent
-          results for your customers. Client satisfaction is our mission.
+          Our expert team ensures exceptional craftsmanship, helping your
+          business deliver stunning results that captivate customers. With
+          attention to detail, fast turnaround, and tailored solutions,<br></br> we
+          prioritize client satisfaction and excellence in every project.
         </p>
-        <ul className="choose-us-list">
-          {points.map((point, index) => (
-            <li key={index}>
-              <span className="choose-us-number">{point.number}</span>
-              <span className="choose-us-title">{point.title}</span>
-            </li>
-          ))}
-        </ul>
-      </div>
-      <div className="choose-us-image">
+        </div>
+        <div className="choose-us-image">
         <img
           src={beforeAfterImage}
           alt="Before and After"
           className="before-after-image"
         />
+         <div>
+        <ul className="choose-us-list">
+          {points.map((point, index) => (
+            <li key={index} className="choose-us-item">
+              <span className="choose-us-number">{point.number}</span>
+              <span className="choose-us-title">{point.title}</span>
+            </li>
+          ))}
+        </ul>
+        </div>
+
       </div>
+     
     </section>
   );
 };
