@@ -1,0 +1,80 @@
+.free-trial-form {
+  background: linear-gradient(to bottom, #4e2e1d, #a36744);
+  color: #fff;
+  padding: 30px;
+  border-radius: 8px;
+  height: 700px;
+  margin: 0 auto;
+}
+
+.free-trial-form h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 3rem;
+  font-family: Domine;
+  color: #ffffff;
+}
+
+form {
+  margin-top: 50px;
+  display: flex;
+  flex-direction: column;
+}
+.form-container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 28%;
+  max-width: 700px;
+}
+.form-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 25px;
+  margin-bottom: 20px;
+}
+
+input, select, textarea {
+  flex: 1;
+  padding: 15px;
+  border: none;
+  border-radius: 4px;
+  outline: none;
+  font-size: 16px;
+  font-family: Arial;
+}
+
+textarea {
+  resize: none;
+  height: 100px;
+}
+
+.service-types {
+  display: flex;
+  flex-wrap: wrap;
+  font-size: 25px;
+  font-family: Arial;
+  gap: 20px;
+}
+
+label {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 14px;
+}
+
+.submit-button {
+  background-color: #6b4226;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  padding: 10px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.submit-button:hover {
+  background-color: #55311b;
+}

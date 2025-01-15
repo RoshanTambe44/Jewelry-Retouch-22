@@ -1,0 +1,101 @@
+.testimonial {
+  background-color: #FAF8ED;
+  padding: 40px 20px;
+  text-align: center;
+  border-radius: 8px;
+}
+
+.testimonial h2 {
+  font-size: 3rem;
+  font-family: Domine;
+  margin-bottom: 20px;
+  color: #954000;
+}
+
+.testimonial-container {
+  display: flex;
+  align-items: center;
+  justify-content:flex-start;
+  margin-left: 20%;
+  flex-wrap: wrap;
+  gap: 40px;
+  position: relative;
+}
+
+.testimonial-image img {
+  width: 220px;
+  height: 250px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.testimonial-content {
+  flex: 1;
+  max-width: 800px;
+  text-align: left;
+}
+
+.testimonial-quote {
+  font-size: 20px;
+  color: #444;
+  line-height: 1.6;
+  margin-bottom: 10px;
+  position: relative;
+}
+
+.testimonial-quote .quote-icon {
+  font-size: 26px;
+  color: #6b4226;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.testimonial-author {
+  font-size: 1.5rem;
+  font-family: Arial;
+  font-weight: bold;
+  color: #000000;
+}
+
+.testimonial-pagination {
+  display: flex;
+  gap: 15px;
+  margin-top: 10px;
+  justify-content: center;
+}
+
+.pagination-dot {
+  width: 12px;
+  height: 12px;
+  background-color: #ddd;
+  border-radius: 50%;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.pagination-dot.active {
+  background-color: #954000;
+}
+
+.testimonial-navigation {
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  transform: translateY(-50%);
+}
+
+.nav-button {
+  background-color: transparent;
+  border: none;
+  font-size: 50px;
+  color: #954000;
+  cursor: pointer;
+  padding: 10px;
+  transition: color 0.3s ease;
+}
+
+.nav-button:hover {
+  color: #333;
+}

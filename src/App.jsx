@@ -8,6 +8,10 @@ import Retouching from "./components/Retouching";
 import JewelryService from './components/JewelryEditing';
 import WhyChooseUs from './components/WhyChooseUs';
 import Portfolio from './components/Portfolio';
+import FAQ from './components/faq';
+import TestimonialSlider from './components/Testimonial';
+import FreeTrialForm from './components/FreeTrial';
+import Footer from './components/Footer';
 
 const App = () => {
   return (
@@ -20,7 +24,10 @@ const App = () => {
       <JewelryService />
       <WhyChooseUs />
       <Portfolio/>
-
+      <FAQ />
+      <TestimonialSlider/>
+      <FreeTrialForm/>
+      <Footer/>
       </>
   );
 };

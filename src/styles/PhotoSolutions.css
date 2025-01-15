@@ -37,7 +37,7 @@
 }
 
 .solution-image {
-  width: 80%; /* Ensures images are responsive */
+  width: 85%; /* Ensures images are responsive */
   height: auto; /* Maintains image aspect ratio */
   margin-bottom: 15px;
   border-radius: 5px; /* Optional: Adds subtle rounded corners */

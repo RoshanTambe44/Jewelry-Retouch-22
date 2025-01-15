@@ -1,33 +1,51 @@
 // Portfolio.jsx
 import React, { useState } from "react";
+import neck from "../assets/1.png";
+import black from "../assets/2.png";
+import color from "../assets/3.png";
+import retouch from "../assets/4.png";
+import clipping from "../assets/5.png";
+import photo from "../assets/6.png";
+import retouch2 from "../assets/7.png";
+import bracelet from "../assets/8.png";
+import heart from "../assets/P-2.png";
+
 import "../styles/Portfolio.css";
 
-// Replace these with actual image imports or URLs
+// Portfolio image data
 const portfolioImages = [
-  { id: 1, src: "path-to-image1.jpg", category: "Clipping Path" },
-  { id: 2, src: "path-to-image2.jpg", category: "Retouching" },
-  { id: 3, src: "path-to-image3.jpg", category: "Color Correction" },
-  { id: 4, src: "path-to-image4.jpg", category: "Photography" },
-  { id: 5, src: "path-to-image5.jpg", category: "Clipping Path" },
-  { id: 6, src: "path-to-image6.jpg", category: "Color Correction" },
-  { id: 7, src: "path-to-image7.jpg", category: "Photography" },
-  { id: 8, src: "path-to-image8.jpg", category: "Retouching" },
+  { id: 1, src: neck, category: "Clipping Path" },
+  { id: 2, src: photo, category: "Clipping Path" },
+  { id: 3, src: neck, category: "Clipping Path" },
+  { id: 4, src: black, category: "Retouching" },
+  { id: 5, src: color, category: "Color Correction" },
+  { id: 6, src: photo, category: "Model + Jewelry" },
+  { id: 7, src: clipping, category: "Clipping Path" },
+  { id: 8, src: retouch2, category: "Color Correction" },
+  { id: 9, src: bracelet, category: "Model + Jewelry" },
+  { id: 10, src: photo, category: "Retouching" },
+  { id: 11, src: heart, category: "Retouching" },
+  { id: 12, src: retouch, category: "Model + Jewelry" },
 ];
 
 const Portfolio = () => {
   const [activeCategory, setActiveCategory] = useState("All");
 
+  // Filter images based on selected category
   const filteredImages =
     activeCategory === "All"
       ? portfolioImages
       : portfolioImages.filter((image) => image.category === activeCategory);
 
-  const categories = ["All", "Clipping Path", "Retouching", "Color Correction", "Photography"];
+  // Categories for tabs
+  const categories = ["All", "Clipping Path", "Retouching", "Color Correction", "Model + Jewelry"];
 
   return (
     <section className="portfolio">
       <h2>Portfolio</h2>
       <p>Making Your Jewelry Photos Look Irresistible and Beautiful</p>
+
+      {/* Category Tabs */}
       <div className="portfolio-tabs">
         {categories.map((category, index) => (
           <button
@@ -41,6 +59,8 @@ const Portfolio = () => {
           </button>
         ))}
       </div>
+
+      {/* Gallery Section */}
       <div className="portfolio-gallery">
         {filteredImages.map((image) => (
           <div key={image.id} className="portfolio-item">
