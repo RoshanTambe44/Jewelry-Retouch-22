@@ -23,8 +23,8 @@
 }
 
 .testimonial-image img {
-  width: 220px;
-  height: 250px;
+  width: 250px;
+  height: 300px;
   border-radius: 50%;
   object-fit: cover;
 }
