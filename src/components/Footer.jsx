@@ -1,28 +1,27 @@
-import React from "react";
-import { useState } from "react";
+import React, { useState } from "react";
 import "../styles/Footer.css";
 import { FaLinkedin, FaGoogle, FaFacebook } from "react-icons/fa";
 
 const Footer = () => {
-    const [email, setEmail] = useState("");
-    const [error, setError] = useState("");
-  
-    const handleSubmit = (e) => {
-      e.preventDefault();
-  
-      // Simple email validation regex
-      const emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
-  
-      if (!email) {
-        setError("Email is required.");
-      } else if (!emailPattern.test(email)) {
-        setError("Please enter a valid email address.");
-      } else {
-        setError(""); // Clear error if email is valid
-        // Handle successful form submission logic here (e.g., API call)
-        alert("Subscribed successfully!");
-      }
+  const [email, setEmail] = useState("");
+  const [error, setError] = useState("");
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    // Simple email validation regex
+    const emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
+
+    if (!email) {
+      setError("Email is required.");
+    } else if (!emailPattern.test(email)) {
+      setError("Please enter a valid email address.");
+    } else {
+      setError(""); // Clear error if email is valid
+      // Handle successful form submission logic here (e.g., API call)
+      alert("Subscribed successfully!");
     }
+  };
 
   return (
     <footer className="footer" id="contact">
@@ -44,15 +43,17 @@ const Footer = () => {
             about our products and services delivered right to your inbox!
           </p>
           <form className="newsletter-form" onSubmit={handleSubmit}>
-            <input
-              type="email"
-              placeholder="Email Address"
-              className="newsletter-input"
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
-              required
-            />
-            <button type="submit" className="newsletter-button">➤</button>
+            <div className="input-wrapper">
+              <input
+                type="email"
+                placeholder="Email Address"
+                className="newsletter-input"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+                required
+              />
+              <button type="submit" className="newsletter-button">➤</button>
+            </div>
           </form>
           {error && <p className="error-message">{error}</p>}
         </div>
@@ -75,9 +76,6 @@ const Footer = () => {
       </div>
     </footer>
   );
-  
 };
 
 export default Footer;
-
-

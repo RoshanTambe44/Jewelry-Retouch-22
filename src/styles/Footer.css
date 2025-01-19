@@ -39,32 +39,41 @@
   color: #444;
   margin: 5px 0;
 }
-
 /* Newsletter Form */
 .newsletter-form {
-  display: flex; /* Align items horizontally */
+  display: flex;
   justify-content: center;
   align-items: center;
   margin-top: 10px;
 }
 
+.input-wrapper {
+  position: relative;
+  display: flex;
+  width: 100%;
+  max-width: 300px; /* Maximum width for the input form */
+}
+
 .newsletter-input {
   padding: 10px;
   border: 1px solid #ddd;
-  border-radius: 5px 0 0 5px; /* Rounded left corners */
+  border-radius: 5px;
   font-size: 1rem;
-  flex: 1;
-  max-width: 250px;
-  border-right: none; /* Remove border between input and button */
+  width: 100%; /* Take up available space */
+  padding-right: 40px; /* Space for the button */
 }
 
 .newsletter-button {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%); /* Vertically center the button */
   background-color: #954000;
   color: white;
   border: none;
-  padding: 10px 15px;
+  padding: 9px;
   font-size: 1.1rem;
-  border-radius: 0 5px 5px 0; /* Rounded right corners */
+  border-radius: 5px;
   cursor: pointer;
   transition: background-color 0.3s ease;
 }
