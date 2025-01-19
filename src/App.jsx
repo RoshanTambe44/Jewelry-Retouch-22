@@ -8,10 +8,12 @@ import Retouching from "./components/Retouching";
 import JewelryService from './components/JewelryEditing';
 import WhyChooseUs from './components/WhyChooseUs';
 import Portfolio from './components/Portfolio';
-import FAQ from './components/faq';
+import FAQ from './components/FAQ';
 import TestimonialSlider from './components/Testimonial';
 import FreeTrialForm from './components/FreeTrial';
 import Footer from './components/Footer';
+import Last from './components/Last';
+
 
 const App = () => {
   return (
@@ -28,6 +30,7 @@ const App = () => {
       <TestimonialSlider/>
       <FreeTrialForm/>
       <Footer/>
+      <Last/>
       </>
   );
 };

@@ -1,34 +1,47 @@
+/* PhotoSolutions Section */
 .photo-solutions {
-  height: 1300px;
-  background: linear-gradient(135deg, #FCE5D8, #FFFFFF); /* Adjust colors and angle as needed */
+  background: linear-gradient(135deg, #FCE5D8, #FFFFFF); /* Subtle gradient background */
+  padding-top: 50px;
+  padding-bottom: 50px; /* Added bottom padding for better spacing */
+  text-align: center;
 }
 
+/* Title Styling */
 .photo-solutions h2 {
   font-size: 3.5rem;
-  font-family: Domine;
-  padding-top: 50px;
-  margin-left: 5%;
+  font-family: Domine, serif;
   color: #954000;
+  margin: 0 5%;
+  line-height: 1.2;
+  text-align: center;
+  font-weight: bold;
+  margin-bottom: 30px; /* Adds space below the heading */
 }
 
+/* Grid Layout for the Photo Solutions */
 .solutions-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr); /* Ensures 3 items per row */
-  gap: 70px; /* Adds consistent spacing between items */
-  justify-content: flex-start; /* Centers the grid */
-  max-width: 1300px; /* Limits grid width */
+  grid-template-columns: repeat(3, 1fr); /* 3 items per row */
+  gap: 30px; /* Reduced gap for a tighter layout */
+  justify-items: center; /* Centers each item in its grid cell */
+  max-width: 1300px; /* Ensures the grid does not expand too wide */
   margin: 0 auto; /* Centers the grid container */
-  
+  padding: 0 5%; /* Adds padding to prevent items from touching the edges */
+  transition: all 0.3s ease; /* Smooth transition when resizing */
 }
 
+/* Solution Item Styling */
 .solution-item {
-  padding: 30px;
+  padding: 20px;
   border: 1px solid #ddd;
   border-radius: 10px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   background-color: #FAF8ED;
   transition: transform 0.3s, box-shadow 0.3s;
-  text-align: center; /* Ensures text and images are centered */
+  text-align: center;
+  width: 100%;
+  max-width: 350px; /* Limits max width of the item */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .solution-item:hover {
@@ -36,35 +49,72 @@
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
 }
 
+/* Image Styling */
 .solution-image {
-  width: 85%; /* Ensures images are responsive */
-  height: auto; /* Maintains image aspect ratio */
+  width: 100%;
+  max-width: 350px;
+  height: auto;
   margin-bottom: 15px;
-  border-radius: 5px; /* Optional: Adds subtle rounded corners */
+  border-radius: 5px;
 }
 
+/* Title Styling in Solution Item */
 .solution-item h3 {
   margin: 15px 0 10px;
-  font-size: 2rem;
-
+  font-size: 1.8rem;
   color: #845616;
+  font-weight: bold;
+  text-align: center;
 }
 
+/* Description Text Styling */
 .solution-item p {
   font-size: 1rem;
-  font-family: Arial;
+  font-family: Arial, sans-serif;
   color: #000000;
   line-height: 1.5;
+  text-align: center;
+  margin-bottom: 20px;
 }
 
+/* Responsive Design for Smaller Screens */
+
+/* Two items per row on screens smaller than 768px */
 @media (max-width: 768px) {
   .solutions-grid {
-    grid-template-columns: repeat(2, 1fr); /* Two items per row on smaller screens */
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .solution-item h3 {
+    font-size: 1.5rem; /* Slightly smaller font for smaller screens */
+  }
+
+  .solution-item p {
+    font-size: 0.95rem; /* Adjust text size for readability */
   }
 }
 
+/* One item per row on very small screens (480px or smaller) */
 @media (max-width: 480px) {
   .solutions-grid {
-    grid-template-columns: 1fr; /* One item per row on very small screens */
+    grid-template-columns: 1fr;
+  }
+
+  .photo-solutions h2 {
+    font-size: 2.5rem; /* Smaller title on very small screens */
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .solution-item {
+    max-width: 90%; /* Ensures the solution items don't stretch too wide */
+  }
+
+  .solution-item h3 {
+    font-size: 1.4rem; /* Adjust title size for better readability */
+  }
+
+  .solution-item p {
+    font-size: 0.9rem; /* Make description more readable on small screens */
   }
 }

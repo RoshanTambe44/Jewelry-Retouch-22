@@ -2,8 +2,8 @@
 import React, { useState } from "react";
 import "../styles/Testimonial.css";
 import clientImage1 from "../assets/client-1.png"; // Replace with actual image paths
-import clientImage2 from "../assets/client-1.png";
-import clientImage3 from "../assets/client-1.png";
+import clientImage2 from "../assets/client-2.webp";
+import clientImage3 from "../assets/client-3.webp";
 
 const testimonials = [
   {
@@ -39,7 +39,7 @@ const TestimonialSlider = () => {
 
   return (
     <section className="testimonial">
-      <h2>Some Best Words From <br></br>Our Clients</h2>
+      <h2>Some Best Words From Our Clients</h2>
       <div className="testimonial-container">
         <div className="testimonial-image">
           <img src={testimonials[currentIndex].image} alt={testimonials[currentIndex].author} />

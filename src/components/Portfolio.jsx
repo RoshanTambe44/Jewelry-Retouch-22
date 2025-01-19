@@ -41,7 +41,7 @@ const Portfolio = () => {
   const categories = ["All", "Clipping Path", "Retouching", "Color Correction", "Model + Jewelry"];
 
   return (
-    <section className="portfolio">
+    <section className="portfolio" id="portfolio">
       <h2>Portfolio</h2>
       <p>Making Your Jewelry Photos Look Irresistible and Beautiful</p>
 

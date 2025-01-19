@@ -1,0 +1,36 @@
+/* Last Footer */
+.last-footer {
+  background-color: #ffffff;
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  text-align: center;
+  font-size: 14px;
+  color: #000000;
+  margin-top: 0; /* Remove space between sections */
+  margin-left: 23px;
+  margin-right: 23px;
+  border-top: 1px solid #e0e0e0;
+}
+
+.footer-text p {
+  margin: 5px 0;
+  font-size: 1.1rem;
+  font-family: Domine;
+}
+
+.footer-links p {
+  margin: 10px 0 0;
+}
+
+.footer-links a {
+  color: #0066cc;
+  font-family: Playfair-Display;
+  font-size: 0.95rem;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.footer-links a:hover {
+  text-decoration: underline;
+}

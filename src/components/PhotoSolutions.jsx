@@ -1,5 +1,5 @@
-// PhotoSolutions.jsx
 import React from "react";
+import { motion } from "framer-motion"; // Importing motion from framer-motion
 import background from "../assets/P-1.png";
 import shadow from "../assets/P-2.png";
 import Eyes from "../assets/P-3.png";
@@ -20,14 +20,20 @@ const PhotoSolutions = () => {
 
   return (
     <section className="photo-solutions">
-      <h2>Photo Editing Solutions <br/>We Offer</h2>
+      <h2>Photo Editing Solutions We Offer</h2>
       <div className="solutions-grid">
         {solutions.map((solution, index) => (
-          <div key={index} className="solution-item">
+          <motion.div
+            key={index}
+            className="solution-item"
+            initial={{ opacity: 0, y: 50 }} // Starting point: invisible and slightly below
+            animate={{ opacity: 1, y: 0 }} // End point: fully visible and in place
+            transition={{ delay: index * 0.2, duration: 0.5 }} // Delay each item slightly for staggered effect
+          >
             <img src={solution.image} alt={solution.title} className="solution-image" />
             <h3>{solution.title}</h3>
             <p>{solution.description}</p>
-          </div>
+          </motion.div>
         ))}
       </div>
     </section>

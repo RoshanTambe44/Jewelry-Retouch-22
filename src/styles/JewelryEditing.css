@@ -1,66 +1,87 @@
+/* Jewelry Service Section */
 .jewelry-service {
   display: flex;
-  flex-wrap: wrap; /* Allows items to stack on smaller screens */
-  align-items: center;
+  align-items: center; /* Vertically center items */
+  justify-content: center;
   padding: 50px 20px;
   background-color: #fff5f0;
-  gap: 30px; /* Ensures spacing between elements */
+  gap: 0; /* Remove spacing between items */
+  text-align: center;
 }
 
-.service-content-edit {
-  flex: 1 1 40%; /* Ensures it takes 40% width, but can shrink */
-  margin-left: 40px;
-  margin-right: 40px;
-  max-width: 35%;
+/* Equal Width for Divs */
+.service-image {
+  flex: 1;
+  max-width: 300px; /* Restrict the width of the image */
 }
 
-.service-content-edit h2 {
-  font-size: 3rem;
-  font-family: Domine;
+/* Center Content but Keep Close to Images */
+.service-content {
+  flex: 2; /* Slightly larger for content compared to images */
+  text-align: center;
+  padding: 0 20px; /* Minimal padding for alignment */
+  max-width: 500px;
+}
+
+/* Heading Styling */
+.service-content h2 {
+  font-size: 2.5rem;
+  font-family: Domine, serif;
   color: #954000;
-  margin-bottom: 10px;
-  font-weight: 600; /* Add font-weight for better prominence */
+  margin-bottom: 20px;
+  font-weight: 600;
 }
 
-.service-content-edit p {
-  font-size: 1.2rem;
-  font-family: Arial;
-  color: #000000;
+/* Paragraph Styling */
+.service-content p {
+  font-size: 1.1rem;
+  font-family: Arial, sans-serif;
+  color: #333;
   line-height: 1.6;
 }
 
-.service-images-1 {
-  margin-left: 7%;
-}
-
-.service-image-2{
-  flex: 1 1 40%;
-  margin-left: 10%;
-}
+/* Jewelry Image Styling */
 .jewelry-image {
   width: 100%;
-  max-width: 270px;
+  max-width: 300px; /* Restrict image width */
   border-radius: 10px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  object-fit: cover; /* Ensures the image scales well */
+  object-fit: cover;
 }
 
-/* Add responsiveness for smaller screens */
-@media (max-width: 768px) {
+/* Responsive Design */
+@media (max-width: 1024px) {
   .jewelry-service {
-    flex-direction: column;
-    align-items: center;
-    padding: 30px 10px;
+    flex-wrap: wrap; /* Stack items on smaller screens */
+    gap: 10px; /* Minimal gap */
   }
 
+  .service-image,
   .service-content {
-    flex: 1 1 100%; /* Takes full width on smaller screens */
-    margin-right: 0;
+    flex: 1 1 100%; /* Take full width */
+    max-width: 100%;
+  }
+
+  .service-content h2 {
+    font-size: 2rem;
+  }
+
+  .service-content p {
+    font-size: 1rem;
+  }
+
+  .jewelry-image {
+    max-width: 200px; /* Reduce image size for smaller screens */
+  }
+}
+
+@media (max-width: 768px) {
+  .jewelry-service {
+    flex-direction: column; /* Stack vertically */
     text-align: center;
   }
 
-  .service-images {
-    flex: 1 1 100%; /* Takes full width on smaller screens */
-    justify-content: center;
+  .service-image {
+    margin-bottom: 20px; /* Add spacing between stacked items */
   }
 }

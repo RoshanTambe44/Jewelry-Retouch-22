@@ -1,81 +1,98 @@
 .why-choose-us {
   display: flex;
   flex-direction: column; /* Stack items by default */
+  justify-content: center;
+  align-items: center;
   padding: 50px 20px;
   background-color: #FEF5E1;
+  min-height: 100vh; /* Ensures full screen height */
 }
 
 .choose-us-content {
-  flex: 1 1 50%;
-  margin-left: 30px;
-  margin-right: 20px;
-  text-align: center; /* Center the content */
+  flex: 1;
+  display: flex;
+  flex-direction: column; /* Stack content vertically */
+  justify-content: center; /* Center vertically */
+  align-items: center; /* Center horizontally */
+  text-align: center;
+  /* margin-bottom: 30px; Space below content */
 }
 
 .choose-us-content h2 {
   font-size: 3rem;
-  font-family: 'Domine';
+  font-family: 'Domine', serif;
   color: #954000;
   margin-bottom: 15px;
 }
 
 .choose-us-content p {
   font-size: 1.3rem;
-  font-family: 'Mulish';
+  font-family: 'Mulish', sans-serif;
   color: #000000;
-  padding-left: 20px;
-  padding-right: 20px;
+  padding: 0 20px;
   line-height: 1.8;
-  text-align: center; /* Ensure it's centered on small screens */
+  text-align: center;
+}
+
+.image-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px; /* Add space between the image and list */
+  flex-wrap: wrap; /* Ensure wrapping on smaller screens */
+  width: 100%;
+  margin-left: 18%;
 }
 
 .choose-us-image {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-left: 10%;
-  gap: 50px;
-  flex: 1 1 50%; /* Ensures the image takes up 50% of the space */
 }
 
 .choose-us-list {
-  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
   list-style: none;
   padding: 0;
-  flex: 1 1 50%; /* Ensures the list takes up 50% of the space */
+  flex: 1;
+  margin-top: 20px;
 }
 
 .choose-us-item {
   display: flex;
   align-items: flex-start;
   margin-bottom: 15px;
-  flex-wrap: wrap; /* Allows wrapping if space is tight */
+  flex-wrap: wrap;
+  /* width: 100%; */
 }
 
 .choose-us-number {
   font-size: 1.5rem;
-  font-family: 'Mulish';
+  font-family: 'Mulish', sans-serif;
   color: #845616;
   margin-right: 15px;
 }
 
 .choose-us-title {
   font-size: 1.5rem;
-  font-family: 'Mulish';
+  font-family: 'Mulish', sans-serif;
   color: #845616;
   margin-right: 15px;
 }
 
 .choose-us-description {
   font-size: 1rem;
-  font-family: 'Arial';
+  font-family: 'Arial', sans-serif;
   margin-left: 20px;
   color: #000000;
-  flex-basis: 100%; /* Ensures the description takes full width in small space */
+  flex-basis: 100%; /* Ensure description takes full width */
 }
 
 .before-after-image {
-  width: 100%;
+  /* width: 100%; */
   max-width: 350px;
   border-radius: 12px;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
@@ -83,33 +100,78 @@
 }
 
 /* Responsive Design */
+@media (max-width: 1024px) {
+  .why-choose-us {
+    padding: 30px 20px;
+  }
+
+  .choose-us-content h2 {
+    font-size: 2.5rem;
+  }
+
+  .choose-us-content p {
+    font-size: 1.1rem;
+  }
+
+  .image-content {
+    flex-direction: column; /* Stack image and list on smaller screens */
+  }
+
+  .before-after-image {
+    max-width: 300px;
+  }
+}
+
 @media (max-width: 768px) {
   .why-choose-us {
-    flex-direction: column; /* Stack items vertically on smaller screens */
+    flex-direction: column;
     text-align: center;
   }
 
   .choose-us-content {
+    flex: 1 1 100%;
     margin-right: 0;
-    flex: 1 1 100%; /* Full width */
   }
 
   .choose-us-image,
   .choose-us-list {
-    flex: 1 1 100%; /* Full width for both image and list */
-    margin-top: 20px; /* Add space between items */
+    flex: 1 1 100%;
+    margin-top: 20px;
   }
 
   .choose-us-item {
-    flex-direction: column; /* Stack number, title, and description vertically on mobile */
+    flex-direction: column;
     align-items: center;
   }
 
   .choose-us-description {
-    margin-top: 5px; /* Adds spacing between title and description */
+    margin-top: 5px;
   }
 
   .before-after-image {
-    max-width: 300px; /* Slightly smaller for mobile */
+    max-width: 300px;
+  }
+}
+
+@media (max-width: 480px) {
+  .choose-us-content h2 {
+    font-size: 2rem;
+  }
+
+  .choose-us-content p {
+    font-size: 1rem;
+    padding: 0 10px;
+  }
+
+  .choose-us-number, .choose-us-title {
+    font-size: 1.3rem;
+  }
+
+  .choose-us-description {
+    font-size: 0.9rem;
+  }
+
+  .before-after-image {
+    max-width: 250px;
   }
 }
