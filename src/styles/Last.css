@@ -1,91 +1,45 @@
-/* Last Footer Section */
+/* Footer Styling */
 .last-footer {
-  background-color: #ffffff; /* Clean, neutral background */
-  display: flex;
-  flex-wrap: wrap; /* Allows wrapping for smaller screens */
-  justify-content: space-between;
-  align-items: center; /* Align vertically for consistent spacing */
-  padding: 15px 20px; /* Adjust padding for better balance */
+  background-color: #fef5e1; /* Light background color */
+  padding: 20px;
   text-align: center;
-  font-size: 14px;
-  color: #000000;
-  margin: 0 20px; /* Consistent horizontal margins */
-  border-top: 2px solid #e0e0e0; /* Subtle divider */
-  gap: 10px; /* Spacing between items for smaller layouts */
+  border-top: 1px solid #ddd; /* Subtle border for separation */
 }
 
-/* Footer Text Styling */
-.footer-text p {
+.footer-text p,
+.footer-links p {
+  font-family: 'Mulish', sans-serif;
+  font-size: 1rem;
+  color: #666; /* Neutral text color */
   margin: 5px 0;
-  font-size: 1.1rem;
-  font-family: "Domine", serif;
-  color: #333333;
-  text-align: left;
 }
 
-/* Footer Links Container */
-.footer-links {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-end; /* Align to the right */
-  text-align: right;
-  margin: 0;
-}
-
-/* Footer Link Styling */
 .footer-links a {
-  color: #0066cc; /* Blue for links */
-  font-family: "Playfair Display", serif;
-  font-size: 0.95rem;
+  color: #954000; /* Highlighted link color */
   text-decoration: none;
   font-weight: bold;
-  margin-bottom: 5px; /* Add spacing between links */
-  transition: color 0.3s ease, text-decoration 0.3s ease;
+  transition: color 0.3s ease;
 }
 
 .footer-links a:hover {
-  text-decoration: underline; /* Underline on hover */
-  color: #004499; /* Slightly darker shade on hover */
+  color: #da8500; /* Hover color */
 }
 
 /* Responsive Design */
-
-/* Medium Screens */
 @media (max-width: 768px) {
   .last-footer {
-    flex-direction: column; /* Stack items vertically */
-    text-align: center; /* Center-align for smaller screens */
-    padding: 20px 15px; /* Adjust padding */
+    padding: 15px;
   }
 
-  .footer-text p {
-    text-align: center;
-    font-size: 1rem; /* Slightly smaller font size */
-  }
-
-  .footer-links {
-    align-items: center; /* Center-align links */
-    text-align: center; /* Align text to center */
-    margin-top: 10px;
-  }
-
-  .footer-links a {
-    font-size: 0.9rem; /* Reduce font size for smaller screens */
+  .footer-text p,
+  .footer-links p {
+    font-size: 0.9rem;
   }
 }
 
-/* Small Screens */
 @media (max-width: 480px) {
-  .last-footer {
-    padding: 15px 10px; /* Compact padding for small screens */
-    margin: 0 10px; /* Reduce horizontal margin */
-  }
-
-  .footer-text p {
-    font-size: 0.9rem;
-  }
-
-  .footer-links a {
-    font-size: 0.85rem;
+  .footer-text p,
+  .footer-links p {
+    font-size: 0.8rem;
   }
 }
