@@ -6,17 +6,17 @@
   justify-content: space-between;
   background: linear-gradient(135deg, #fce5d7, #f1dbce);
   padding: 50px 100px;
-  max-height: 65vh;
+  min-height: 65vh;
   box-sizing: border-box;
+  gap: 20px;
 }
 
-/* Header Content */
 .header-content {
   max-width: 50%;
 }
 
 .header-content h1 {
-  font-size: 4rem;
+  font-size: clamp(2.5rem, 5vw, 4rem); /* Scales based on screen width */
   font-family: "Domine", serif;
   margin-bottom: 20px;
   color: #231701;
@@ -24,17 +24,18 @@
 }
 
 .header-content p {
-  font-size: 1.2rem;
+  font-size: clamp(1rem, 1.5vw, 1.2rem); /* Scales for readability */
   font-family: "Mulish", sans-serif;
   color: #231701;
   margin-bottom: 20px;
-  line-height: 1.5;
+  line-height: 1.6;
 }
 
-.third-para p{
-  font-family: Domine , sans-serif;
-  font-size: 1.35rem;
+.third-para p {
+  font-family: "Domine", serif;
+  font-size: clamp(1.1rem, 1.8vw, 1.35rem);
   color: #954000;
+  margin-top: 15px;
 }
 
 /* Header Slider */
@@ -46,7 +47,8 @@
 }
 
 .slider-image {
-  width: 80%;
+  width: 100%; /* Ensures it adapts to parent container */
+  max-width: 400px;
   height: auto;
   border-radius: 10px;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
@@ -58,30 +60,55 @@
     flex-direction: column;
     justify-content: center;
     text-align: center;
-    padding: 30px;
+    padding: 40px;
   }
 
   .header-content {
-    max-width: 90%;
+    max-width: 80%;
   }
 
   .header-slider {
     margin-top: 30px;
-    max-width: 80%;
+    max-width: 70%;
+  }
+
+  .slider-image {
+    max-width: 300px;
   }
 }
 
 @media (max-width: 768px) {
   .header-content h1 {
-    font-size: 2.5rem;
+    font-size: clamp(2rem, 6vw, 2.5rem);
   }
 
   .header-content p {
-    font-size: 1rem;
+    font-size: clamp(0.9rem, 4vw, 1rem);
   }
 
-  .cta-button {
-    font-size: 1rem;
-    padding: 12px 25px;
+  .header {
+    padding: 20px;
+  }
+
+  .slider-image {
+    max-width: 250px;
+  }
+}
+
+@media (max-width: 480px) {
+  .header-content h1 {
+    font-size: clamp(1.8rem, 7vw, 2rem);
+  }
+
+  .header-content p {
+    font-size: 0.9rem;
+  }
+
+  .header-content {
+    max-width: 100%;
+  }
+
+  .slider-image {
+    max-width: 200px;
   }
 }

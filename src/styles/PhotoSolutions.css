@@ -1,33 +1,31 @@
 /* PhotoSolutions Section */
 .photo-solutions {
   background: linear-gradient(135deg, #FCE5D8, #FFFFFF); /* Subtle gradient background */
-  padding-top: 50px;
-  padding-bottom: 50px; /* Added bottom padding for better spacing */
+  padding: 50px 0; /* Combined top and bottom padding */
   text-align: center;
 }
 
 /* Title Styling */
 .photo-solutions h2 {
   font-size: 3.5rem;
-  font-family: Domine, serif;
+  font-family: "Domine", serif;
   color: #954000;
   margin: 0 5%;
   line-height: 1.2;
-  text-align: center;
   font-weight: bold;
-  margin-bottom: 30px; /* Adds space below the heading */
+  margin-bottom: 30px; /* Space below the title */
+  text-align: center;
 }
 
-/* Grid Layout for the Photo Solutions */
+/* Grid Layout */
 .solutions-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr); /* 3 items per row */
-  gap: 30px; /* Reduced gap for a tighter layout */
-  justify-items: center; /* Centers each item in its grid cell */
-  max-width: 1300px; /* Ensures the grid does not expand too wide */
-  margin: 0 auto; /* Centers the grid container */
-  padding: 0 5%; /* Adds padding to prevent items from touching the edges */
-  transition: all 0.3s ease; /* Smooth transition when resizing */
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Adaptive grid with a minimum width */
+  gap: 25px; /* Reduced gap for a tighter, cohesive layout */
+  max-width: 1200px; /* Slightly smaller maximum width for consistency */
+  margin: 0 auto; /* Center the grid container */
+  padding: 0 5%; /* Add padding for edge spacing */
+  justify-items: center; /* Center align each grid item */
 }
 
 /* Solution Item Styling */
@@ -35,9 +33,8 @@
   padding: 20px;
   border: 1px solid #ddd;
   border-radius: 10px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
   background-color: #FAF8ED;
-  transition: transform 0.3s, box-shadow 0.3s;
   text-align: center;
   width: 100%;
   max-width: 350px; /* Limits max width of the item */
@@ -45,76 +42,79 @@
 }
 
 .solution-item:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  transform: translateY(-5px); /* Lift on hover */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15); /* Enhanced shadow on hover */
 }
 
 /* Image Styling */
 .solution-image {
   width: 100%;
-  max-width: 350px;
+  max-width: 100%;
   height: auto;
   margin-bottom: 15px;
   border-radius: 5px;
+  display: block; /* Ensures proper alignment */
 }
 
-/* Title Styling in Solution Item */
+/* Solution Title Styling */
 .solution-item h3 {
   margin: 15px 0 10px;
   font-size: 1.8rem;
   color: #845616;
+  font-family: "Domine", serif;
   font-weight: bold;
-  text-align: center;
 }
 
-/* Description Text Styling */
+/* Solution Description Styling */
 .solution-item p {
   font-size: 1rem;
-  font-family: Arial, sans-serif;
+  font-family: "Arial", sans-serif;
   color: #000000;
-  line-height: 1.5;
-  text-align: center;
+  line-height: 1.6; /* Increased line height for readability */
   margin-bottom: 20px;
 }
 
-/* Responsive Design for Smaller Screens */
+/* Responsive Design */
 
-/* Two items per row on screens smaller than 768px */
+/* Adjusts to two items per row on medium screens (768px or smaller) */
 @media (max-width: 768px) {
+  .photo-solutions h2 {
+    font-size: 3rem; /* Reduced title size */
+  }
+
   .solutions-grid {
-    grid-template-columns: repeat(2, 1fr);
+    gap: 20px; /* Slightly smaller gap */
   }
 
   .solution-item h3 {
-    font-size: 1.5rem; /* Slightly smaller font for smaller screens */
+    font-size: 1.6rem; /* Reduced heading size for smaller screens */
   }
 
   .solution-item p {
-    font-size: 0.95rem; /* Adjust text size for readability */
+    font-size: 0.95rem; /* Slightly smaller font size */
   }
 }
 
-/* One item per row on very small screens (480px or smaller) */
+/* Stacks items vertically on small screens (480px or smaller) */
 @media (max-width: 480px) {
-  .solutions-grid {
-    grid-template-columns: 1fr;
+  .photo-solutions h2 {
+    font-size: 2.5rem; /* Reduced title size for better spacing */
   }
 
-  .photo-solutions h2 {
-    font-size: 2.5rem; /* Smaller title on very small screens */
-    margin-left: 0;
-    margin-right: 0;
+  .solutions-grid {
+    gap: 15px;
   }
 
   .solution-item {
-    max-width: 90%; /* Ensures the solution items don't stretch too wide */
+    max-width: 90%; /* Full width with padding */
+    margin: 0 auto;
   }
 
   .solution-item h3 {
-    font-size: 1.4rem; /* Adjust title size for better readability */
+    font-size: 1.4rem; /* Adjusted heading size for readability */
   }
 
   .solution-item p {
-    font-size: 0.9rem; /* Make description more readable on small screens */
+    font-size: 0.9rem; /* Small, readable text */
   }
 }

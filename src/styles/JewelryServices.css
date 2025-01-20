@@ -1,59 +1,61 @@
 /* Jewelry Services Section */
 .jewelry-services {
-  background-color: #ffffff; /* Light and elegant background */
+  background-color: #ffffff; /* Clean and elegant background */
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
-  padding: 20px 20px;
-  margin: 0;
+  padding: 40px 20px;
+  margin: 0 auto; /* Center the section */
+  max-width: 1200px; /* Limit the width for larger screens */
 }
 
 .jewelry-services h2 {
   font-family: "Domine", serif;
   color: #954000;
   font-size: 3rem;
-  margin-bottom:0px;
+  margin-bottom: 10px; /* Add space between heading and description */
 }
 
 .jewelry-services p {
   font-family: "Mulish", sans-serif;
   color: #000000;
   font-size: 1.5rem;
+  line-height: 1.8;
   margin-bottom: 40px;
-  
 }
 
+/* Service List Container */
 .service-list {
   display: flex;
   justify-content: center;
   gap: 30px;
-  flex-wrap: wrap; /* Allows items to wrap on smaller screens */
-  width: 100%; /* Full width to ensure proper alignment */
-  padding: 0 10px;
+  flex-wrap: wrap; /* Wrap items for smaller screens */
+  width: 100%;
+  padding: 0 20px;
 }
 
+/* Individual Service Item */
 .service-item {
   text-align: center;
   padding: 20px;
-  max-width: 300px; /* Limit width to ensure a uniform card size */
-  background-color: transparent; /* Remove card background */
+  max-width: 300px; /* Uniform card size */
+  background-color: transparent;
   border-radius: 10px;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .service-item:hover {
-  transform: translateY(-5px); /* Slight lift effect on hover */
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+  transform: translateY(-8px); /* Lift effect on hover */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
 }
 
+/* Service Item Images */
 .service-item img {
   width: 100%;
-  max-width: 250px; /* Larger image size */
-  border-radius: 50%;
+  max-width: 250px;
+  border-radius: 50%; /* Circular images */
   margin-bottom: 15px;
-  background-color: transparent; /* No white background */
-  box-shadow: none; /* Remove box shadow from images */
   transition: transform 0.3s ease;
 }
 
@@ -61,14 +63,16 @@
   transform: scale(1.1); /* Subtle zoom effect on hover */
 }
 
+/* Service Item Titles */
 .service-item h3 {
-  margin-top: 15px;
   font-family: "Arial", sans-serif;
   color: #000000;
   font-size: 1.2rem;
   font-weight: bold;
+  margin-top: 15px;
 }
 
+/* Service Item Descriptions */
 .service-item p {
   font-family: "Mulish", sans-serif;
   color: #000000;
@@ -78,39 +82,66 @@
 }
 
 /* Responsive Design */
+
+/* Medium Screens */
 @media (max-width: 1024px) {
+  .jewelry-services {
+    padding: 30px 15px; /* Reduce padding */
+  }
+
   .jewelry-services h2 {
     font-size: 2.5rem;
   }
 
   .jewelry-services p {
-    font-size: 1.1rem;
+    font-size: 1.3rem;
   }
 
   .service-item {
-    max-width: 250px; /* Adjust card size for medium screens */
+    max-width: 250px; /* Smaller cards for medium screens */
   }
 
   .service-item img {
-    max-width: 200px; /* Adjust image size for medium screens */
+    max-width: 200px; /* Adjust image size */
   }
 }
 
+/* Small Screens */
 @media (max-width: 768px) {
   .jewelry-services h2 {
     font-size: 2rem;
   }
 
   .jewelry-services p {
-    font-size: 1rem;
-    padding: 0 10px;
+    font-size: 1.1rem;
+    padding: 0 10px; /* Add padding for smaller screens */
   }
 
   .service-item {
-    max-width: 100%; /* Full width for smaller screens */
+    max-width: 100%; /* Full width for small screens */
   }
 
   .service-item img {
-    max-width: 180px; /* Adjust image size for smaller screens */
+    max-width: 180px; /* Smaller images */
+  }
+}
+
+/* Extra Small Screens */
+@media (max-width: 480px) {
+  .jewelry-services h2 {
+    font-size: 1.8rem;
+  }
+
+  .jewelry-services p {
+    font-size: 1rem;
+    line-height: 1.5; /* Adjust readability for smaller text */
+  }
+
+  .service-item img {
+    max-width: 150px; /* Further reduce image size */
+  }
+
+  .service-list {
+    gap: 20px; /* Adjust gap for small screens */
   }
 }

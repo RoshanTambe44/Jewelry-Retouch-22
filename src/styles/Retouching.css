@@ -5,77 +5,126 @@
   text-align: center;
 }
 
-/* Header Section */
+/* Header Styling */
 .header-re h2 {
   font-size: 3rem;
-  font-family: Domine;
+  font-family: 'Domine', serif;
   color: #954000;
+  margin-bottom: 20px;
 }
-.header-re p{
-  font-family: Mulish;
+
+.header-re p {
+  font-family: 'Mulish', sans-serif;
   font-size: 1.5rem;
   color: #DAA520;
   margin-bottom: 50px;
 }
 
-/* Service Section Styling */
+/* Services Section */
 .service-section {
   display: flex;
   flex-wrap: wrap;
-  gap: 40px;
+  gap: 30px; /* Reduced gap for better alignment */
   justify-content: center;
   margin-bottom: 40px;
 }
 
+/* Service Column */
 .service-column {
-  width: calc(28% - 30px);
+  width: calc(28% - 20px); /* Adjusted for cleaner spacing */
   box-sizing: border-box;
 }
 
+/* Service Box Styling */
 .service-box {
-  background-color: white;
-  border: 1px solid #ddd;
+  background-color: #FFFFFF;
+  border: 1px solid #DDD;
   border-radius: 8px;
   padding: 20px;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-align: center; /* Centers content inside the box */
 }
 
 .service-box:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transform: translateY(-10px); /* Subtle hover lift */
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.15); /* Enhanced shadow effect */
 }
 
 /* Image Styling */
+/* Image Styling */
 .service-image {
   width: 65%;
+  display: flex;
+  justify-content: center; /* Centers horizontally */
+  align-items: center; /* Centers vertically */
   height: auto;
   border-radius: 8px;
+  margin-bottom: 15px;
+  margin-left: auto; /* Center the image by pushing it left */
+  margin-right: auto; /* Center the image by pushing it right */
 }
 
-/* Title and Description Styling */
+/* Title and Description */
 .service-title {
-  margin-top: 20px;
+  margin-top: 15px;
   font-size: 1.5rem;
-  font-family: Domine;
+  font-family: 'Domine', serif;
   color: #954000;
 }
 
 .service-description {
   margin-top: 10px;
   font-size: 1rem;
-  font-family: 'Arial';
+  font-family: 'Arial', sans-serif;
   color: #000000;
+  line-height: 1.5; /* Better readability */
 }
 
 /* Mobile Responsiveness */
+
+/* For Tablets and Medium Screens */
 @media (max-width: 768px) {
   .service-column {
-    width: calc(50% - 20px);
+    width: calc(50% - 20px); /* Two columns on medium screens */
+  }
+
+  .header-re h2 {
+    font-size: 2.5rem;
+  }
+
+  .header-re p {
+    font-size: 1.3rem;
   }
 }
 
+/* For Small Screens and Mobile Devices */
 @media (max-width: 480px) {
   .service-column {
-    width: 100%;
+    width: 100%; /* Single column on small screens */
+  }
+
+  .service-box {
+    padding: 15px; /* Adjust padding for smaller screens */
+  }
+
+  .header-re h2 {
+    font-size: 2rem; /* Smaller font for headings */
+  }
+
+  .header-re p {
+    font-size: 1.2rem; /* Adjust text size for better fit */
+  }
+
+  .service-title {
+    font-size: 1.3rem; /* Smaller titles for smaller devices */
+  }
+
+  .service-description {
+    font-size: 0.95rem; /* Readable text on mobile */
+  }
+  .service-image {
+    width: 80%; /* Adjust image size for mobile */
+    margin-left: auto; /* Center the image */
+    margin-right: auto; /* Center the image */
   }
 }

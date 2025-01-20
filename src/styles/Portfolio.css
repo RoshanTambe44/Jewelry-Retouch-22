@@ -1,29 +1,36 @@
+/* Portfolio Section */
 .portfolio {
-  background-color: #FAF8ED;;
+  background-color: #FAF8ED;
   text-align: center;
   padding: 30px 20px;
 }
 
+/* Portfolio Heading */
 .portfolio h2 {
   font-size: 3.5rem;
-  font-family: 'Domine';
+  font-family: 'Domine', serif;
   color: #954000;
   margin-bottom: 10px;
 }
 
+/* Portfolio Description */
 .portfolio p {
   font-size: 1.5rem;
+  font-family: 'Arial', sans-serif;
   color: #DAA520;
   margin-bottom: 30px;
 }
 
+/* Portfolio Tabs */
 .portfolio-tabs {
   display: flex;
   justify-content: center;
   gap: 20px;
   margin-bottom: 40px;
+  flex-wrap: wrap; /* Allow tabs to wrap onto the next line if necessary */
 }
 
+/* Individual Tab */
 .portfolio-tab {
   padding: 10px 20px;
   border: 1px solid #845616;
@@ -31,37 +38,119 @@
   background-color: #FAF8ED;
   font-size: 1rem;
   color: #845616;
+  font-family: 'Arial', sans-serif;
   cursor: pointer;
-  transition: all 0.3s;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  white-space: nowrap; /* Prevents text from wrapping */
 }
 
-.portfolio-tab.active {
-  background-color: #845616;
-  color: #ffffff;
-
-}
-
+/* Active or Hovered Tab */
+.portfolio-tab.active,
 .portfolio-tab:hover {
   background-color: #845616;
   color: #ffffff;
 }
 
-.portfolio-gallery {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
-  margin-top: 20px;
-  margin-left: 50px;
-  margin-right: 50px;
-  gap: 40px;
+/* Responsive Design for Tabs */
+
+/* For tablets and medium screens */
+@media (max-width: 768px) {
+  .portfolio-tabs {
+    gap: 15px; /* Smaller gap between tabs */
+  }
+
+  .portfolio-tab {
+    font-size: 0.95rem;
+    padding: 8px 16px;
+  }
 }
 
+/* For small screens and mobile devices */
+@media (max-width: 480px) {
+  .portfolio-tabs {
+    flex-direction: column; /* Stack tabs vertically on mobile */
+    gap: 10px; /* Reduce space between stacked tabs */
+    align-items: center; /* Center the tabs horizontally */
+  }
+
+  .portfolio-tab {
+    font-size: 0.9rem;
+    padding: 6px 14px;
+    width: 100%; /* Make tabs full-width for better mobile interaction */
+    text-align: center; /* Center text inside the tab */
+    border-radius: 10px; /* Slightly smaller radius for a compact look */
+  }
+}
+
+
+/* Portfolio Gallery Grid */
+.portfolio-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(290px, 1fr)); /* Responsive grid */
+  gap: 30px; /* Reduced gap for better layout density */
+  margin: 0 5%; /* Unified left and right margins */
+  padding: 0; /* Prevent overflow on smaller screens */
+}
+
+/* Portfolio Items */
 .portfolio-item img {
-  width: 80%;
+  width: 100%; /* Full width of the grid column */
   border-radius: 10px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .portfolio-item img:hover {
-  transform: scale(1.05);
+  transform: scale(1.05); /* Smooth hover zoom effect */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15); /* Enhanced shadow on hover */
+}
+
+/* Responsive Design */
+
+/* For tablets and medium screens */
+@media (max-width: 768px) {
+  .portfolio h2 {
+    font-size: 3rem;
+  }
+
+  .portfolio p {
+    font-size: 1.3rem;
+  }
+
+  .portfolio-gallery {
+    gap: 20px;
+  }
+
+  .portfolio-tab {
+    font-size: 0.95rem;
+    padding: 8px 16px;
+  }
+}
+
+/* For small screens and mobile devices */
+@media (max-width: 480px) {
+  .portfolio h2 {
+    font-size: 2.5rem;
+  }
+
+  .portfolio p {
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+  }
+
+  .portfolio-gallery {
+    grid-template-columns: 1fr; /* Single column layout */
+    gap: 15px; /* Reduced gap for smaller screens */
+    margin: 0 10px; /* Adjusted margin to prevent overflow */
+  }
+
+  .portfolio-tab {
+    font-size: 0.9rem;
+    padding: 6px 14px;
+  }
+
+  .portfolio-item img {
+    width: 100%; /* Full width for mobile */
+    margin: 0 auto; /* Center images on smaller screens */
+  }
 }
