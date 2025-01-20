@@ -6,7 +6,7 @@
   align-items: center;
   padding: 50px 20px;
   background-color: #FEF5E1;
-  min-height: 100vh;
+  max-height: 100vh;
   overflow: hidden; /* Prevents any content overflow */
 }
 

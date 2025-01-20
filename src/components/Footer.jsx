@@ -31,8 +31,8 @@ const Footer = () => {
           <h3>Contact Info</h3>
           <p>D 247/1, Sector 63</p>
           <p>Noida, India 201301</p>
-          <p>Contact: 0120-4330800</p>
-          <p>Email: info@shotwebservices.com</p>
+          <p>Contact: 0120-4558100</p>
+          <p>Email: info@snbwebservices.com</p>
         </div>
 
         {/* Newsletter */}
@@ -65,7 +65,7 @@ const Footer = () => {
             <a href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer">
               <FaLinkedin className="social-icon" />
             </a>
-            <a href="https://www.google.com" target="_blank" rel="noopener noreferrer">
+            <a href="https://snbwebservices.com/photo-editing/" target="_blank" rel="noopener noreferrer">
               <FaGoogle className="social-icon" />
             </a>
             <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer">
