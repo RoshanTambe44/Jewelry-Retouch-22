@@ -14,6 +14,8 @@ const Navbar = () => {
     const targetId = e.target.getAttribute("href").slice(1);
     const targetElement = document.getElementById(targetId);
     if (targetElement) {
+      // Update the URL without reloading the page
+      window.history.pushState(null, "", `#${targetId}`);
       targetElement.scrollIntoView({
         behavior: "smooth",
         block: "start",
@@ -72,7 +74,7 @@ const Navbar = () => {
 
       {/* Free Trial Section */}
       <div className="navbar-right">
-        <a href="#trial" className="cta-button">
+        <a href="#trial" className="cta-button" onClick={handleLinkClick}>
           Get a Free Trial →
         </a>
         <div className="hamburger" onClick={toggleMenu}>
