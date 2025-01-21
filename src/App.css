@@ -1,8 +1,23 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+/* Global styles */
+.container {
+  font-family: Arial, sans-serif;
+  background-color: #282c34;
+  color: #fff;
+
 }
+
+h2 {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+  color: #f5c518;
+}
+
+p {
+  text-align: center;
+  margin: 5px 0 20px 0;
+  color: rgba(255, 255, 255, 0.8);
+}
+
 
 

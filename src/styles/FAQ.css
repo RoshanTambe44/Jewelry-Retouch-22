@@ -1,7 +1,10 @@
 /* FAQ Section */
 .faq {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   background-color: #fce5d7;
-  padding: 40px 20px; /* Adjusted padding for smaller screens */
+  padding: 40px 20px;
   border-radius: 12px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   font-family: 'Domine', serif;
@@ -9,7 +12,7 @@
 
 .faq h2 {
   text-align: center;
-  font-size: clamp(2rem, 4vw, 3rem); /* Scales for all screen sizes */
+  font-size: clamp(2rem, 4vw, 3rem);
   margin-bottom: 25px;
   color: #954000;
   font-weight: bold;
@@ -21,7 +24,7 @@
 .faq-container {
   display: flex;
   flex-direction: column;
-  gap: 20px; /* Increased gap for better spacing */
+  gap: 20px;
 }
 
 /* FAQ Item */
@@ -34,9 +37,11 @@
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.faq-item:hover {
+.faq-item:hover,
+.faq-item:focus-within {
   transform: translateY(-3px);
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+  outline: none;
 }
 
 /* FAQ Question */
@@ -46,12 +51,18 @@
   align-items: center;
   padding: 15px 20px;
   cursor: pointer;
-  font-size: clamp(1rem, 2vw, 1.2rem); /* Scales for readability */
+  font-size: clamp(1rem, 2vw, 1.2rem);
   font-family: 'Arial', sans-serif;
   color: #000000;
   background: linear-gradient(to right, #faf8ed, #fadbd8);
   border-bottom: 1px solid #ddd;
   transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.faq-question:hover,
+.faq-question:focus {
+  background-color: #f8c5b6;
+  color: #d35400;
 }
 
 .faq-question.active {
@@ -74,26 +85,26 @@
 /* FAQ Answer */
 .faq-answer {
   padding: 15px 20px;
-  font-size: clamp(0.9rem, 1.8vw, 1.1rem); /* Adjust font for smaller screens */
+  font-size: clamp(0.9rem, 1.8vw, 1.1rem);
   font-family: 'Mulish', sans-serif;
   background-color: #fffaf7;
   color: #000000;
   line-height: 1.6;
   display: none; /* Hidden by default */
-  animation: fadeIn 0.3s ease-in-out;
 }
 
 .faq-answer.active {
   display: block; /* Display when active */
+  animation: fadeIn 0.3s ease-in-out;
 }
 
 /* Fade-in Animation */
 @keyframes fadeIn {
-  from {
+  0% {
     opacity: 0;
     transform: translateY(-10px);
   }
-  to {
+  100% {
     opacity: 1;
     transform: translateY(0);
   }
@@ -106,7 +117,6 @@
   }
 
   .faq h2 {
-    text-align: center;
     font-size: clamp(1.8rem, 4vw, 2.5rem);
   }
 

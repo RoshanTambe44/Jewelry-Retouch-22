@@ -40,7 +40,7 @@ const JewelryRetouchingSection = () => {
       altText: "Earring",
       title: "Earring Editing Services",
       description:
-        "Our Services focus on refining the details of your earring images to showcase their beauty and craftsmanship. We enhance clarity, adjust lighting, and perfect the shine, ensuring each earring is presented in its best light.",
+        "Our Services focus on refining the details of your earring images to showcase their beauty and craftsmanship. We enhance clarity, adjust lighting ,ensuring each earring is presented in its best light.",
     },
     {
       imgSrc:
@@ -64,7 +64,7 @@ const JewelryRetouchingSection = () => {
       altText: "Bracelet",
       title: "Bracelet Editing Services",
       description:
-        "Whether it's highlighting gemstones, metal finishes, or unique designs, we refine every element for a flawless appearance by adjusting lighting, removing imperfections, and emphasizing the bracelet's texture and sparkle. ",
+        "Whether it's highlighting gemstones, metal finishes, or unique designs, refine element for a flawless appearance by adjusting lighting, removing imperfections, and emphasizing the bracelet's texture and sparkle , Through careful lighting adjustments showcasing the unique design ",
     },
     {
       imgSrc:
@@ -72,7 +72,7 @@ const JewelryRetouchingSection = () => {
       altText: "Necklace",
       title: "Necklace Editing Services",
       description:
-        "Necklace Editing Services are crafted to bring out the true elegance and beauty of your necklaces, ensuring they captivate in every image. We focus on enhancing clarity, adjusting lighting, and perfecting the shine to showcase every detail of the design.",
+        "Necklace Editing Services are crafted to bring out the true elegance and beauty of your necklaces, ensuring they captivate in every image. We focus on enhancing clarity, adjusting lighting, and perfecting the shine to showcase every detail of the design and emphasizing.",
     },
     {
       imgSrc:

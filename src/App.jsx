@@ -1,4 +1,3 @@
-
 import React from 'react';
 import Navbar from './components/Hero';
 import Header from './components/Navbar';
@@ -13,7 +12,7 @@ import TestimonialSlider from './components/Testimonial';
 import FreeTrialForm from './components/FreeTrial';
 import Footer from './components/Footer';
 import Last from './components/Last';
-
+import './App.css'
 
 const App = () => {
   return (

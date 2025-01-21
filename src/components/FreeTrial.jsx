@@ -87,7 +87,9 @@ const FreeTrialForm = () => {
   return (
     <section className="free-trial-form" id="trial">
       <h2>— FREE TRIAL —</h2>
-      <p>Try us before you decide to use our service. Get up to 5 images free of cost.</p>
+      <p>Get up to 5 Photos free of cost</p>
+      <h3>Try us before you decide to use our service</h3>
+      <p>We offer up to 10 images for a free trial. there is an opportunity to justify our quality before submitting your final order. </p>
       <div className="form-layout">
         {/* Left Section: Contact Info */}
         <div className="contact-info">

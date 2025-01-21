@@ -7,7 +7,7 @@
   text-align: center;
   padding: 40px 20px;
   margin: 0 auto; /* Center the section */
-  max-width: 1200px; /* Limit the width for larger screens */
+  width: 100%; /* Limit the width for larger screens */
 }
 
 .jewelry-services h2 {

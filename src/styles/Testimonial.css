@@ -1,11 +1,12 @@
-/* Testimonial Section Styling */
 .testimonial {
   background-color: #FAF8ED;
   padding: 50px 30px;
   text-align: center;
   border-radius: 12px;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  margin-bottom: 0; /* Ensure no margin at the bottom */
 }
+
 
 .testimonial h2 {
   font-size: 3rem;
@@ -25,6 +26,7 @@
   margin: 0 auto;
   max-width: 1200px;
   position: relative;
+  margin-bottom: 0; /* Remove bottom margin */
 }
 
 /* Testimonial Image */
@@ -128,76 +130,4 @@
 .nav-button:disabled {
   color: #ddd;
   cursor: not-allowed;
-}
-
-/* Responsive Design */
-
-/* For Larger Tablets and Medium Screens */
-@media (max-width: 1024px) {
-  .testimonial-container {
-    flex-direction: column; /* Stack vertically */
-    gap: 30px;
-    padding: 0 20px;
-  }
-
-  .testimonial-content {
-    text-align: center; /* Center text */
-    margin-top: 20px;
-  }
-}
-
-/* For Tablets and Small Screens */
-@media (max-width: 768px) {
-  .testimonial h2 {
-    font-size: 2.5rem;
-  }
-
-  .testimonial-quote {
-    font-size: 1.1rem;
-  }
-
-  .testimonial-author {
-    font-size: 1.3rem;
-  }
-
-  .testimonial-pagination {
-    margin-top: 15px;
-  }
-
-  .nav-button {
-    font-size: 35px;
-  }
-}
-
-/* For Small Mobile Screens */
-@media (max-width: 480px) {
-  .testimonial h2 {
-    font-size: 2rem;
-  }
-
-  .testimonial-container {
-    padding: 0 15px;
-  }
-
-  .testimonial-quote {
-    font-size: 1rem;
-    line-height: 1.6;
-  }
-
-  .testimonial-author {
-    font-size: 1.2rem;
-  }
-
-  .testimonial-pagination {
-    gap: 8px;
-  }
-
-  .pagination-dot {
-    width: 12px;
-    height: 12px;
-  }
-
-  .nav-button {
-    font-size: 30px;
-  }
 }

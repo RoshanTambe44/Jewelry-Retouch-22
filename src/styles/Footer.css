@@ -1,6 +1,6 @@
 /* Footer Container */
 .footer {
-  background-color: #FAF8ED;
+  background-color: #faf8ed;
   padding: 40px 20px;
   text-align: center;
   box-sizing: border-box;
@@ -11,7 +11,7 @@
   display: flex;
   justify-content: space-around;
   align-items: flex-start;
-  gap: 40px; /* Increased gap for better spacing */
+  gap: 40px;
   flex-wrap: wrap;
   margin-bottom: 20px;
 }
@@ -19,7 +19,7 @@
 /* Individual Footer Section */
 .footer-section {
   flex: 1;
-  min-width: 200px; /* Ensures proper wrapping on smaller screens */
+  min-width: 220px; /* Adjusted for better wrapping on smaller screens */
   text-align: center;
 }
 
@@ -45,7 +45,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-direction: column; /* Stack form elements on smaller screens */
+  flex-direction: column; /* Stacks elements on smaller screens */
   margin-top: 15px;
 }
 
@@ -53,16 +53,16 @@
   position: relative;
   display: flex;
   width: 100%;
-  max-width: 350px; /* Increased max width for better usability */
+  max-width: 400px;
 }
 
 .newsletter-input {
-  padding: 10px;
+  padding: 12px;
   border: 1px solid #ddd;
   border-radius: 5px;
   font-size: 1rem;
   width: 100%;
-  padding-right: 50px; /* Space for button */
+  padding-right: 60px; /* Space for the button */
 }
 
 .newsletter-button {
@@ -73,15 +73,18 @@
   background-color: #954000;
   color: white;
   border: none;
-  padding: 9px 12px;
+  padding: 10px 14px;
   font-size: 1rem;
   border-radius: 5px;
   cursor: pointer;
-  transition: background-color 0.3s ease;
+  transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
-.newsletter-button:hover {
+.newsletter-button:hover,
+.newsletter-button:focus {
   background-color: #762d00;
+  transform: scale(1.05);
+  outline: none;
 }
 
 /* Error Message */
@@ -108,9 +111,11 @@
   cursor: pointer;
 }
 
-.social-icon:hover {
+.social-icon:hover,
+.social-icon:focus {
   color: #6b4226;
   transform: scale(1.1);
+  outline: none;
 }
 
 /* Responsive Design */
@@ -127,11 +132,11 @@
 
   .newsletter-form {
     flex-direction: column;
-    gap: 10px;
+    gap: 12px;
   }
 
   .input-wrapper {
-    max-width: 100%; /* Full width for smaller screens */
+    max-width: 100%;
   }
 }
 
@@ -146,12 +151,12 @@
 
   .newsletter-input {
     font-size: 0.9rem;
-    padding: 8px 10px;
+    padding: 10px;
   }
 
   .newsletter-button {
     font-size: 0.9rem;
-    padding: 8px 10px;
+    padding: 9px 12px;
   }
 
   .social-icon {
@@ -175,7 +180,7 @@
 
   .newsletter-button {
     font-size: 0.8rem;
-    padding: 7px 10px;
+    padding: 8px 10px;
   }
 
   .social-icon {
