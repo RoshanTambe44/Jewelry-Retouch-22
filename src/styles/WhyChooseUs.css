@@ -73,7 +73,8 @@
   flex-wrap: wrap;
 }
 
-.choose-us-number, .choose-us-title {
+.choose-us-number,
+.choose-us-title {
   font-size: 1.6rem;
   font-family: 'Mulish', sans-serif;
   color: #845616;
@@ -168,7 +169,8 @@
     padding: 0 10px;
   }
 
-  .choose-us-number, .choose-us-title {
+  .choose-us-number,
+  .choose-us-title {
     font-size: 1.3rem;
   }
 

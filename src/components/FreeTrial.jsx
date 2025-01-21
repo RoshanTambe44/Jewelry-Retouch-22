@@ -1,4 +1,7 @@
 import React, { useState } from "react";
+import location from "../assets/C-1.png";
+import contact from "../assets/C-2.png";
+import email from "../assets/C-3.png";
 import "../styles/FreeTrial.css";
 
 const FreeTrialForm = () => {
@@ -94,12 +97,15 @@ const FreeTrialForm = () => {
         {/* Left Section: Contact Info */}
         <div className="contact-info">
           <h3>Contact Info</h3>
-          <p>D 247/1, Sector 63</p>
-          <p>Noida, India 201301</p>
+          <p> 
+              {/* <img src = {location} alt = "location"/>D 247/1, Sector 63<br></br> */}
+          Noida, India 201301</p>
           <p>
+          {/* <img src= {contact} alt = "contact"/> */}
             <strong>Contact:</strong> 0120-4558100
           </p>
           <p>
+            {/* <img src= {email} alt="email"/> */}
             <strong>Email:</strong> info@snwbswebservices.com
           </p>
         </div>
@@ -210,11 +216,27 @@ const FreeTrialForm = () => {
               />
               Shadow Creation
             </label>
+            <label>
+              <input
+                type="checkbox"
+                value="Shadow Creation"
+                onChange={handleCheckboxChange}
+              />
+             Re-color
+            </label>
+            <label>
+              <input
+                type="checkbox"
+                value="Shadow Creation"
+                onChange={handleCheckboxChange}
+              />
+              Gamestone Enhancement
+            </label>
           </div>
 
           <div className="form-row">
-            <label className="file-upload">
-              <strong>Upload Files:</strong> JPG / JPEG / PNG / GIF / RAW (Max 20 files)
+            <label className="file-upload ">
+              <strong>Upload Files:</strong> JPG / JPEG / PNG / GIF / TIF / TIFF / PSD / DNG/RAW/CR2
               <input type="file" multiple onChange={handleFileUpload} />
             </label>
           </div>

@@ -1,6 +1,12 @@
 import React, { useState } from "react";
 import "../styles/Footer.css";
-import { FaLinkedin, FaGoogle, FaFacebook } from "react-icons/fa";
+import {
+  FaLinkedin,
+  FaGoogle,
+  FaFacebook,
+  FaInstagram,
+  FaTwitter,
+} from "react-icons/fa";
 
 const Footer = () => {
   const [email, setEmail] = useState("");
@@ -18,41 +24,34 @@ const Footer = () => {
       setError("Please enter a valid email address.");
     } else {
       setError(""); // Clear error if email is valid
-      // Handle successful form submission logic here (e.g., API call)
       alert("Subscribed successfully!");
+      setEmail(""); // Clear the email input field after success
     }
   };
 
   return (
     <footer className="footer" id="contact">
       <div className="footer-container">
-        {/* Contact Info */}
-        <div className="footer-section">
-          <h3>Contact Info</h3>
-          <p>D 247/1, Sector 63</p>
-          <p>Noida, India 201301</p>
-          <p>Contact: 0120-4558100</p>
-          <p>Email: info@snbwebservices.com</p>
-        </div>
-
         {/* Newsletter */}
         <div className="footer-section">
-          <h3>Newsletter</h3>
+          <h3>Subscribe to Our Newsletter</h3>
           <p>
-            Stay updated! Subscribe to our newsletter to get the latest news
-            about our products and services delivered right to your inbox!
+            Stay updated with our latest offers, news, and product releases.
+            Subscribe now and never miss out!
           </p>
           <form className="newsletter-form" onSubmit={handleSubmit}>
             <div className="input-wrapper">
               <input
                 type="email"
-                placeholder="Email Address"
+                placeholder="Enter your email"
                 className="newsletter-input"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
                 required
               />
-              <button type="submit" className="newsletter-button">➤</button>
+              <button type="submit" className="newsletter-button">
+                Subscribe
+              </button>
             </div>
           </form>
           {error && <p className="error-message">{error}</p>}
@@ -60,16 +59,43 @@ const Footer = () => {
 
         {/* Social Links */}
         <div className="footer-section">
-          <h3>Social</h3>
+          <h3>Follow Us</h3>
+          <p>Connect with us on our social media platforms.</p>
           <div className="social-icons">
-            <a href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer">
-              <FaLinkedin className="social-icon" />
+            <a
+              href="https://www.linkedin.com"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <FaLinkedin className="social-icon" title="LinkedIn" />
             </a>
-            <a href="https://snbwebservices.com/photo-editing/" target="_blank" rel="noopener noreferrer">
-              <FaGoogle className="social-icon" />
+            <a
+              href="https://www.google.com"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <FaGoogle className="social-icon" title="Google" />
             </a>
-            <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer">
-              <FaFacebook className="social-icon" />
+            <a
+              href="https://www.facebook.com"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <FaFacebook className="social-icon" title="Facebook" />
+            </a>
+            <a
+              href="https://www.instagram.com"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <FaInstagram className="social-icon" title="Instagram" />
+            </a>
+            <a
+              href="https://www.twitter.com"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <FaTwitter className="social-icon" title="Twitter" />
             </a>
           </div>
         </div>

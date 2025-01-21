@@ -28,7 +28,7 @@ const WhyChooseUs = () => {
       number: "04.",
       title: "Customized Solutions",
       description:
-        " We offer tailored services to meet your specific needs and preferences, ensuring that your images are   exactly as you envision",
+        "We offer tailored services to meet your specific needs and preferences, ensuring that your images are exactly as you envision.",
     },
   ];
 
@@ -45,14 +45,14 @@ const WhyChooseUs = () => {
           animate={{ opacity: inView ? 1 : 0 }}
           transition={{ duration: 1 }}
         >
-         — Why Choose Us? —
+          — Why Choose Us? —
         </motion.h2>
         <motion.p
           initial={{ opacity: 0 }}
           animate={{ opacity: inView ? 1 : 0 }}
           transition={{ duration: 1 }}
         >
-        Our expert team ensures exceptional craftsmanship, helping your business deliver stunning results that captivate customers. With attention to detail, fast turnaround, and tailored solutions, we prioritize client satisfaction and excellence in every project.
+          Our expert team ensures exceptional craftsmanship, helping your business deliver stunning results that captivate customers. With attention to detail, fast turnaround, and tailored solutions, we prioritize client satisfaction and excellence in every project.
         </motion.p>
       </div>
       <div className="image-content">
