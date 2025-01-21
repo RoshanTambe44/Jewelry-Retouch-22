@@ -11,6 +11,7 @@ const FreeTrialForm = () => {
     country: "",
     services: [],
     instruction: "",
+    files: null,
   });
 
   const [errors, setErrors] = useState({});
@@ -30,31 +31,32 @@ const FreeTrialForm = () => {
     });
   };
 
+  const handleFileUpload = (e) => {
+    setFormData({ ...formData, files: e.target.files });
+  };
+
   const validate = () => {
     const newErrors = {};
 
-    // Name validation (alphabets only)
+    // Validation logic
     if (!formData.name.trim()) {
       newErrors.name = "Name is required";
     } else if (!/^[A-Za-z\s]+$/.test(formData.name)) {
       newErrors.name = "Name must contain only alphabets";
     }
 
-    // Email validation
     if (!formData.email.trim()) {
       newErrors.email = "Email is required";
     } else if (!/^\S+@\S+\.\S+$/.test(formData.email)) {
       newErrors.email = "Enter a valid email address";
     }
 
-    // Phone number validation (10 digits only)
     if (!formData.phone.trim()) {
       newErrors.phone = "Phone number is required";
     } else if (!/^\d{10}$/.test(formData.phone)) {
       newErrors.phone = "Phone number must be exactly 10 digits";
     }
 
-    // State validation (must be selected)
     if (!formData.state) {
       newErrors.state = "Please select your state";
     }
@@ -67,8 +69,7 @@ const FreeTrialForm = () => {
     e.preventDefault();
     if (validate()) {
       console.log(formData);
-      alert("Form submitted successfully, w'll get touch soon!");
-      // Reset form after submission
+      alert("Form submitted successfully, we'll get in touch soon!");
       setFormData({
         name: "",
         email: "",
@@ -78,6 +79,7 @@ const FreeTrialForm = () => {
         country: "",
         services: [],
         instruction: "",
+        files: null,
       });
     }
   };
@@ -85,55 +87,65 @@ const FreeTrialForm = () => {
   return (
     <section className="free-trial-form" id="trial">
       <h2>— FREE TRIAL —</h2>
-      <p>Get up to 5 Photos free of cost.</p>
-      <div className="form-container">
+      <p>Try us before you decide to use our service. Get up to 5 images free of cost.</p>
+      <div className="form-layout">
+        {/* Left Section: Contact Info */}
+        <div className="contact-info">
+          <h3>Contact Info</h3>
+          <p>D 247/1, Sector 63</p>
+          <p>Noida, India 201301</p>
+          <p>
+            <strong>Contact:</strong> 0120-4558100
+          </p>
+          <p>
+            <strong>Email:</strong> info@snwbswebservices.com
+          </p>
+        </div>
+
+        {/* Right Section: Form */}
         <form onSubmit={handleSubmit}>
-          <div className="form-row side">
-            <div>
-              <input 
-                type="text"
-                name="name"
-                placeholder="Enter Your Full Name"
-                value={formData.name}
-                onChange={handleInputChange}
-                required
-              />
-              {errors.name && <p className="error">{errors.name}</p>}
-            </div>
-            <div>
-              <input
-                type="email"
-                name="email"
-                placeholder="Email Id"
-                value={formData.email}
-                onChange={handleInputChange}
-                required
-              />
-              {errors.email && <p className="error">{errors.email}</p>}
-            </div>
-            <div>
-            <input
-                type="text"
-                name="phone"
-                placeholder="Phone Number"
-                value={formData.phone}
-                onChange={handleInputChange}
-                required
-              />
-              {errors.phone && <p className="error">{errors.phone}</p>}
-            </div>
-          </div>
           <div className="form-row">
             <input
-              className="address"
+              type="text"
+              name="name"
+              placeholder="Enter Your Full Name"
+              value={formData.name}
+              onChange={handleInputChange}
+              required
+            />
+            {errors.name && <p className="error">{errors.name}</p>}
+
+            <input
+              type="email"
+              name="email"
+              placeholder="Email Id"
+              value={formData.email}
+              onChange={handleInputChange}
+              required
+            />
+            {errors.email && <p className="error">{errors.email}</p>}
+          </div>
+
+          <div className="form-row">
+            <input
               type="text"
               name="address"
-              placeholder="Address"
+              placeholder="Enter Full Address"
               value={formData.address}
               onChange={handleInputChange}
               required
-            /> 
+            />
+            <input
+              type="text"
+              name="phone"
+              placeholder="Enter Phone Number"
+              value={formData.phone}
+              onChange={handleInputChange}
+              required
+            />
+            {errors.phone && <p className="error">{errors.phone}</p>}
           </div>
+
           <div className="form-row">
             <select
               name="state"
@@ -144,13 +156,10 @@ const FreeTrialForm = () => {
               <option value="" disabled>
                 Select Your State
               </option>
-              <option value="California">Uttar Pradesh</option>
+              <option value="Uttar Pradesh">Uttar Pradesh</option>
               <option value="New York">New York</option>
               <option value="Texas">Texas</option>
-              <option value="Florida">Florida</option>
-              <option value="Illinois">Illinois</option>
             </select>
-            {errors.state && <p className="error">{errors.state}</p>}
             <select
               name="country"
               value={formData.country}
@@ -160,12 +169,12 @@ const FreeTrialForm = () => {
               <option value="" disabled>
                 Select Your Country
               </option>
-              <option value="USA">USA</option>
               <option value="India">India</option>
+              <option value="USA">USA</option>
               <option value="UK">UK</option>
-              <option value="Australia">Australia</option>
             </select>
           </div>
+
           <div className="form-row service-types">
             <label>
               <input
@@ -178,34 +187,10 @@ const FreeTrialForm = () => {
             <label>
               <input
                 type="checkbox"
-                value="Shadow Creation"
+                value="Metal Retouching"
                 onChange={handleCheckboxChange}
               />
-              Shadow Creation
-            </label>
-            <label>
-              <input
-                type="checkbox"
-                value="Reflections removal"
-                onChange={handleCheckboxChange}
-              />
-              Reflections removal
-            </label>
-            <label>
-              <input
-                type="checkbox"
-                value="Color Change"
-                onChange={handleCheckboxChange}
-              />
-              Color Change
-            </label>
-            <label>
-              <input
-                type="checkbox"
-                value="Scratch removal"
-                onChange={handleCheckboxChange}
-              />
-              Scratch removal
+              Metal Retouching
             </label>
             <label>
               <input
@@ -215,7 +200,23 @@ const FreeTrialForm = () => {
               />
               Color Correction
             </label>
+            <label>
+              <input
+                type="checkbox"
+                value="Shadow Creation"
+                onChange={handleCheckboxChange}
+              />
+              Shadow Creation
+            </label>
           </div>
+
+          <div className="form-row">
+            <label className="file-upload">
+              <strong>Upload Files:</strong> JPG / JPEG / PNG / GIF / RAW (Max 20 files)
+              <input type="file" multiple onChange={handleFileUpload} />
+            </label>
+          </div>
+
           <div className="form-row">
             <textarea
               name="instruction"
@@ -225,6 +226,7 @@ const FreeTrialForm = () => {
               required
             ></textarea>
           </div>
+
           <button type="submit" className="submit-button">
             Submit Form
           </button>
