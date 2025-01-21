@@ -9,21 +9,33 @@ const testimonials = [
   {
     id: 1,
     image: clientImage1,
-    text: "Absolutely fantastic service! The retouching brought out the perfect sparkle and elegance in my product photos. The images look so polished and professional now. This has made a big difference in how my products are showcased, and I’ve already noticed an increase in customer engagement. The attention to detail, from color correction to background enhancement, was impeccable. I’m confident that these enhanced visuals will help my brand stand out even more in a competitive market. I highly recommend this service to anyone looking to elevate their product presentation and drive sales!",
+    text: "I’ve been using this jewelry retouching service for a few months, and the results are consistently stunning. Every image looks polished and vibrant, with attention to the finest details. I highly recommend their services to any jewelry business!",
     author: "Tani Shah",
   },
   {
     id: 2,
     image: clientImage2,
-    text: "The team's exceptional attention to detail and creative expertise have transformed my products into stunning works of art. Every image reflects their remarkable ability to enhance even the smallest elements, bringing out the true essence of my designs. Their dedication to perfection has elevated my brand and exceeded all expectations. My products have never looked better, and the results have left me thrilled and inspired. I’m excited to see how these enhancements continue to captivate and resonate with my customers!",
+    text:"The team truly knows how to enhance jewelry photos. They manage to capture the shine and texture of each piece so beautifully. Thanks to their expert retouching, my images now look more professional and appealing!",
     author: "Arjun Patel",
   },
   {
     id: 3,
     image: clientImage3,
-    text: "I’m absolutely thrilled with the results! The editing has given my photos a polished, professional edge that makes them truly stand out. Every detail was carefully enhanced, highlighting the quality and uniqueness of my products. Their dedication to excellence exceeded my expectations, and the transformation is remarkable. The final images perfectly capture the essence of my designs, making them more appealing than ever. I highly recommend their services to anyone looking to elevate their visuals to the next level!",
+    text: "This jewelry retouching service has taken my product photos to the next level. They pay such close attention to detail, making sure each piece shines with precision. The final images look flawless, and the turnaround time is impressive. I’ll definitely continue using their services!",
     author: "Riya Kapoor",
   },
+  {
+  id: 4,
+  image: clientImage1,
+  text: "Amazing work on my watch images! The retouching highlighted every intricate detail, giving a professional, polished look.",
+  author: "Vedika Rana",
+},
+{
+  id: 5,
+  image: clientImage2,
+  text: "I’m beyond impressed with the quality of the jewelry retouching! Every image now looks crisp, with the right amount of brightness and clarity. They’ve made my jewelry pieces pop in a way that’s captured my audience’s attention. I’ll be returning for all my future retouching needs!",
+  author: "Sumit Patel",
+}
 ];
 
 const TestimonialSlider = () => {
@@ -39,7 +51,7 @@ const TestimonialSlider = () => {
 
   return (
     <section className="testimonial">
-      <h2>Some Best Words From Our Clients</h2>
+      <h2>— What our customers say —</h2>
       <div className="testimonial-container">
         <div className="testimonial-image">
           <img src={testimonials[currentIndex].image} alt={testimonials[currentIndex].author} />

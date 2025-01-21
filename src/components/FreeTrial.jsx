@@ -84,7 +84,8 @@ const FreeTrialForm = () => {
 
   return (
     <section className="free-trial-form" id="trial">
-      <h2>Get a Free Trial</h2>
+      <h2>— FREE TRIAL —</h2>
+      <p>Get up to 5 Photos free of cost.</p>
       <div className="form-container">
         <form onSubmit={handleSubmit}>
           <div className="form-row side">
@@ -122,9 +123,6 @@ const FreeTrialForm = () => {
               {errors.phone && <p className="error">{errors.phone}</p>}
             </div>
           </div>
-         
-            
-    
           <div className="form-row">
             <input
               className="address"

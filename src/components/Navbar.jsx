@@ -64,18 +64,13 @@ const Navbar = () => {
               Portfolio
             </a>
           </li>
-          <li>
-            <a href="#contact" onClick={handleLinkClick}>
-              Contact Us
-            </a>
-          </li>
         </ul>
       </div>
 
       {/* Free Trial Section */}
       <div className="navbar-right">
         <a href="#trial" className="cta-button" onClick={handleLinkClick}>
-          Get a Free Trial →
+          Free Trial →
         </a>
         <div className="hamburger" onClick={toggleMenu}>
           <div className={isOpen ? "line line1 open" : "line line1"}></div>

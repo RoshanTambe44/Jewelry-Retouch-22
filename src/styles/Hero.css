@@ -9,26 +9,30 @@
   min-height: 65vh;
   box-sizing: border-box;
   gap: 20px;
+  transition: padding 0.3s ease-in-out;
 }
 
 .header-content {
   max-width: 50%;
+  transition: max-width 0.3s ease-in-out;
 }
 
 .header-content h1 {
-  font-size: clamp(2.5rem, 5vw, 4rem); /* Scales based on screen width */
+  font-size: clamp(2.5rem, 5vw, 4rem);
   font-family: "Domine", serif;
   margin-bottom: 20px;
   color: #231701;
   line-height: 1.2;
+  transition: font-size 0.3s ease-in-out, color 0.3s ease-in-out;
 }
 
 .header-content p {
-  font-size: clamp(1rem, 1.5vw, 1.2rem); /* Scales for readability */
+  font-size: clamp(1rem, 1.5vw, 1.2rem);
   font-family: "Mulish", sans-serif;
   color: #231701;
   margin-bottom: 20px;
   line-height: 1.6;
+  transition: font-size 0.3s ease-in-out, color 0.3s ease-in-out;
 }
 
 .third-para p {
@@ -36,6 +40,7 @@
   font-size: clamp(1.1rem, 1.8vw, 1.35rem);
   color: #954000;
   margin-top: 15px;
+  transition: color 0.3s ease-in-out, font-size 0.3s ease-in-out;
 }
 
 /* Header Slider */
@@ -44,14 +49,21 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  transition: max-width 0.3s ease-in-out;
 }
 
 .slider-image {
-  width: 100%; /* Ensures it adapts to parent container */
+  width: 100%;
   max-width: 400px;
   height: auto;
   border-radius: 10px;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.slider-image:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 25px rgba(0, 0, 0, 0.3);
 }
 
 /* Responsive Design */

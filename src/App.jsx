@@ -1,6 +1,6 @@
 
 import React from 'react';
-import Navbar from './components/Header';
+import Navbar from './components/Hero';
 import Header from './components/Navbar';
 import JewelryServices from "./components/JewelryServices";
 import PhotoSolutions from "./components/PhotoSolutions";
@@ -23,7 +23,7 @@ const App = () => {
       <JewelryServices />
       <PhotoSolutions />
       <Retouching />
-      <JewelryService />
+      {/* <JewelryService /> */}
       <WhyChooseUs />
       <Portfolio/>
       <FAQ />

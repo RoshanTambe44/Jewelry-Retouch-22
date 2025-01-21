@@ -29,8 +29,8 @@
 
 /* Testimonial Image */
 .testimonial-image img {
-  width: 240px;
-  height: 290px;
+  width: 180px;
+  height: 200px;
   border-radius: 50%;
   object-fit: cover;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);

@@ -4,25 +4,27 @@ import "../styles/JewelryServices.css";
 import { motion } from "framer-motion"; // Import Framer Motion
 import earrings from "../assets/S-1.png";
 import pendant from "../assets/S-2.png";
-import weddingRing from "../assets/S-3.png";
 import rings from "../assets/S-4.png";
 import bracelets from "../assets/S-5.png";
 import necklaces from "../assets/S-6.png";
+import watches from "../assets/S-7.png";
 
 const JewelryServices = () => {
   const services = [
     { name: "Earrings", image: earrings },
     { name: "Pendant", image: pendant },
-    { name: "Wedding & Bridal", image: weddingRing },
     { name: "Rings", image: rings },
     { name: "Bracelets", image: bracelets },
     { name: "Necklaces", image: necklaces },
+    { name: "Watches" , image: watches},
   ];
 
   return (
     <section className="jewelry-services" id="services">
-      <h2>Jewelry Editing Services</h2>
-      <p>We specialize in high-end jewelry retouching that enhances the beauty and detail enhances of your jewelry pieces.</p>
+       <h2 className="heading-line">
+       — Jewelry Retouching Services —
+      </h2>
+      <p>Making Your Jewelry Photos Look Amazing and Detailed</p>
       <div className="service-list">
         {services.map((service, index) => (
           <motion.div

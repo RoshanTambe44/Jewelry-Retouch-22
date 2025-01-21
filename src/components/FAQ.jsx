@@ -41,31 +41,28 @@ const FAQ = () => {
 
   const faqs = [
     {
-      question: "What is the need of Jewelry editing services?",
+      question: "What is turnaround time for photos?",
       answer:
-        "Jewelry editing services are essential for enhancing the beauty and professionalism of jewelry images. They involve techniques like color correction, retouching, and background removal to create flawless visuals that attract customers, increase online sales, and make products stand out in a competitive market.",
+        "The turnaround time depends on the complexity of the project. Generally, we aim to complete most projects within 12-24 hours.",
     },
     {
       question: "How do I submit my photos for editing?",
-      answer: "You can submit your photos for editing by uploading them through our secure online portal, ensuring quick and easy access. Alternatively, you can email your images directly to us. We accept various file formats and provide clear instructions for seamless submission, guaranteeing efficient service for your needs.",
+      answer: "Request us to share a folder for easily submitting your photos. Alternatively, you can email your images directly to us. We accept various file formats and provide clear instructions for seamless submission, guaranteeing efficient service for your needs.",
     },
     {
-      question: "We help your online store to look fashionable!",
-      answer: "We help your online store look fashionable by enhancing product images through expert editing techniques. Our services include retouching, color correction, and background optimization, ensuring your jewelry stands out with elegance and professionalism. High-quality visuals attract customers, boost credibility, and create a compelling, stylish brand presence online.",
+      question: "What file formats do you accept?",
+      answer: "We accept all major image file formats including JPEG, TIFF, and PNG. For special requests, please contact us",
     },
     {
-      question: "How we enhance the visuals of Jewelry images?",
+      question: "Can you handle large volumes of images?",
       answer:
-        "We enhance the visuals of jewelry images by using advanced editing techniques such as retouching to remove imperfections, color correction to highlight brilliance, and background removal for a clean, professional look. These methods ensure your jewelry appears flawless, captivating, and ready to attract more customers..",
+        "Yes, we can handle both small and large volumes of images with equal attention to detail..",
     },
     {
-      question: "Do you offer bulk discounts for photo editing services?",
-      answer: "Yes, we offer bulk discounts for photo editing services. If you have a large number of images, contact us for a customized quote tailored to your specific requirements and budget.",
+      question: "Do you offer revisions?",
+      answer: "Yes, we offer revisions to ensure the final images meet your expectations. Please review our revision policy for more details.",
     },
-    {
-      question: "Are there any hidden fees in your pricing?",
-      answer: "Yes, we offer bulk discounts for photo editing services. If you have a large number of images, contact us for a customized quote tailored to your specific requirements and budget.",
-    },
+    
   ];
 
   const toggleFAQ = (index) => {
@@ -74,7 +71,7 @@ const FAQ = () => {
 
   return (
     <section className="faq">
-      <h2>FAQs</h2>
+      <h2>— Frequently Asked Questions (FAQ’s) —</h2>
       <div className="faq-container">
         {faqs.map((faq, index) => (
           <FAQItem

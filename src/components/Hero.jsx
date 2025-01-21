@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion"; // Import Framer Motion
-import "../styles/Header.css";
+import "../styles/Hero.css";
 
+// Import slider images
 import Header1 from "../assets/Header-1.png";
 import Header2 from "../assets/Header-2.png";
 import Header3 from "../assets/Header-1.png";
@@ -29,26 +30,14 @@ const Header = () => {
         transition={{ duration: 1 }}
       >
         <div className="heading">
-          <h1>Professional Jewelry Image Retouching</h1>
+          <h1>Jewelry Photo Retouching Services</h1>
         </div>
         <motion.p
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 1, delay: 0.3 }}
         >
-          Are you looking to enhance your jewelry photos to their full allure?
-          We offer top-notch retouching services with meticulous attention to
-          detail, giving your jewelry photos exceptional shine.
-        </motion.p>
-        <motion.p
-          className="third-para"
-          initial={{ opacity: 0, scale: 0.9 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.5, delay: 0.6 }}
-          whileHover={{ scale: 1.1 }}
-          whileTap={{ scale: 0.95 }}
-        >
-          <p>Making your Jewelry Photos Look Amazing and Detailed.</p>
+        Are you looking to elevate your jewelry photography to its fullest potential, our expert retouching services are the perfect solution. We specialize in enhancing the details of your jewelry photos.
         </motion.p>
       </motion.div>
 

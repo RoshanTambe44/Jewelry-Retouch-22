@@ -8,7 +8,7 @@
 }
 
 .faq h2 {
-  text-align: left;
+  text-align: center;
   font-size: clamp(2rem, 4vw, 3rem); /* Scales for all screen sizes */
   margin-bottom: 25px;
   color: #954000;

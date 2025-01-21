@@ -7,7 +7,7 @@
 
 /* Title Styling */
 .photo-solutions h2 {
-  font-size: 3.5rem;
+  font-size: 3rem;
   font-family: "Domine", serif;
   color: #954000;
   margin: 0 5%;
@@ -15,6 +15,29 @@
   font-weight: bold;
   margin-bottom: 30px; /* Space below the title */
   text-align: center;
+}
+
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .heading-line {
+    font-size: 1.8rem;
+  }
+
+  .heading-line span {
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .heading-line {
+    font-size: 1.5rem;
+  }
+
+  .heading-line span {
+    font-size: 1rem;
+  }
 }
 
 /* Grid Layout */

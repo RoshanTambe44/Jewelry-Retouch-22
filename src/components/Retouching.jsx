@@ -35,54 +35,66 @@ const ServiceBox = ({ imgSrc, altText, title, description }) => {
 const JewelryRetouchingSection = () => {
   const services = [
     {
-      imgSrc: "https://www.jewelryediting.com/wp-content/uploads/2022/11/Ring.png",
-      altText: "Ring",
-      title: "Ring Editing Services",
-      description:
-        "Jewelry Editing Services as a company works to make this ride hassle-free and remarkable for each of our clients very nicely and smoothly.",
-    },
-    {
-      imgSrc: "https://www.jewelryediting.com/wp-content/uploads/2022/11/earring-1.png",
+      imgSrc:
+        "https://www.jewelryediting.com/wp-content/uploads/2022/11/earring-1.png",
       altText: "Earring",
       title: "Earring Editing Services",
       description:
-        "Editing as art needs no new introduction. None of us nowadays are unaware of the striking difference between an edited photo and an unedited one.",
+        "Our Services focus on refining the details of your earring images to showcase their beauty and craftsmanship. We enhance clarity, adjust lighting, and perfect the shine, ensuring each earring is presented in its best light.",
     },
     {
-      imgSrc: "https://www.jewelryediting.com/wp-content/uploads/2022/11/necklace.png",
-      altText: "Necklace",
-      title: "Necklace Editing Services",
+      imgSrc:
+        "https://www.jewelryediting.com/wp-content/uploads/2022/11/necklace.png",
+      altText: "Pendant",
+      title: "Pendant Editing Services",
       description:
-        "At Jewelry Editing Services, we redefine the visualities of Jewelries. We believe that 'First impression does last lifelong', especially when we are residing.",
+        "Pendant Editing Services are tailored to enhance the elegance of your pendant images by perfecting every intricate detail. We adjust lighting, sharpen designs, and emphasize shine, ensuring your pendants look flawless.",
     },
     {
-      imgSrc: "https://www.jewelryediting.com/wp-content/uploads/2022/11/bracelet.png",
+      imgSrc:
+        "https://www.jewelryediting.com/wp-content/uploads/2022/11/Ring.png",
+      altText: "Ring",
+      title: "Ring Editing Services",
+      description:
+        "We enhance the intricate details and shine of your rings, bringing out their full brilliance by fine-tune lighting, remove imperfections, and highlight design features to create flawless images. ",
+    },
+    {
+      imgSrc:
+        "https://www.jewelryediting.com/wp-content/uploads/2022/11/bracelet.png",
       altText: "Bracelet",
       title: "Bracelet Editing Services",
       description:
-        "If you are performing a digital jewelry business, then you always require an experienced jewelry photo editing service company.",
+        "Whether it's highlighting gemstones, metal finishes, or unique designs, we refine every element for a flawless appearance by adjusting lighting, removing imperfections, and emphasizing the bracelet's texture and sparkle. ",
     },
     {
-      imgSrc: "https://www.jewelryediting.com/wp-content/uploads/2022/11/watch-1.png",
+      imgSrc:
+        "https://www.jewelryediting.com/wp-content/uploads/2022/11/imatation-jewelry.png",
+      altText: "Necklace",
+      title: "Necklace Editing Services",
+      description:
+        "Necklace Editing Services are crafted to bring out the true elegance and beauty of your necklaces, ensuring they captivate in every image. We focus on enhancing clarity, adjusting lighting, and perfecting the shine to showcase every detail of the design.",
+    },
+    {
+      imgSrc:
+        "https://www.jewelryediting.com/wp-content/uploads/2022/11/watch-1.png",
       altText: "Watch",
       title: "Watch Editing Services",
       description:
-        "Editing is always a requirement, whether for personal use or commercial use, when you are trading jewelry, perfection on clicking the jewelry image is mandatory",
-    },
-    {
-      imgSrc: "https://www.jewelryediting.com/wp-content/uploads/2022/11/imatation-jewelry.png",
-      altText: "Imitation Jewelry",
-      title: "Imitation Jewelry Editing Services",
-      description:
-        "As a service provider, you have to display your jewelry perfectly, and when you are trading jewelry, perfection on clicking the jewelry image is mandatory.",
+        "Our Watch Retouching Services are designed to perfect every detail of your timepiece images, ensuring they look flawless and high-end. We expertly enhance the watch’s dial, strap, and casing, correcting imperfections and refining the shine to highlight its luxury and craftsmanship. ",
     },
   ];
 
   return (
     <section className="jewelry-retouching-section">
       <header className="header-re">
-        <h2>World Class Jewelry Retouching for Jewellers</h2>
-        <p>Making Your Jewelry Photos Look Amazing and detailed</p>
+        <h2>
+          — High End Jewelry Retouching
+          Services—
+        </h2>
+        <p>
+          We specialize in high-end jewelry retouching that enhances the beauty
+          and detail of your jewelry pieces.
+        </p>
       </header>
       <section className="service-section">
         {services.map((service, index) => (

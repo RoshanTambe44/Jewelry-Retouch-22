@@ -10,17 +10,19 @@ import "../styles/PhotoSolutions.css";
 
 const PhotoSolutions = () => {
   const solutions = [
-    { title: "Shadow Creation", description: "Shadow creation adds depth and dimension to design elements, enhancing visual appeal. By using soft or hard shadows,making elements stand out.", image: background },
-    { title: "Metal Retouching", description: "Enhance metal surfaces and enhancing or correcting images of metal objects. It can fix scratches, adjust lighting, and add reflections for a polished, professional look.", image: shadow },
-    { title: "Gemstone Enhancement", description: "Bring brilliance to gemstones, gemstone's appearance through treatments like heat, irradiation, or coating to enhance color, clarity, or durability.", image: Eyes },
-    { title: "Color Correction", description: "Adjusting brightness, contrast, saturation, and hue to enhance visual appeal. Proper color correction creates a cohesive and professional look.", image: scratch },
-    { title: "Background Removal", description: "Isolate jewelry with clean background and  enhancing focus on the subject. This process is used in product photography, design, and visual content.", image: color },
-    { title: "Reflection Creation", description: "Add beautiful reflections , adding mirrored effects beneath objects or text to simulate a reflective surface. This technique enhances depth, visual appeal,", image: Reflection },
+    { title: "Background Removal", description: "Isolate backgrounds give your product images a clean, professional look by eliminating distracting or unappealing backgrounds.", image: background },
+    { title: "Metal Retouching", description: "Enhance the beauty and shine of your jewelry’s metal elements by removing imperfections, adjusting reflections, and ensuring a flawless finish.", image: shadow },
+    { title: "Gemstone Enhancement", description: "Bring true brilliance and vibrancy to your gemstones, ensuring they captivate with their full color and clarity perfect for showcasing in catalogs, online stores.", image: Eyes },
+    { title: "Color Correction", description: "Proper color correction creates a cohesive and professional look. We expertly adjust brightness, contrast, saturation, and hues,to enhance the intended shades of your jewelry.", image: scratch },
+    { title: "Re-Color", description: "Whether you're looking to transform the color of jewelry, our re-coloring service ensures that your gold and silver jewelry always looks its best, with a stunning and professional appearance.", image: color },
+    { title: "Shadow Creation", description: "Shadow Creation service adds depth and dimension to your images by creating realistic and flattering shadows that enhance the visual appeal of your jewelry.", image: Reflection },
   ];
 
   return (
     <section className="photo-solutions">
-      <h2>Photo Editing Solutions We Offer</h2>
+        <h2>
+        — Photo Editing Solutions We Offer —
+      </h2>
       <div className="solutions-grid">
         {solutions.map((solution, index) => (
           <motion.div

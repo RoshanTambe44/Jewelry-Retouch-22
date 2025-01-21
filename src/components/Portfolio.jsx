@@ -42,7 +42,7 @@ const Portfolio = () => {
 
   return (
     <section className="portfolio" id="portfolio">
-      <h2>Portfolio</h2>
+      <h2>— Portfolio —</h2>
       <p>Making Your Jewelry Photos Look Irresistible and Beautiful</p>
 
       {/* Category Tabs */}
