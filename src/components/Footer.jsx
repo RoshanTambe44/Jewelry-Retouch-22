@@ -59,7 +59,7 @@ const Footer = () => {
 
         {/* Social Links */}
         <div className="footer-section">
-          <h3>Follow Us</h3>
+          <h3>Follow Us For More</h3>
           <p>Connect with us on our social media platforms.</p>
           <div className="social-icons">
             <a
