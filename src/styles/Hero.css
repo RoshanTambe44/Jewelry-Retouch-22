@@ -9,24 +9,21 @@
   width: 100%;
   box-sizing: border-box;
   gap: 20px;
-  transition: padding 0.3s ease-in-out;
-  border-bottom: 2px solid #f1dbce; /* Added subtle border to separate header */
+  border-bottom: 2px solid #f1dbce; /* Subtle border to separate header */
 }
 
 /* Header Content */
 .header-content {
   max-width: 50%;
-  transition: max-width 0.3s ease-in-out;
 }
 
 .header-content h1 {
   font-size: 3rem;
   font-family: "Domine", serif;
   margin-bottom: 20px;
-  color: #2e2e2e; /* Softer black for a more elegant feel */
+  color: #2e2e2e;
   line-height: 1.2;
-  text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.1); /* Added text shadow for a more stylish look */
-  transition: font-size 0.3s ease-in-out, color 0.3s ease-in-out;
+  text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.1); /* Text shadow for elegance */
 }
 
 .header-content p {
@@ -35,8 +32,7 @@
   color: #333;
   margin-bottom: 20px;
   line-height: 1.6;
-  transition: font-size 0.3s ease-in-out, color 0.3s ease-in-out;
-  letter-spacing: 0.5px; /* Added slight letter-spacing for readability */
+  letter-spacing: 0.5px;
 }
 
 /* Header Slider */
@@ -45,17 +41,15 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: max-width 0.3s ease-in-out;
 }
 
 .slider-image {
   width: 100%;
-  max-width: 300px;
+  max-width: 350px;
   height: auto;
   border-radius: 10px;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
   transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-  border: 3px solid transparent; /* Added border for smooth hover transition */
+  border: 3px solid transparent;
 }
 
 .slider-image:hover {
@@ -64,7 +58,7 @@
   border-color: #f5c518; /* Gold border effect on hover */
 }
 
-/* Button Styling - Optional CTA in Header */
+/* Button Styling */
 .header-button {
   background-color: #f5c518;
   padding: 12px 30px;
@@ -79,10 +73,10 @@
 
 .header-button:hover {
   background-color: #e5b318;
-  transform: translateY(-3px); /* Slight movement on hover */
+  transform: translateY(-3px);
 }
 
-/* Responsive Design */
+/* Responsive Design - Combined media queries for better performance */
 @media (max-width: 1024px) {
   .header {
     flex-direction: column;

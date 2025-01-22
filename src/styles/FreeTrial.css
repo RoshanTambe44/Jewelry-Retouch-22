@@ -39,23 +39,64 @@
 .contact-info {
   flex: 1;
   min-width: 280px;
-  max-width: 100%;
   padding: 20px;
   border-right: 1px solid rgba(255, 255, 255, 0.2);
-  text-align: center; /* Center-align text for better appearance */
+  margin-bottom: 20px;
 }
 
 .contact-info h3 {
-  font-size: 1.5rem;
-  margin-bottom: 15px;
+  font-size: 1.6rem;
+  margin-bottom: 20px;
   color: #fff;
+  text-align: center;
 }
 
-.contact-info p {
-  font-size: 1rem;
-  line-height: 1.5;
-  margin-bottom: 10px;
+.contact-item {
+  display: flex;
+  align-items: center;
+  flex-direction: column; /* Stack the image above the text */
+  margin-bottom: 15px;
+  text-align: center;
 }
+
+.contact-item img {
+  width: 40px;
+  height: 40px;
+  margin-bottom: 10px; /* Adds spacing between icon and text */
+}
+.contact-item a {
+  background-color: white;  /* White background for the icons */
+  border-radius: 50%;  /* Make the background circular */
+  padding: 10px;  /* Add space around the icon */
+  display: inline-block;
+}
+
+.contact-item a img {
+  width: 30px;  /* Adjust the size of the icon */
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+}
+
+.contact-item a:hover {
+  background-color: #f0f0f0;  /* Slightly darker background on hover */
+}
+
+
+
+.contact-item p {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #fff;
+}
+.contact-item a:hover {
+  opacity: 0.8;  /* Slightly dim the icon when hovered */
+  transform: scale(1.1);  /* Make the icon slightly bigger */
+  transition: all 0.3s ease;  /* Smooth transition */
+}
+
 
 /* Form Inputs */
 form {
