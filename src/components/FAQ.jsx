@@ -20,7 +20,7 @@ const FAQ = () => {
     },
     {
       question: 'What file formats do you accept?',
-      answer: 'We accept all major image file formats including JPEG, TIFF, and PNG. For special requests, please contact us.',C
+      answer: 'We accept all major image file formats including JPEG, TIFF, and PNG. For special requests, please contact us.'
     },
     {
       question: 'Can you handle large volumes of images?',
