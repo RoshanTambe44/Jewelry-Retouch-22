@@ -42,8 +42,10 @@ const Navbar = () => {
     <nav className="navbar">
       {/* Logo Section */}
       <div className="navbar-logo">
-        <img src={logo} alt="logo" />
-        <span className="navbar-title">My Jewelry Retouch</span>
+        <a href="/" onClick={() => window.location.reload()}>
+          <img src={logo} alt="logo" />
+          <span className="navbar-title">My Jewelry Retouch</span>
+        </a>
       </div>
 
       {/* Navbar Links */}

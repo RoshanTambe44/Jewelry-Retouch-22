@@ -7,7 +7,7 @@
 
 /* Portfolio Heading */
 .portfolio h2 {
-  font-size: 3.5rem;
+  font-size: 2.5rem;
   font-family: 'Domine', serif;
   color: #954000;
   margin-bottom: 10px;
@@ -15,7 +15,7 @@
 
 /* Portfolio Description */
 .portfolio p {
-  font-size: 1.5rem;
+  font-size: 1rem;
   font-family: 'Arial', sans-serif;
   color: #DAA520;
   margin-bottom: 30px;
@@ -95,15 +95,35 @@
 /* Portfolio Items */
 .portfolio-item img {
   width: 100%; /* Full width of the grid column */
+  height: 200px; /* Set a fixed height for uniformity */
+  object-fit: cover; /* Ensures the image maintains aspect ratio and fills the space */
   border-radius: 10px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
+/* On hover */
 .portfolio-item img:hover {
   transform: scale(1.05); /* Smooth hover zoom effect */
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15); /* Enhanced shadow on hover */
 }
+
+/* Responsive Design for Images */
+
+/* For tablets and medium screens */
+@media (max-width: 768px) {
+  .portfolio-item img {
+    height: 180px; /* Adjust height for smaller screens */
+  }
+}
+
+/* For small screens and mobile devices */
+@media (max-width: 480px) {
+  .portfolio-item img {
+    height: 150px; /* Adjust height for better fit on mobile */
+  }
+}
+
 
 /* Responsive Design */
 

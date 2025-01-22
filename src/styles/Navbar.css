@@ -1,4 +1,3 @@
-/* Navbar Base Styles */
 /* Global Styles to Prevent Overflow */
 body {
   margin: 0;
@@ -15,48 +14,64 @@ body {
 
 .navbar {
   width: 100%; /* Ensure navbar doesn't exceed the screen width */
-}
-
-/* Mobile Styles Fix for Overflow */
-@media (max-width: 768px) {
-  .navbar-links {
-    width: 70%; /* Keep dropdown width manageable */
-    overflow-x: hidden; /* Avoid overflow inside dropdown */
-  }
-}
-
-.navbar {
   display: flex;
-  align-items: center;
   justify-content: space-between;
+  align-items: center;
   padding: 20px 40px;
   background-color: #fff;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   position: sticky;
   top: 0;
   z-index: 1000;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for background and shadow */
 }
 
+/* Navbar hover effect */
+.navbar:hover {
+  background-color: #f5f5f5;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Navbar Logo and Title */
 .navbar-logo {
   display: flex;
+  flex-direction: column; /* Stack logo and title vertically */
   align-items: center;
+  gap: 5px; /* Small space between logo and title */
 }
 
 .navbar-logo img {
   width: 50px;
-  margin-right: 10px;
+  height: auto;
+  transition: transform 0.3s ease;
 }
 
+.navbar-logo img:hover {
+  transform: scale(1.1);
+}
+
+/* Remove underline from title */
 .navbar-title {
   font-size: 1.5rem;
   font-weight: bold;
-  font-family: Abril Fatface;
+  font-family: 'Abril Fatface', serif;
   color: #954000;
+  text-decoration: none;
 }
 
+.navbar-logo a {
+  text-decoration: none; /* Ensure no underline in the logo's anchor tag */
+}
+
+.navbar-title:hover {
+  color: #6c3700;
+}
+
+/* Navbar Middle Section */
 .navbar-middle {
   display: flex;
-  align-items: center;
+  justify-content: center; /* Center the navbar links horizontally */
+  flex-grow: 1; /* Allow the middle section to take available space */
 }
 
 .navbar-links {
@@ -69,27 +84,29 @@ body {
 
 .navbar-links li a {
   text-decoration: none;
-  font-family: Arial;
+  font-family: Arial, sans-serif;
   font-size: 1.2rem;
   font-weight: 500;
   color: #000000;
-  transition: color 0.3s;
+  transition: color 0.3s ease;
 }
 
 .navbar-links li a:hover {
   color: #954000;
 }
 
+/* Navbar Right Section */
 .navbar-right {
   display: flex;
   align-items: center;
   gap: 20px;
 }
 
+/* Call-to-Action Button */
 .cta-button {
   background-color: #954000;
   color: #fff;
-  font-family: Arial;
+  font-family: Arial, sans-serif;
   padding: 10px 20px;
   font-size: 1.2rem;
   font-weight: bold;
@@ -135,6 +152,22 @@ body {
 
 /* Mobile Styles */
 @media (max-width: 768px) {
+  .navbar {
+    padding: 15px 30px;
+  }
+
+  .navbar-title {
+    font-size: 1.2rem;
+  }
+
+  .navbar-logo img {
+    width: 40px;
+  }
+
+  .navbar-middle {
+    display: none; /* Hide navbar links on mobile */
+  }
+
   .navbar-links {
     display: none;
     flex-direction: column;
@@ -147,10 +180,15 @@ body {
     gap: 15px;
     width: 70%;
     border-radius: 5px 0 0 5px;
+    transform: translateY(-20px);
+    opacity: 0;
+    transition: opacity 0.3s ease, transform 0.3s ease;
   }
 
   .navbar-links.open {
     display: flex;
+    opacity: 1;
+    transform: translateY(0);
   }
 
   .navbar-right {
