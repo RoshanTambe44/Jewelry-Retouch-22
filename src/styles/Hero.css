@@ -20,7 +20,7 @@
 }
 
 .header-content h1 {
-  font-size: 4rem;
+  font-size: 3rem;
   font-family: "Domine", serif;
   margin-bottom: 20px;
   color: #2e2e2e; /* Softer black for a more elegant feel */
@@ -30,7 +30,7 @@
 }
 
 .header-content p {
-  font-size: 1.5rem;
+  font-size: 1rem;
   font-family: "Mulish", sans-serif;
   color: #333;
   margin-bottom: 20px;
@@ -50,7 +50,7 @@
 
 .slider-image {
   width: 100%;
-  max-width: 500px;
+  max-width: 300px;
   height: auto;
   border-radius: 10px;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);

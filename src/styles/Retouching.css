@@ -1,130 +1,148 @@
-/* General Section Styling */
-.jewelry-retouching-section {
-  padding: 40px 20px;
+/* PhotoServices Section */
+.photo-services {
   background-color: #FFFFFF;
+  padding: 50px 0; /* Combined top and bottom padding */
   text-align: center;
 }
 
-/* Header Styling */
-.header-re h2 {
+/* Title Styling */
+.photo-services h2 {
   font-size: 3rem;
-  font-family: 'Domine', serif;
+  font-family: "Domine", serif;
   color: #954000;
+  margin: 0 5%;
+  line-height: 1.2;
+  font-weight: bold;
+  margin-bottom: 30px; /* Space below the title */
+  text-align: center;
+}
+
+.photo-services p{
+  color: #DAA520;
+  font-family: Arial;
+  font-size: 1.5rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .heading-line {
+    font-size: 1.8rem;
+  }
+
+  .heading-line span {
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .heading-line {
+    font-size: 1.5rem;
+  }
+
+  .heading-line span {
+    font-size: 1rem;
+  }
+}
+
+/* Grid Layout */
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Adaptive grid with a minimum width */
+  gap: 25px; /* Reduced gap for a tighter, cohesive layout */
+  max-width: 1200px; /* Slightly smaller maximum width for consistency */
+  margin: 0 auto; /* Center the grid container */
+  padding: 0 5%; /* Add padding for edge spacing */
+  justify-items: center; /* Center align each grid item */
+
+}
+
+/* Services Item Styling */
+.services-item {
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  background-color: #FFFFFF;
+  text-align: center;
+  width: 100%;
+  max-width: 350px; /* Limits max width of the item */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.services-item:hover {
+  transform: translateY(-5px); /* Lift on hover */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15); /* Enhanced shadow on hover */
+}
+
+/* Image Styling */
+.services-image {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 15px;
+  border-radius: 5px;
+  display: block; /* Ensures proper alignment */
+}
+
+/* services Title Styling */
+.services-item h3 {
+  margin: 15px 0 10px;
+  font-size: 1.8rem;
+  color: #845616;
+  font-family: "Domine", serif;
+  font-weight: bold;
+}
+
+/* services Description Styling */
+.services-item p {
+  font-size: 1rem;
+  font-family: "Arial", sans-serif;
+  color: #000000;
+  line-height: 1.6; /* Increased line height for readability */
   margin-bottom: 20px;
 }
 
-.header-re p {
-  font-family: 'Mulish', sans-serif;
-  font-size: 1.5rem;
-  color: #DAA520;
-  margin-bottom: 50px;
-}
+/* Responsive Design */
 
-/* Services Section */
-.service-section {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 30px; /* Reduced gap for better alignment */
-  justify-content: center;
-  margin-bottom: 40px;
-}
-
-/* Service Column */
-.service-column {
-  width: calc(28% - 20px); /* Adjusted for cleaner spacing */
-  box-sizing: border-box;
-}
-
-/* Service Box Styling */
-.service-box {
-  background-color: #FFFFFF;
-  border: 1px solid #DDD;
-  border-radius: 8px;
-  padding: 20px;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  text-align: center; /* Centers content inside the box */
-}
-
-.service-box:hover {
-  transform: translateY(-10px); /* Subtle hover lift */
-  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.15); /* Enhanced shadow effect */
-}
-
-/* Image Styling */
-/* Image Styling */
-.service-image {
-  width: 65%;
-  display: flex;
-  justify-content: center; /* Centers horizontally */
-  align-items: center; /* Centers vertically */
-  height: auto;
-  border-radius: 8px;
-  margin-bottom: 15px;
-  margin-left: auto; /* Center the image by pushing it left */
-  margin-right: auto; /* Center the image by pushing it right */
-}
-
-/* Title and Description */
-.service-title {
-  margin-top: 15px;
-  font-size: 1.5rem;
-  font-family: 'Domine', serif;
-  color: #954000;
-}
-
-.service-description {
-  margin-top: 10px;
-  font-size: 1rem;
-  font-family: 'Arial', sans-serif;
-  color: #000000;
-  line-height: 1.5; /* Better readability */
-}
-
-/* Mobile Responsiveness */
-
-/* For Tablets and Medium Screens */
+/* Adjusts to two items per row on medium screens (768px or smaller) */
 @media (max-width: 768px) {
-  .service-column {
-    width: calc(50% - 20px); /* Two columns on medium screens */
+  .photo-services h2 {
+    font-size: 3rem; /* Reduced title size */
   }
 
-  .header-re h2 {
-    font-size: 2.5rem;
+  .services-grid {
+    gap: 20px; /* Slightly smaller gap */
   }
 
-  .header-re p {
-    font-size: 1.3rem;
+  .services-item h3 {
+    font-size: 1.6rem; /* Reduced heading size for smaller screens */
+  }
+
+  .services-item p {
+    font-size: 0.95rem; /* Slightly smaller font size */
   }
 }
 
-/* For Small Screens and Mobile Devices */
+/* Stacks items vertically on small screens (480px or smaller) */
 @media (max-width: 480px) {
-  .service-column {
-    width: 100%; /* Single column on small screens */
+  .photo-services h2 {
+    font-size: 2.5rem; /* Reduced title size for better spacing */
   }
 
-  .service-box {
-    padding: 15px; /* Adjust padding for smaller screens */
+  .services-grid {
+    gap: 15px;
   }
 
-  .header-re h2 {
-    font-size: 2rem; /* Smaller font for headings */
+  .services-item {
+    max-width: 90%; /* Full width with padding */
+    margin: 0 auto;
   }
 
-  .header-re p {
-    font-size: 1.2rem; /* Adjust text size for better fit */
+  .services-item h3 {
+    font-size: 1.4rem; /* Adjusted heading size for readability */
   }
 
-  .service-title {
-    font-size: 1.3rem; /* Smaller titles for smaller devices */
-  }
-
-  .service-description {
-    font-size: 0.95rem; /* Readable text on mobile */
-  }
-  .service-image {
-    width: 80%; /* Adjust image size for mobile */
-    margin-left: auto; /* Center the image */
-    margin-right: auto; /* Center the image */
+  .services-item p {
+    font-size: 0.9rem; /* Small, readable text */
   }
 }
