@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { motion } from 'framer-motion';  // Import Framer Motion
-import '../styles/Faq.css';
+import '../styles/FAQ.css';
 
 const FAQ = () => {
   const [openIndex, setOpenIndex] = useState(null);
@@ -20,7 +20,7 @@ const FAQ = () => {
     },
     {
       question: 'What file formats do you accept?',
-      answer: 'We accept all major image file formats including JPEG, TIFF, and PNG. For special requests, please contact us.',
+      answer: 'We accept all major image file formats including JPEG, TIFF, and PNG. For special requests, please contact us.',C
     },
     {
       question: 'Can you handle large volumes of images?',
