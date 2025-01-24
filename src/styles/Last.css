@@ -1,45 +1,89 @@
-/* Footer Styling */
-.last-footer {
-  background-color: #fef5e1; /* Light background color */
-  padding: 20px;
-  text-align: center;
-  border-top: 1px solid #ddd; /* Subtle border for separation */
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.footer-text p,
-.footer-links p {
-  font-family: 'Mulish', sans-serif;
-  font-size: 1rem;
-  color: #666; /* Neutral text color */
-  margin: 5px 0;
+.last-footer {
+  background-color: #f8f9fa;
+  color: #000000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem 2rem;
+  font-family: Arial, sans-serif;
+  border-top: 1px solid #ddd;
+  flex-wrap: wrap; /* Allows wrapping for smaller screens */
+}
+
+/* Left Section: Copyright Text */
+.footer-text {
+  font-size: 0.9rem;
+  color: #000000;
+  flex: 1; /* Ensures it occupies one portion */
+  text-align: left;
+}
+
+/* Right Section: Links */
+.footer-links {
+  display: flex;
+  justify-content: flex-end;
+  gap: 1rem;
+  flex: 2; /* Ensures it occupies more space for alignment */
+  flex-wrap: wrap;
 }
 
 .footer-links a {
-  color: #954000; /* Highlighted link color */
   text-decoration: none;
-  font-weight: bold;
+  color: #954000;
+  font-size: 1rem;
+  font-weight:500;
+  font-family: Arial;
   transition: color 0.3s ease;
 }
 
 .footer-links a:hover {
-  color: #da8500; /* Hover color */
+  color: #DAA520;
 }
 
-/* Responsive Design */
+/* Center Section: Credits */
+.footer-credits {
+  flex-basis: 100%;
+  text-align: center;
+  margin-top: 1rem; /* Adds spacing when stacked */
+  font-size: 1rem;
+  color: #000000;
+}
+
+.footer-credits a {
+  text-decoration: none;
+  font-family:Arial;
+  font-weight: bold;
+  color: #954000;
+  transition: color 0.3s ease;
+}
+
+.footer-credits a:hover {
+  color: #DAA520;
+}
+
+/* Responsive Styles */
 @media (max-width: 768px) {
   .last-footer {
-    padding: 15px;
+   
+    flex-direction: column; /* Stacks all sections vertically */
+    align-items: center; /* Center-aligns content */
   }
 
-  .footer-text p,
-  .footer-links p {
-    font-size: 0.9rem;
+  .footer-text,
+  .footer-links {
+    margin-top: 20px;
+    text-align: center; /* Center-align text on smaller screens */
   }
-}
 
-@media (max-width: 480px) {
-  .footer-text p,
-  .footer-links p {
-    font-size: 0.8rem;
+  .footer-links {
+    justify-content: center; /* Centers links on smaller screens */
+    gap: 1rem;
   }
 }

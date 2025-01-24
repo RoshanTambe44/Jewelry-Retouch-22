@@ -6,7 +6,7 @@ const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   const toggleMenu = () => {
-    setIsOpen(!isOpen);
+    setIsOpen((prevState) => !prevState);
   };
 
   const handleLinkClick = (e) => {
@@ -14,13 +14,12 @@ const Navbar = () => {
     const targetId = e.target.getAttribute("href").slice(1);
     const targetElement = document.getElementById(targetId);
     if (targetElement) {
-      // Update the URL without reloading the page
       window.history.pushState(null, "", `#${targetId}`);
       targetElement.scrollIntoView({
         behavior: "smooth",
         block: "start",
       });
-      setIsOpen(false); // Close menu on mobile after click
+      setIsOpen(false); // Close menu after a link is clicked
     }
   };
 
@@ -40,7 +39,7 @@ const Navbar = () => {
 
   return (
     <nav className="navbar">
-      {/* Logo Section */}
+      {/* Logo */}
       <div className="navbar-logo">
         <a href="/" onClick={() => window.location.reload()}>
           <img src={logo} alt="logo" />
@@ -48,9 +47,9 @@ const Navbar = () => {
         </a>
       </div>
 
-      {/* Navbar Links */}
-      <div className="navbar-middle">
-        <ul className={isOpen ? "navbar-links open" : "navbar-links"}>
+      {/* Links */}
+      <div className={`navbar-links-wrapper ${isOpen ? "open" : ""}`}>
+        <ul className="navbar-links">
           <li>
             <a href="#home" onClick={handleLinkClick}>
               Home
@@ -69,16 +68,23 @@ const Navbar = () => {
         </ul>
       </div>
 
-      {/* Free Trial Section */}
-      <div className="navbar-right">
+      {/* Free Trial Button */}
+      <div className="navbar-free-trial">
         <a href="#trial" className="cta-button" onClick={handleLinkClick}>
           Free Trial →
         </a>
-        <div className="hamburger" onClick={toggleMenu}>
-          <div className={isOpen ? "line line1 open" : "line line1"}></div>
-          <div className={isOpen ? "line line2 open" : "line line2"}></div>
-          <div className={isOpen ? "line line3 open" : "line line3"}></div>
-        </div>
+      </div>
+
+      {/* Hamburger Menu */}
+      <div
+        className={`hamburger ${isOpen ? "open" : ""}`}
+        onClick={toggleMenu}
+        aria-expanded={isOpen}
+        aria-label="Toggle navigation menu"
+      >
+        <span className="line"></span>
+        <span className="line"></span>
+        <span className="line"></span>
       </div>
     </nav>
   );
