@@ -154,3 +154,75 @@ body {
     margin-top: 1rem;
   }
 }
+/* Responsive Styles for Screens 400px or Less */
+@media (max-width: 478px) {
+  .navbar {
+    flex-direction: column; /* Stack logo and menu vertically */
+    align-items: flex-start; /* Align items to the left */
+    padding: 0.8rem 1rem;
+  }
+
+  .navbar-logo {
+    justify-content: center; /* Center the logo */
+    margin-bottom: 1rem; /* Add spacing below the logo */
+    width: 100%; /* Take full width */
+    text-align: center; /* Center align content */
+  }
+
+  .navbar-title {
+    font-size: 1.4rem; /* Slightly smaller title font */
+  }
+
+  .navbar-links-wrapper {
+    display: none; /* Hide by default for small screens */
+    flex-direction: column; /* Stack links vertically */
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%; /* Full width dropdown */
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    transition: max-height 0.3s ease-in-out;
+    max-height: 0;
+    z-index: 999; /* Ensure it's above other elements */
+  }
+
+  .navbar-links-wrapper.open {
+    display: flex;
+    max-height: 300px; /* Adjust dropdown height */
+  }
+
+  .navbar-links {
+    flex-direction: column; /* Stack links vertically */
+    gap: 1rem;
+    padding: 0.5rem 0;
+  }
+
+  .navbar-links li a {
+    font-size: 0.9rem; /* Smaller font for links */
+  }
+
+  .hamburger {
+    display: flex; /* Show hamburger menu */
+    align-self: flex-end; /* Align to the right */
+    margin-bottom: 0.5rem; /* Space below hamburger */
+  }
+
+  .hamburger .line {
+    width: 20px; /* Adjust width for smaller screens */
+    height: 2.5px; /* Slightly thinner lines */
+  }
+
+  .navbar-free-trial {
+    margin-top: 1rem; /* Space above the button */
+    width: 100%; /* Full width for better interaction */
+    text-align: center; /* Center align button */
+  }
+
+  .cta-button {
+    font-size: 0.9rem; /* Adjust button font size */
+    padding: 0.5rem 1rem;
+  }
+}
+
