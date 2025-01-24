@@ -23,6 +23,9 @@ body {
   border-bottom: 1px solid #ddd;
 }
 
+.navbar:hover{
+  background-color: #f8f9fa;
+}
 .navbar-logo {
   display: flex;
   align-items: center;
