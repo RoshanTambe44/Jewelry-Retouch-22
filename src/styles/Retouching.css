@@ -1,148 +1,153 @@
-/* PhotoServices Section */
+/* Photo Services Section */
 .photo-services {
-  background-color: #FFFFFF;
-  padding: 50px 0; /* Combined top and bottom padding */
+  padding: 50px 0;
   text-align: center;
+  background-color: #f9f9f9;
 }
 
-/* Title Styling */
 .photo-services h2 {
   font-size: 2.5rem;
-  font-family: "Domine", serif;
   color: #954000;
-  margin: 0 5%;
-  line-height: 1.2;
+  margin-bottom: 20px;
+  font-family: "Domine", serif;
   font-weight: bold;
-  margin-bottom: 30px; /* Space below the title */
-  text-align: center;
 }
 
-.photo-services p{
-  color: #DAA520;
-  font-family: Arial;
+.photo-services p {
+  color: #555;
   font-size: 1rem;
-}
-
-/* Responsive Design */
-@media (max-width: 768px) {
-  .heading-line {
-    font-size: 1.8rem;
-  }
-
-  .heading-line span {
-    font-size: 1.2rem;
-  }
-}
-
-@media (max-width: 480px) {
-  .heading-line {
-    font-size: 1.5rem;
-  }
-
-  .heading-line span {
-    font-size: 1rem;
-  }
+  margin-bottom: 40px;
 }
 
 /* Grid Layout */
 .services-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Adaptive grid with a minimum width */
-  gap: 25px; /* Reduced gap for a tighter, cohesive layout */
-  max-width: 1200px; /* Slightly smaller maximum width for consistency */
-  margin: 0 auto; /* Center the grid container */
-  padding: 0 5%; /* Add padding for edge spacing */
-  justify-items: center; /* Center align each grid item */
-
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 5%;
+}
+/* Container for all services */
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Adaptive grid */
+  gap: 30px; /* Space between items */
+  justify-items: center; /* Center-align the items */
 }
 
-/* Services Item Styling */
+/* Individual service item */
 .services-item {
+  display: flex;
+  flex-direction: column; /* Stack content vertically */
+  align-items: center; /* Center-align everything horizontally */
   padding: 20px;
   border: 1px solid #ddd;
   border-radius: 10px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
   background-color: #FFFFFF;
   text-align: center;
   width: 100%;
-  max-width: 350px; /* Limits max width of the item */
+  max-width: 350px; /* Limits the max width of the item */
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
+/* Hover effect */
 .services-item:hover {
-  transform: translateY(-5px); /* Lift on hover */
+  transform: translateY(-5px); /* Lift effect */
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15); /* Enhanced shadow on hover */
 }
 
 /* Image Styling */
-.services-image {
-  width: 100%;
-  max-width: 100%;
-  height: auto;
-  margin-bottom: 15px;
+.service-image {
+  width: 150px; /* Fixed width */
+  height: 150px; /* Fixed height for consistency */
+  object-fit: cover; /* Ensures image doesn’t stretch */
   border-radius: 5px;
-  display: block; /* Ensures proper alignment */
+  margin-bottom: 20px; /* Space below the image */
 }
 
-/* services Title Styling */
+/* Title Styling */
 .services-item h3 {
-  margin: 15px 0 10px;
-  font-size: 1.8rem;
+  font-size: 1.6rem;
   color: #845616;
   font-family: "Domine", serif;
   font-weight: bold;
+  margin: 0; /* Remove default margins */
+  line-height: 1.2; /* Adjust line spacing */
+  margin-bottom: 10px; /* Space below the title */
+  min-height: 50px; /* Ensures titles are aligned */
 }
 
-/* services Description Styling */
+/* Description Styling */
 .services-item p {
   font-size: 1rem;
   font-family: "Arial", sans-serif;
   color: #000000;
-  line-height: 1.6; /* Increased line height for readability */
-  margin-bottom: 20px;
+  line-height: 1.5; /* Line spacing for readability */
+  margin: 0; /* Remove default margins */
+  min-height: 70px; /* Consistent height for descriptions */
+}
+
+/* Image Container */
+.image-container {
+  margin-bottom: 15px;
+}
+
+.service-image {
+  width: 100%;
+  height: auto;
+  max-width: 250px;
+  display: block;
+  margin: 0 auto;
+  border-radius: 5px;
+}
+
+/* Title Container */
+.title-container h3 {
+  font-size: 1.8rem;
+  color: #845616;
+  margin-bottom: 10px;
+  font-family: "Domine", serif;
+  font-weight: bold;
+}
+
+/* Description Container */
+.description-container p {
+  font-size: 1rem;
+  color: #333;
+  line-height: 1.6;
 }
 
 /* Responsive Design */
-
-/* Adjusts to two items per row on medium screens (768px or smaller) */
 @media (max-width: 768px) {
-  .photo-services h2 {
-    font-size: 3rem; /* Reduced title size */
-  }
-
   .services-grid {
-    gap: 20px; /* Slightly smaller gap */
+    gap: 20px;
   }
 
-  .services-item h3 {
-    font-size: 1.6rem; /* Reduced heading size for smaller screens */
+  .title-container h3 {
+    font-size: 1.6rem;
   }
 
-  .services-item p {
-    font-size: 0.95rem; /* Slightly smaller font size */
+  .description-container p {
+    font-size: 0.95rem;
   }
 }
 
-/* Stacks items vertically on small screens (480px or smaller) */
 @media (max-width: 480px) {
-  .photo-services h2 {
-    font-size: 2.5rem; /* Reduced title size for better spacing */
-  }
-
   .services-grid {
     gap: 15px;
   }
 
   .services-item {
-    max-width: 90%; /* Full width with padding */
-    margin: 0 auto;
+    padding: 15px;
   }
 
-  .services-item h3 {
-    font-size: 1.4rem; /* Adjusted heading size for readability */
+  .title-container h3 {
+    font-size: 1.4rem;
   }
 
-  .services-item p {
-    font-size: 0.9rem; /* Small, readable text */
+  .description-container p {
+    font-size: 0.9rem;
   }
 }

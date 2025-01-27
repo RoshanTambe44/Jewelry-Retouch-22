@@ -130,21 +130,14 @@ form {
 .form-row textarea::placeholder {
   color: #A9A9A9;
 }
-
-.form-row input[type="checkbox"] {
-  margin-right: 10px;
-}
-
 .service-types {
   display: flex;
-  flex-wrap: wrap;
   gap: 10px;
-  justify-content: space-between;
   margin-bottom: 15px;
 }
 
 .service-types label {
-  font-size: 1.2rem;
+  font-size: 1rem;
   color: #fff;
   display: flex;
   align-items: center;

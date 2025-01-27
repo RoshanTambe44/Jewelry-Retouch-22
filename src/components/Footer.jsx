@@ -1,7 +1,13 @@
 import React, { useState } from "react";
 import "../styles/Footer.css";
-import { FaLinkedin, FaGoogle, FaFacebook, FaInstagram, FaTwitter } from "react-icons/fa";
-import { motion, useInView } from "framer-motion";
+import {
+  FaLinkedin,
+  FaGoogle,
+  FaFacebook,
+  FaInstagram,
+  FaTwitter,
+} from "react-icons/fa";
+import { motion } from "framer-motion";
 
 const Footer = () => {
   const [email, setEmail] = useState("");
@@ -41,35 +47,6 @@ const Footer = () => {
       transition={{ duration: 0.8 }}
     >
       <div className="footer-container">
-        {/* Newsletter */}
-        <motion.div
-          className="footer-section"
-          variants={fadeIn}
-          transition={{ duration: 0.6, delay: 0.2 }}
-        >
-          <h3>Subscribe to Our Newsletter</h3>
-          <p>
-            Stay updated with our latest offers, news, and product releases.
-            Subscribe now and never miss out!
-          </p>
-          <form className="newsletter-form" onSubmit={handleSubmit}>
-            <div className="input-wrapper">
-              <input
-                type="email"
-                placeholder="Enter your email"
-                className="newsletter-input"
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
-                required
-              />
-              <button type="submit" className="newsletter-button">
-                Subscribe
-              </button>
-            </div>
-          </form>
-          {error && <p className="error-message">{error}</p>}
-        </motion.div>
-
         {/* Social Links */}
         <motion.div
           className="footer-section"
@@ -121,6 +98,37 @@ const Footer = () => {
               <FaTwitter className="social-icon" title="Twitter" />
             </a>
           </motion.div>
+        </motion.div>
+
+        {/* Vertical Line */}
+        <div className="footer-line"></div>
+        {/* Newsletter */}
+        <motion.div
+          className="footer-section subscribe"
+          variants={fadeIn}
+          transition={{ duration: 0.6, delay: 0.2 }}
+        >
+          <h3>Subscribe to Our Newsletter</h3>
+          <p>
+            Stay updated with our latest offers, news, and product releases.
+            Subscribe now and never miss out!
+          </p>
+          <form className="newsletter-form" onSubmit={handleSubmit}>
+            <div className="input-wrapper">
+              <input
+                type="email"
+                placeholder="Enter your email"
+                className="newsletter-input"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+                required
+              />
+              <button type="submit" className="newsletter-button">
+                Subscribe
+              </button>
+            </div>
+          </form>
+          {error && <p className="error-message">{error}</p>}
         </motion.div>
       </div>
     </motion.footer>

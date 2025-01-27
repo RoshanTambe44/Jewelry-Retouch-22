@@ -19,7 +19,7 @@
 /* Footer Section */
 .footer-section {
   flex: 1;
-  max-width: 300px;
+  max-width: 350px;
   text-align: left;
 }
 
@@ -48,7 +48,7 @@
 
 .input-wrapper {
   position: relative;
-  width: 100%;
+  width: 90%;
 }
 
 .newsletter-input {
@@ -109,10 +109,9 @@
 
   .newsletter-form {
     align-items: center;
-  }
 
-  .social-icons{
+    .social-icons{
       justify-content: center;
     }
   }
-
+}

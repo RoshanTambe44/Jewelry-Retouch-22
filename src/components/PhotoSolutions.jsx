@@ -1,4 +1,3 @@
-import React from "react";
 import { motion } from "framer-motion"; // Importing motion from framer-motion
 import { useInView } from "react-intersection-observer"; // Importing useInView for scroll-triggered animations
 import background from "../assets/P-1.png";

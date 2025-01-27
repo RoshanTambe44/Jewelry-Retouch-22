@@ -65,53 +65,52 @@ const FreeTrialForm = () => {
     setErrors(newErrors);
     return Object.keys(newErrors).length === 0;
   };
-      const handleSubmit = (e) => {
-        e.preventDefault();
-        if (validate()) {
-          const templateParams = {
-            name: formData.name,
-            email: formData.email,
-            address: formData.address,
-            phone: formData.phone,
-            state: formData.state,
-            country: formData.country,
-            services: formData.services.join(", "),
-            instruction: formData.instruction,
-            files: formData.files ? formData.files[0].name : "No files uploaded",
-          };
-    
-          emailjs
-            .send(
-              "service_waggq6v", // Replace with your EmailJS Service ID
-              "template_3t2y449", // Replace with your EmailJS Template ID
-              templateParams,
-              "JRZ4D4K-EU7nlq1lo" // Replace with your EmailJS Public Key
-            )
-            .then(
-              (response) => {
-                console.log("SUCCESS!", response.status, response.text);
-                alert("Form submitted successfully, we'll get in touch soon!");
-              },
-              (error) => {
-                console.error("FAILED...", error);
-                alert("Form submission failed. Please try again.");
-              }
-            );
-    
-          setFormData({
-            name: "",
-            email: "",
-            address: "",
-            phone: "",
-            state: "",
-            country: "",
-            services: [],
-            instruction: "",
-            files: null,
-          });
-        }
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    if (validate()) {
+      const templateParams = {
+        name: formData.name,
+        email: formData.email,
+        address: formData.address,
+        phone: formData.phone,
+        state: formData.state,
+        country: formData.country,
+        services: formData.services.join(", "),
+        instruction: formData.instruction,
+        files: formData.files ? formData.files[0].name : "No files uploaded",
       };
-     
+
+      emailjs
+        .send(
+          "service_waggq6v", // Replace with your EmailJS Service ID
+          "template_3t2y449", // Replace with your EmailJS Template ID
+          templateParams,
+          "JRZ4D4K-EU7nlq1lo" // Replace with your EmailJS Public Key
+        )
+        .then(
+          (response) => {
+            console.log("SUCCESS!", response.status, response.text);
+            alert("Form submitted successfully, we'll get in touch soon!");
+          },
+          (error) => {
+            console.error("FAILED...", error);
+            alert("Form submission failed. Please try again.");
+          }
+        );
+
+      setFormData({
+        name: "",
+        email: "",
+        address: "",
+        phone: "",
+        state: "",
+        country: "",
+        services: [],
+        instruction: "",
+        files: null,
+      });
+    }
+  };
 
   return (
     <section className="free-trial-form" id="trial">
@@ -212,78 +211,87 @@ const FreeTrialForm = () => {
           </div>
 
           <div className="form-row">
-            
-             <select name="state" value={formData.state} onChange={handleInputChange} required>
-           <option value="" disabled>
-            Select Your State
-  </option>
-  {/* India */}
-  <option value="Uttar Pradesh">Uttar Pradesh</option>
-  <option value="Maharashtra">Maharashtra</option>
-  <option value="Delhi">Delhi</option>
-  <option value="Karnataka">Karnataka</option>
-  
-  {/* USA */}
-  <option value="New York">New York</option>
-  <option value="California">California</option>
-  <option value="Texas">Texas</option>
-  <option value="Florida">Florida</option>
+            <select
+              name="state"
+              value={formData.state}
+              onChange={handleInputChange}
+              required
+            >
+              <option value="" disabled>
+                Select Your State
+              </option>
+              {/* India */}
+              <option value="Uttar Pradesh">Uttar Pradesh</option>
+              <option value="Maharashtra">Maharashtra</option>
+              <option value="Delhi">Delhi</option>
+              <option value="Karnataka">Karnataka</option>
 
-  {/* UK */}
-  <option value="England">England</option>
-  <option value="Scotland">Scotland</option>
-  <option value="Wales">Wales</option>
-  <option value="Northern Ireland">Northern Ireland</option>
+              {/* USA */}
+              <option value="New York">New York</option>
+              <option value="California">California</option>
+              <option value="Texas">Texas</option>
+              <option value="Florida">Florida</option>
 
-  {/* Canada */}
-  <option value="Ontario">Ontario</option>
-  <option value="Quebec">Quebec</option>
-  <option value="British Columbia">British Columbia</option>
-  <option value="Alberta">Alberta</option>
+              {/* UK */}
+              <option value="England">England</option>
+              <option value="Scotland">Scotland</option>
+              <option value="Wales">Wales</option>
+              <option value="Northern Ireland">Northern Ireland</option>
 
-  {/* Australia */}
-  <option value="New South Wales">New South Wales</option>
-  <option value="Victoria">Victoria</option>
-  <option value="Queensland">Queensland</option>
-  <option value="Western Australia">Western Australia</option>
+              {/* Canada */}
+              <option value="Ontario">Ontario</option>
+              <option value="Quebec">Quebec</option>
+              <option value="British Columbia">British Columbia</option>
+              <option value="Alberta">Alberta</option>
 
-  {/* Germany */}
-  <option value="Bavaria">Bavaria</option>
-  <option value="Berlin">Berlin</option>
-  <option value="Hamburg">Hamburg</option>
-  <option value="North Rhine-Westphalia">North Rhine-Westphalia</option>
+              {/* Australia */}
+              <option value="New South Wales">New South Wales</option>
+              <option value="Victoria">Victoria</option>
+              <option value="Queensland">Queensland</option>
+              <option value="Western Australia">Western Australia</option>
 
-  {/* Japan */}
-  <option value="Tokyo">Tokyo</option>
-  <option value="Osaka">Osaka</option>
-  <option value="Kyoto">Kyoto</option>
-  <option value="Hokkaido">Hokkaido</option>
-</select>
+              {/* Germany */}
+              <option value="Bavaria">Bavaria</option>
+              <option value="Berlin">Berlin</option>
+              <option value="Hamburg">Hamburg</option>
+              <option value="North Rhine-Westphalia">
+                North Rhine-Westphalia
+              </option>
 
-<select name="country" value={formData.country} onChange={handleInputChange} required>
-  <option value="" disabled>
-    Select Your Country
-  </option>
-  <option value="India">India</option>
-  <option value="USA">USA</option>
-  <option value="UK">UK</option>
-  <option value="Canada">Canada</option>
-  <option value="Australia">Australia</option>
-  <option value="Germany">Germany</option>
-  <option value="Japan">Japan</option>
-  <option value="France">France</option>
-  <option value="Italy">Italy</option>
-  <option value="Spain">Spain</option>
-  <option value="Brazil">Brazil</option>
-  <option value="Mexico">Mexico</option>
-  <option value="South Africa">South Africa</option>
-  <option value="China">China</option>
-  <option value="Russia">Russia</option>
-  <option value="South Korea">South Korea</option>
-  <option value="Argentina">Argentina</option>
-  <option value="New Zealand">New Zealand</option>
+              {/* Japan */}
+              <option value="Tokyo">Tokyo</option>
+              <option value="Osaka">Osaka</option>
+              <option value="Kyoto">Kyoto</option>
+              <option value="Hokkaido">Hokkaido</option>
+            </select>
 
-
+            <select
+              name="country"
+              value={formData.country}
+              onChange={handleInputChange}
+              required
+            >
+              <option value="" disabled>
+                Select Your Country
+              </option>
+              <option value="India">India</option>
+              <option value="USA">USA</option>
+              <option value="UK">UK</option>
+              <option value="Canada">Canada</option>
+              <option value="Australia">Australia</option>
+              <option value="Germany">Germany</option>
+              <option value="Japan">Japan</option>
+              <option value="France">France</option>
+              <option value="Italy">Italy</option>
+              <option value="Spain">Spain</option>
+              <option value="Brazil">Brazil</option>
+              <option value="Mexico">Mexico</option>
+              <option value="South Africa">South Africa</option>
+              <option value="China">China</option>
+              <option value="Russia">Russia</option>
+              <option value="South Korea">South Korea</option>
+              <option value="Argentina">Argentina</option>
+              <option value="New Zealand">New Zealand</option>
             </select>
           </div>
 
@@ -323,7 +331,7 @@ const FreeTrialForm = () => {
             <label>
               <input
                 type="checkbox"
-                value="Shadow Creation"
+                value="Re-color"
                 onChange={handleCheckboxChange}
               />
               Re-color
@@ -331,10 +339,10 @@ const FreeTrialForm = () => {
             <label>
               <input
                 type="checkbox"
-                value="Shadow Creation"
+                value="Gemstone Enhancement"
                 onChange={handleCheckboxChange}
               />
-              Gamestone Enhancement
+              Gemstone Enhancement
             </label>
           </div>
 
