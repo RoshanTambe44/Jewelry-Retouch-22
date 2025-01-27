@@ -1,17 +1,13 @@
 import React, { useState } from "react";
 import "../styles/Footer.css";
-import {
-  FaLinkedin,
-  FaGoogle,
-  FaFacebook,
-  FaInstagram,
-  FaTwitter,
-} from "react-icons/fa";
+import { FaLinkedin, FaGoogle, FaFacebook, FaInstagram, FaTwitter } from "react-icons/fa";
+import { motion, useInView } from "framer-motion";
 
 const Footer = () => {
   const [email, setEmail] = useState("");
   const [error, setError] = useState("");
 
+  // Handle email submission
   const handleSubmit = (e) => {
     e.preventDefault();
 
@@ -29,11 +25,28 @@ const Footer = () => {
     }
   };
 
+  // Animation variants
+  const fadeIn = {
+    hidden: { opacity: 0, y: 20 },
+    visible: { opacity: 1, y: 0 },
+  };
+
   return (
-    <footer className="footer" id="contact">
+    <motion.footer
+      className="footer"
+      id="contact"
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: true, amount: 0.3 }}
+      transition={{ duration: 0.8 }}
+    >
       <div className="footer-container">
         {/* Newsletter */}
-        <div className="footer-section">
+        <motion.div
+          className="footer-section"
+          variants={fadeIn}
+          transition={{ duration: 0.6, delay: 0.2 }}
+        >
           <h3>Subscribe to Our Newsletter</h3>
           <p>
             Stay updated with our latest offers, news, and product releases.
@@ -55,13 +68,23 @@ const Footer = () => {
             </div>
           </form>
           {error && <p className="error-message">{error}</p>}
-        </div>
+        </motion.div>
 
         {/* Social Links */}
-        <div className="footer-section">
+        <motion.div
+          className="footer-section"
+          variants={fadeIn}
+          transition={{ duration: 0.6, delay: 0.4 }}
+        >
           <h3>Follow Us For More</h3>
           <p>Connect with us on our social media platforms.</p>
-          <div className="social-icons">
+          <motion.div
+            className="social-icons"
+            initial={{ opacity: 0, scale: 0.8 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            viewport={{ once: true, amount: 0.3 }}
+            transition={{ duration: 0.8, delay: 0.6 }}
+          >
             <a
               href="https://www.linkedin.com"
               target="_blank"
@@ -97,10 +120,10 @@ const Footer = () => {
             >
               <FaTwitter className="social-icon" title="Twitter" />
             </a>
-          </div>
-        </div>
+          </motion.div>
+        </motion.div>
       </div>
-    </footer>
+    </motion.footer>
   );
 };
 

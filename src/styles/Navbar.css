@@ -36,8 +36,8 @@ body {
   margin-right: 10px;
 }
 .navbar-title {
-  font-size: 1.6rem;
-  font-family: "Abril Fatface", serif;
+  font-size: 1.8rem;
+  font-family: "Abril Fatface", serif, cursive;
   font-weight: bold;
   color: #954000;
   text-decoration: none; /* Remove underline */

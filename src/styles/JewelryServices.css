@@ -22,13 +22,13 @@
   color: #000000;
   font-size: 1rem;
   line-height: 1.8;
-  margin-bottom: 40px;
 }
 
 /* Service List Container */
 .service-list {
   display: flex;
   justify-content: center;
+  margin-top: 30px;
   gap: 30px;
   flex-wrap: nowrap; /* Prevent wrapping for larger screens */
   width: 100%;
@@ -40,6 +40,7 @@
 .service-list::-webkit-scrollbar {
   display: none; /* Hide scrollbar for Webkit browsers */
 }
+
 
 /* Responsive Design */
 

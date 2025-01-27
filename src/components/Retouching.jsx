@@ -1,4 +1,5 @@
-import { motion } from "framer-motion"; // Importing motion from framer-motion
+import { motion } from "framer-motion";
+import { useInView } from "react-intersection-observer";
 import Earring from "../assets/SE-1.png";
 import Pendant from "../assets/SE-2.png";
 import Ring from "../assets/SE-3.png";
@@ -18,27 +19,40 @@ const Retouch = () => {
   ];
 
   return (
-    <section className="photo-services">
-        <h2>
-        —  High End Jewelry Retouching Services —
-      </h2>
+    <motion.section
+      className="photo-services"
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{ duration: 1 }}
+    >
+      <h2>— High End Jewelry Retouching Services —</h2>
       <p>We specialize in high-end jewelry retouching that enhances the beauty and detail of your jewelry pieces.</p>
+
       <div className="services-grid">
-        {services.map((service, index) => (
-          <motion.div
-            key={index}
-            className="services-item"
-            initial={{ opacity: 0, y: 50 }} // Starting point: invisible and slightly below
-            animate={{ opacity: 1, y: 0 }} // End point: fully visible and in place
-            transition={{ delay: index * 0.2, duration: 0.5 }} // Delay each item slightly for staggered effect
-          >
-            <img src={service.image} alt={service.title} className="service-image" />
-            <h3>{service.title}</h3>
-            <p>{service.description}</p>
-          </motion.div>
-        ))}
+        {services.map((service, index) => {
+          // Intersection Observer hook for each service item
+          const { ref, inView } = useInView({
+            triggerOnce: true, // Trigger the animation once
+            threshold: 0.1, // 10% of the item needs to be visible
+          });
+
+          return (
+            <motion.div
+              key={index}
+              ref={ref}
+              className="services-item"
+              initial={{ opacity: 0, y: 50 }} // Start with opacity 0 and slightly below
+              animate={{ opacity: inView ? 1 : 0, y: inView ? 0 : 50 }} // Animate when in view
+              transition={{ delay: index * 0.2, duration: 0.5 }} // Stagger the animation
+            >
+              <img src={service.image} alt={service.title} className="service-image" />
+              <h3>{service.title}</h3>
+              <p>{service.description}</p>
+            </motion.div>
+          );
+        })}
       </div>
-    </section>
+    </motion.section>
   );
 };
 

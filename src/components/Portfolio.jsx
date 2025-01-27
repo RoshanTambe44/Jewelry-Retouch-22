@@ -1,4 +1,6 @@
 import React, { useState } from "react";
+import { motion } from "framer-motion";
+import { useInView } from "react-intersection-observer";
 import watch from "../assets/WP-1.jpg";
 import watch1 from "../assets/WP-2.jpg";
 import watch2 from "../assets/WP-3.jpg";
@@ -74,30 +76,56 @@ const Portfolio = () => {
   // Categories for tabs
   const categories = ["All", "Clipping Path", "Retouching", "Color Correction", "Model + Jewelry"];
 
+  // Intersection Observer for section visibility
+  const { ref, inView } = useInView({
+    triggerOnce: true,
+    threshold: 0.1,
+  });
+
   return (
-    <section className="portfolio" id="portfolio">
-      <h2>— Portfolio —</h2>
-      <p>Making Your Jewelry Photos Look Irresistible and Beautiful</p>
+    <section className="portfolio" id="portfolio" ref={ref}>
+      <motion.h2
+        initial={{ opacity: 0, y: -30 }}
+        animate={{ opacity: inView ? 1 : 0, y: inView ? 0 : -30 }}
+        transition={{ duration: 1 }}
+      >
+        — Portfolio —
+      </motion.h2>
+      <motion.p
+        initial={{ opacity: 0, y: -20 }}
+        animate={{ opacity: inView ? 1 : 0, y: inView ? 0 : -20 }}
+        transition={{ duration: 1, delay: 0.2 }}
+      >
+        Making Your Jewelry Photos Look Irresistible and Beautiful
+      </motion.p>
 
       {/* Category Tabs */}
       <div className="portfolio-tabs">
         {categories.map((category, index) => (
-          <button
+          <motion.button
             key={index}
             className={`portfolio-tab ${activeCategory === category ? "active" : ""}`}
             onClick={() => setActiveCategory(category)}
+            whileHover={{ scale: 1.05 }}
+            transition={{ duration: 0.3 }}
           >
             {category}
-          </button>
+          </motion.button>
         ))}
       </div>
 
       {/* Gallery Section */}
       <div className="portfolio-gallery">
         {filteredImages.map((image) => (
-          <div key={image.id} className="portfolio-item">
+          <motion.div
+            key={image.id}
+            className="portfolio-item"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: inView ? 1 : 0 }}
+            transition={{ duration: 0.5 }}
+          >
             <img src={image.src} alt={image.category} />
-          </div>
+          </motion.div>
         ))}
       </div>
     </section>

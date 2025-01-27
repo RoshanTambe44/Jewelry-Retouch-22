@@ -19,7 +19,8 @@ const JewelryService = () => {
         className="service-image"
         initial={{ opacity: 0, x: -100 }}
         animate={{ opacity: inView ? 1 : 0, x: inView ? 0 : -100 }}
-        transition={{ duration: 1 }}
+        transition={{ duration: 1, ease: "easeOut" }}
+        whileHover={{ scale: 1.05, boxShadow: "0px 8px 15px rgba(0, 0, 0, 0.2)" }}
       >
         <img
           src={traditionalJewelry}
@@ -30,22 +31,32 @@ const JewelryService = () => {
       </motion.div>
 
       {/* Center Content */}
-      <div className="service-content">
+      <motion.div
+        className="service-content"
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: inView ? 1 : 0, y: inView ? 0 : 20 }}
+        transition={{ duration: 1, ease: "easeOut", delay: 0.3 }}
+      >
         <h2>Jewelry Photo Editing Service in India</h2>
-        <p>
+        <motion.p
+          initial={{ opacity: 0 }}
+          animate={{ opacity: inView ? 1 : 0 }}
+          transition={{ duration: 1, ease: "easeOut", delay: 0.5 }}
+        >
           Elevate your jewelry visuals with expert editing that highlights the
           brilliance of your precious pieces. We specialize in background
           removal, color correction, shine enhancement, and custom retouching to
           ensure every detail stands out.
-        </p>
-      </div>
+        </motion.p>
+      </motion.div>
 
       {/* Right Image */}
       <motion.div
         className="service-image"
         initial={{ opacity: 0, x: 100 }}
         animate={{ opacity: inView ? 1 : 0, x: inView ? 0 : 100 }}
-        transition={{ duration: 1 }}
+        transition={{ duration: 1, ease: "easeOut" }}
+        whileHover={{ scale: 1.05, boxShadow: "0px 8px 15px rgba(0, 0, 0, 0.2)" }}
       >
         <img
           src={diamondRing}

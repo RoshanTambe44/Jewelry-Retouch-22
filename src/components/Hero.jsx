@@ -1,22 +1,19 @@
 import React, { useState, useEffect } from "react";
-import { motion } from "framer-motion"; // Import Framer Motion
+import { motion } from "framer-motion";
 import "../styles/Hero.css";
 
-// Import slider images
 import Header1 from "../assets/Header-1.png";
 import Header2 from "../assets/Header-2.png";
 import Header3 from "../assets/Header-1.png";
 
 const Header = () => {
-  const images = [Header1, Header2, Header3]; // Array of images
+  const images = [Header1, Header2, Header3];
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
-  // Auto-slide effect
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentImageIndex((prevIndex) => (prevIndex + 1) % images.length);
-    }, 3000); // Change image every 3 seconds
-
+    }, 3000);
     return () => clearInterval(interval);
   }, [images.length]);
 
@@ -29,15 +26,29 @@ const Header = () => {
         animate={{ opacity: 1, x: 0 }}
         transition={{ duration: 1 }}
       >
-        <div className="heading">
-          <h1>Jewelry Photo Retouching Services</h1>
-        </div>
+        <motion.div
+          className="heading"
+          initial="hidden"
+          animate="visible"
+          variants={{
+            hidden: { opacity: 0, y: -20 },
+            visible: {
+              opacity: 1,
+              y: 0,
+              transition: { duration: 0.8, staggerChildren: 0.3 },
+            },
+          }}
+        >
+          <motion.h1 variants={{ hidden: { opacity: 0 }, visible: { opacity: 1 } }}>
+            Jewelry Photo Retouching Services
+          </motion.h1>
+        </motion.div>
         <motion.p
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 1, delay: 0.3 }}
         >
-        Are you looking to elevate your jewelry photography to its fullest potential, our expert retouching services are the perfect solution. We specialize in enhancing the details of your jewelry photos.
+          Are you looking to elevate your jewelry photography to its fullest potential? Our expert retouching services are the perfect solution. We specialize in enhancing the details of your jewelry photos.
         </motion.p>
       </motion.div>
 
@@ -56,7 +67,9 @@ const Header = () => {
             className="slider-image"
             initial={{ opacity: 0, scale: 0.8 }}
             animate={{ opacity: 1, scale: 1 }}
+            exit={{ opacity: 0 }}
             transition={{ duration: 0.8 }}
+            whileHover={{ scale: 1.05 }}
           />
         </div>
       </motion.div>

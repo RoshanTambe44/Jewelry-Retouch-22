@@ -1,5 +1,5 @@
-// TestimonialSlider.jsx
 import React, { useState } from "react";
+import { motion } from "framer-motion"; // Importing motion from framer-motion
 import "../styles/Testimonial.css";
 import clientImage1 from "../assets/client-1.png"; // Replace with actual image paths
 import clientImage2 from "../assets/client-2.webp";
@@ -25,17 +25,17 @@ const testimonials = [
     author: "Olivia Morgan",
   },
   {
-  id: 4,
-  image: clientImage1,
-  text: "Amazing work on my watch images! The retouching highlighted every intricate detail, giving a professional, polished look.",
-  author: "Emily Carter",
-},
-{
-  id: 5,
-  image: clientImage2,
-  text: "I’m beyond impressed with the quality of the jewelry retouching! Every image now looks crisp, with the right amount of brightness and clarity. They’ve made my jewelry pieces pop in a way that’s captured my audience’s attention. I’ll be returning for all my future retouching needs!",
-  author: "Logan Davis",
-}
+    id: 4,
+    image: clientImage1,
+    text: "Amazing work on my watch images! The retouching highlighted every intricate detail, giving a professional, polished look.",
+    author: "Emily Carter",
+  },
+  {
+    id: 5,
+    image: clientImage2,
+    text: "I’m beyond impressed with the quality of the jewelry retouching! Every image now looks crisp, with the right amount of brightness and clarity. They’ve made my jewelry pieces pop in a way that’s captured my audience’s attention. I’ll be returning for all my future retouching needs!",
+    author: "Logan Davis",
+  }
 ];
 
 const TestimonialSlider = () => {
@@ -53,17 +53,30 @@ const TestimonialSlider = () => {
     <section className="testimonial">
       <h2>— What our customers say —</h2>
       <div className="testimonial-container">
-        <div className="testimonial-image">
+        <motion.div
+          className="testimonial-image"
+          initial={{ opacity: 0, y: 50 }} // Start from below and invisible
+          whileInView={{ opacity: 1, y: 0 }} // Animate to full opacity and normal position when in view
+          viewport={{ once: true, amount: 0.2 }} // Trigger animation once when 20% of the element is in view
+          transition={{ duration: 0.5 }}
+        >
           <img src={testimonials[currentIndex].image} alt={testimonials[currentIndex].author} />
-        </div>
-        <div className="testimonial-content">
+        </motion.div>
+
+        <motion.div
+          className="testimonial-content"
+          initial={{ opacity: 0, y: 50 }} // Start from below and invisible
+          whileInView={{ opacity: 1, y: 0 }} // Animate to full opacity and normal position when in view
+          viewport={{ once: true, amount: 0.2 }} // Trigger animation once when 20% of the element is in view
+          transition={{ duration: 0.5 }}
+        >
           <p className="testimonial-quote">
             <span className="quote-icon">“</span>
             {testimonials[currentIndex].text}
             <span className="quote-icon">”</span>
-
           </p>
           <p className="testimonial-author">{testimonials[currentIndex].author}</p>
+
           <div className="testimonial-pagination">
             {testimonials.map((_, index) => (
               <span
@@ -73,7 +86,8 @@ const TestimonialSlider = () => {
               ></span>
             ))}
           </div>
-        </div>
+        </motion.div>
+
         <div className="testimonial-navigation">
           <button className="nav-button" onClick={handlePrev}>
             &#8249;
