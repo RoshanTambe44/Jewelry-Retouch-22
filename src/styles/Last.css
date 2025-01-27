@@ -1,89 +1,47 @@
-/* General Reset */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
 .last-footer {
-  background-color: #f8f9fa;
-  color: #000000;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 1.5rem 2rem;
-  font-family: Arial, sans-serif;
-  border-top: 1px solid #ddd;
-  flex-wrap: wrap; /* Allows wrapping for smaller screens */
+  background-color: #f8f9fa; /* Light background color */
+  padding: 10px 20px; /* Add some padding for spacing */
 }
 
-/* Left Section: Copyright Text */
-.footer-text {
-  font-size: 0.9rem;
-  color: #000000;
-  flex: 1; /* Ensures it occupies one portion */
-  text-align: left;
+.footer-containers {
+  display: flex;
+  justify-content: space-between; /* Spread the content evenly across the row */
+  align-items: center; /* Align content vertically */
+  flex-wrap: wrap; /* Allow wrapping on smaller screens */
+  gap: 10px; /* Add spacing between flex items */
 }
 
-/* Right Section: Links */
-.footer-links {
-  display: flex;
-  justify-content: flex-end;
-  gap: 1rem;
-  flex: 2; /* Ensures it occupies more space for alignment */
-  flex-wrap: wrap;
+.footer-text p,
+.footer-credits p {
+  margin: 0; /* Remove default margins */
+  font-size: 14px; /* Adjust font size */
+  color: #000000; /* Muted text color */
 }
 
 .footer-links a {
+  margin: 0 8px; /* Space between links */
+  font-size: 14px;
+  color: #954000; /* Link color */
   text-decoration: none;
-  color: #954000;
-  font-size: 1rem;
-  font-weight:500;
-  font-family: Arial;
-  transition: color 0.3s ease;
 }
 
 .footer-links a:hover {
-  color: #DAA520;
-}
-
-/* Center Section: Credits */
-.footer-credits {
-  flex-basis: 100%;
-  text-align: center;
-  margin-top: 1rem; /* Adds spacing when stacked */
-  font-size: 1rem;
-  color: #000000;
+  text-decoration: underline; /* Add underline on hover */
 }
 
 .footer-credits a {
-  text-decoration: none;
-  font-family:Arial;
-  font-weight: bold;
   color: #954000;
-  transition: color 0.3s ease;
+  text-decoration: none;
 }
 
 .footer-credits a:hover {
-  color: #DAA520;
+  text-decoration: underline;
 }
 
-/* Responsive Styles */
+/* Responsive Design */
 @media (max-width: 768px) {
-  .last-footer {
-   
-    flex-direction: column; /* Stacks all sections vertically */
-    align-items: center; /* Center-aligns content */
-  }
-
-  .footer-text,
-  .footer-links {
-    margin-top: 20px;
-    text-align: center; /* Center-align text on smaller screens */
-  }
-
-  .footer-links {
-    justify-content: center; /* Centers links on smaller screens */
-    gap: 1rem;
+  .footer-container {
+    flex-direction: column; /* Stack content on smaller screens */
+    text-align: center; /* Center-align content */
   }
 }
