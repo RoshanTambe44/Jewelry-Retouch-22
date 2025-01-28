@@ -124,12 +124,14 @@ const FreeTrialForm = () => {
       <div className="form-layout">
         {/* Left Section: Contact Info */}
         <div className="contact-info">
-          <h3>Contact Info</h3>
-          <div className="contact-item">
+          <h3 style={{textAlign:"start", marginBottom:"0px"}} >Contact Info</h3>
+          <hr style={{width:"20%", marginBottom:"50px" }} />
+          <div className="contact-main-div" >
             <a
               href="https://www.google.com/maps?q=Noida, India" // Link to Google Maps with the address
               target="_blank"
               rel="noopener noreferrer"
+              className="contact-item"
             >
               <img
                 src="https://fonts.gstatic.com/s/i/materialiconsoutlined/place/v1/24px.svg"
@@ -138,9 +140,10 @@ const FreeTrialForm = () => {
             </a>
             <p>D 247/1, Sector 63, Noida, India 201301</p>
           </div>
-          <div className="contact-item">
+          <div className="contact-main-div">
             <a
               href="tel:+01204558100" // Click to call phone number
+               className="contact-item"
             >
               <img
                 src="https://fonts.gstatic.com/s/i/materialiconsoutlined/phone/v1/24px.svg"
@@ -151,9 +154,10 @@ const FreeTrialForm = () => {
               <strong>Contact:</strong> 0120-4558100
             </p>
           </div>
-          <div className="contact-item">
+          <div className="contact-main-div" >
             <a
               href="mailto:info@snwbswebservices.com" // Open default mail client
+               className="contact-item"
             >
               <img
                 src="https://fonts.gstatic.com/s/i/materialiconsoutlined/email/v1/24px.svg"
@@ -169,52 +173,81 @@ const FreeTrialForm = () => {
         {/* Right Section: Form */}
         <form onSubmit={handleSubmit}>
           <div className="form-row">
+           <div className="" style={{display:"flex", flexDirection:"column", flex:"auto" }}>
+           <label htmlFor="name">Name</label>
             <input
               type="text"
+              id="name"
               name="name"
               placeholder="Enter Your Full Name"
               value={formData.name}
               onChange={handleInputChange}
+              style={{boxShadow: "inset 2px 2px 10px rgba(0, 0, 0, 0.3)",  color: "black",
+                ":placeholder": {
+                  color: "black", 
+                },}}
               required
             />
             {errors.name && <p className="error">{errors.name}</p>}
+           </div>
 
+            <div className=""  style={{display:"flex", flexDirection:"column", flex:"auto" }}>
+            <label htmlFor="Email">Email</label>
             <input
               type="email"
+              id="email"
               name="email"
               placeholder="Email Id"
               value={formData.email}
               onChange={handleInputChange}
+              style={{boxShadow: "inset 2px 2px 10px rgba(0, 0, 0, 0.3)", }}
               required
             />
             {errors.email && <p className="error">{errors.email}</p>}
+
+            </div>
           </div>
 
           <div className="form-row">
-            <input
+          <div className=""  style={{display:"flex", flexDirection:"column", flex:"auto" }}>
+            <label htmlFor="address">Address</label>
+          <input
               type="text"
+              id="address"
               name="address"
               placeholder="Enter Full Address"
               value={formData.address}
               onChange={handleInputChange}
+              style={{boxShadow: "inset 2px 2px 10px rgba(0, 0, 0, 0.3)", }}
               required
             />
-            <input
+            {errors.address && <p className="error">{errors.address}</p>}
+          </div>
+           <div className="" style={{display:"flex", flexDirection:"column", flex:"auto" }}>
+            <label htmlFor="phone">Phone</label>
+           <input
               type="text"
+              id="phone"
               name="phone"
               placeholder="Enter Phone Number"
               value={formData.phone}
               onChange={handleInputChange}
+              style={{boxShadow: "inset 2px 2px 10px rgba(0, 0, 0, 0.3)", }}
               required
             />
             {errors.phone && <p className="error">{errors.phone}</p>}
+           </div>
           </div>
 
           <div className="form-row">
+            <div className="" style={{display:"flex", flexDirection:"column", flex:"auto", width:"50%"  }}>
+              <label htmlFor="state">State</label>
             <select
               name="state"
+              id="state"
               value={formData.state}
               onChange={handleInputChange}
+              style={{boxShadow: "inset 2px 2px 10px rgba(0, 0, 0, 0.3)", }}
               required
             >
               <option value="" disabled>
@@ -264,11 +297,16 @@ const FreeTrialForm = () => {
               <option value="Kyoto">Kyoto</option>
               <option value="Hokkaido">Hokkaido</option>
             </select>
+            </div>
 
+            <div className="" style={{display:"flex", flexDirection:"column", flex:"auto",  width:"50%" }}>
+              <label htmlFor="country">Country</label>
             <select
               name="country"
+              id="country"
               value={formData.country}
               onChange={handleInputChange}
+              style={{boxShadow: "inset 2px 2px 10px rgba(0, 0, 0, 0.3)", }}
               required
             >
               <option value="" disabled>
@@ -293,66 +331,99 @@ const FreeTrialForm = () => {
               <option value="Argentina">Argentina</option>
               <option value="New Zealand">New Zealand</option>
             </select>
+            </div>
           </div>
 
-          <div className="form-row service-types">
-            <label>
+          <div className="form-row service-types" style={{display:"flex" ,flexDirection:"column"}}>
+            <div className="" style={{display:"flex", alignItems:"start",  flexDirection:"column"}}>
+              <h2 className="">Service Type</h2>
+              <p style={{textAlign:"center", width:"200px"}}>Pick One!</p>
+            </div>
+            <div className="" style={{display:"flex", gap:"16px"}}>
+            <div className="" style={{width:"30%", display:"flex", flex:"auto",  flexDirection:"column", gap:"16px", justifyContent:"start"  }}>
+            
+              <div className=" " style={{ display:"flex"  , flexDirection:"row-reverse"}}>
+              <label style={{textWrap:"nowrap", width:"80%"}}>
+              Background removal
+            </label>
               <input
                 type="checkbox"
                 value="Background removal"
                 onChange={handleCheckboxChange}
+                style={{width:"20%" }}
               />
-              Background removal
+              
+              </div>
+            <div className="" style={{display:"flex" , flexDirection:"row-reverse"}}>
+            <label style={{textWrap:"nowrap", width:"80%" }} > Metal Retouching
             </label>
-            <label>
               <input
                 type="checkbox"
                 value="Metal Retouching"
                 onChange={handleCheckboxChange}
+                style={{width:"20%"}}
               />
-              Metal Retouching
+            </div>
+             
+            </div>
+            <div className="" style={{width:"30%", display:"flex", flex:"auto", flexDirection:"column", gap:"16px", justifyContent:"start"  }}>
+            <div className="" style={{display:"flex" , flexDirection:"row-reverse" , justifyContent:"space-between" }}>
+            <label style={{textWrap:"nowrap", width:"80%"}}>Color Correction
             </label>
-            <label>
               <input
                 type="checkbox"
                 value="Color Correction"
                 onChange={handleCheckboxChange}
+                style={{width:"20%"}}
               />
-              Color Correction
+            </div>
+              
+            <div className="" style={{display:"flex" , flexDirection:"row-reverse"}}>
+            <label style={{textWrap:"nowrap", width:"80%"}}>Shadow Creation
             </label>
-            <label>
               <input
                 type="checkbox"
                 value="Shadow Creation"
                 onChange={handleCheckboxChange}
+                style={{width:"20%"}}
               />
-              Shadow Creation
+              
+            </div>
+            </div>
+            <div className="" style={{width:"30%", display:"flex", flex:"auto",  flexDirection:"column", gap:"16px", justifyContent:"start" }}>
+            <div className="" style={{display:"flex" , flexDirection:"row-reverse", }}>
+              <label style={{textWrap:"nowrap", width:"80%"}}> Re-color
             </label>
-            <label>
               <input
                 type="checkbox"
                 value="Re-color"
                 onChange={handleCheckboxChange}
-              />
-              Re-color
+                style={{width:"20%"}}
+              /></div>
+             
+            <div className="" style={{display:"flex" , flexDirection:"row-reverse"}}>
+            <label style={{textWrap:"nowrap", width:"80%"}}> Gemstone Enhancement
             </label>
-            <label>
               <input
                 type="checkbox"
                 value="Gemstone Enhancement"
                 onChange={handleCheckboxChange}
+                style={{width:"20%"}}
               />
-              Gemstone Enhancement
-            </label>
+            </div>
+             
+            </div>
           </div>
-
-          <div className="form-row">
-            <label className="file-upload ">
+          </div>
+         
+          <div className="form-row" style={{display:"flex", flexDirection:'column', gap:'16px'}}>
+            <label className="file-upload  " style={{color:"white", fontSize:"20px", marginTop:'16px' }}>
               <strong>Upload Files:</strong> JPG / JPEG / PNG / GIF / TIF / TIFF
-              / PSD / DNG/RAW/CR2
+              / PSD / DNG/RAW/CR2</label>
               <input type="file" multiple onChange={handleFileUpload} />
-            </label>
-          </div>
+            
+            </div>
+            
 
           <div className="form-row">
             <textarea
@@ -363,6 +434,7 @@ const FreeTrialForm = () => {
               required
             ></textarea>
           </div>
+          
 
           <button type="submit" className="submit-button">
             Submit Form

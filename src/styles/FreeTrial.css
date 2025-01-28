@@ -2,7 +2,7 @@
 .free-trial-form {
   width: 100%;
   padding: 30px 15px; /* Adjusted padding for responsiveness */
-  background: linear-gradient(145deg, #352014, #845616);
+  background: linear-gradient(180deg, #1d110b , #845616);
   color: #FFFFFF;
 }
 
@@ -51,17 +51,28 @@
   text-align: center;
 }
 
+.contact-main-div{
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+}
+
 .contact-item {
+  padding: 10px;
   display: flex;
   align-items: center;
+  background: white;
   flex-direction: column; /* Stack the image above the text */
   margin-bottom: 15px;
   text-align: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
 }
 
 .contact-item img {
-  width: 40px;
-  height: 40px;
+  width: 100%;
+  height: 100%;
   margin-bottom: 10px; /* Adds spacing between icon and text */
 }
 .contact-item a {
@@ -107,9 +118,8 @@ form {
 
 .form-row {
   display: flex;
-  flex-wrap: wrap;
-  gap: 15px; /* Reduced gap for smaller screens */
-  margin-bottom: 15px;
+  gap: 16px;
+  margin-bottom: 16px;
 }
 
 .form-row input,
