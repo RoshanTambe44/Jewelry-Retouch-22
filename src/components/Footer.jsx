@@ -45,15 +45,20 @@ const Footer = () => {
       whileInView="visible"
       viewport={{ once: true, amount: 0.3 }}
       transition={{ duration: 0.8 }}
+      style={{width:'100%'}}
     >
-      <div className="footer-container">
+      <div className="footer-container" style={{ width:"100%",  display:"flex", justifyContent:"space-between" }}>
         {/* Social Links */}
         <motion.div
-          className="footer-section"
+          className=""
           variants={fadeIn}
           transition={{ duration: 0.6, delay: 0.4 }}
+          style={{width:'40%', display:'flex', flexDirection:'column', gap:'16px', alignItems:"center" }}
         >
+          <div className="">
           <h3>Follow Us For More</h3>
+          <hr style={{background:'#7D5115' , width:"20%"}} />
+          </div>
           <p>Connect with us on our social media platforms.</p>
           <motion.div
             className="social-icons"
@@ -101,15 +106,19 @@ const Footer = () => {
         </motion.div>
 
         {/* Vertical Line */}
-        <div className="footer-line"></div>
+        <div className="footer-line" style={{background:"#7D5115", width:"1px", height:"140px" }}></div>
         {/* Newsletter */}
         <motion.div
-          className="footer-section subscribe"
+          className=""
           variants={fadeIn}
           transition={{ duration: 0.6, delay: 0.2 }}
+          style={{display:"flex", flexDirection:"column", gap:"16px", alignItems:"center", width:"60%", paddingLeft:"50px", paddingRight:"50px"}}
         >
-          <h3>Subscribe to Our Newsletter</h3>
-          <p>
+          <div className="">
+          <h3 >Newsletter</h3>
+          <hr style={{background:'#7D5115' , width:"40%"}} />
+          </div>
+          <p style={{width:"500px"}}>
             Stay updated with our latest offers, news, and product releases.
             Subscribe now and never miss out!
           </p>
@@ -124,7 +133,7 @@ const Footer = () => {
                 required
               />
               <button type="submit" className="newsletter-button">
-                Subscribe
+              <i class="fa-solid fa-plane"></i>
               </button>
             </div>
           </form>
