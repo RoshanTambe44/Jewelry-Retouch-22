@@ -47,7 +47,7 @@ const Footer = () => {
       transition={{ duration: 0.8 }}
       style={{width:'100%'}}
     >
-      <div className="footer-container" style={{ width:"100%",  display:"flex", justifyContent:"space-between" }}>
+      <div className="footer-container" >
         {/* Social Links */}
         <motion.div
           className=""
@@ -56,7 +56,7 @@ const Footer = () => {
           style={{width:'40%', display:'flex', flexDirection:'column', gap:'16px', alignItems:"center" }}
         >
           <div className="">
-          <h3  >Follow Us For More</h3>
+          <h3 className="footer-left-content">Follow Us For More</h3>
           <hr style={{background:'#7D5115' , width:"20%"}} />
           </div>
           <p>Connect with us on our social media platforms.</p>

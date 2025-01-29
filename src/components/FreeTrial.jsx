@@ -23,7 +23,6 @@ const FreeTrialForm = () => {
   };
 
   const handleCheckboxChange = (e) => {
-    console.log("hii");
     
     const { value, checked } = e.target;
     setFormData((prevState) => {
@@ -140,7 +139,7 @@ const FreeTrialForm = () => {
                 alt="Location"
               />
             </a>
-            <p>D 247/1, Sector 63, Noida, India 201301</p>
+            <p style={{textAlign:"start"}}>D 247/1, Sector 63, Noida, India 201301</p>
           </div>
           <div className="contact-main-div">
             <a
@@ -339,13 +338,13 @@ const FreeTrialForm = () => {
           <div className="form-row service-types" style={{display:"flex" ,flexDirection:"column"}}>
             <div className="" style={{display:"flex", alignItems:"start",  flexDirection:"column"}}>
               <h2 className="">Service Type</h2>
-              <p style={{textAlign:"center", width:"200px"}}>Pick One!</p>
+              <p style={{textAlign:"start", marginLeft:"10px" , width:"200px"}}>Pick One!</p>
             </div>
             <div className="" style={{display:"flex", gap:"16px"}}>
             <div className="" style={{width:"30%", display:"flex", flex:"auto",  flexDirection:"column", gap:"16px", justifyContent:"start"  }}>
             
               <div className=" " style={{ display:"flex"  , flexDirection:"row-reverse"}}>
-              <label style={{textWrap:"nowrap", width:"80%"}}>
+              <label style={{textWrap:"nowrap", width:"80%", fontSize:"16px"}}>
               Background removal
             </label>
             <label class="round-checkbox">
@@ -359,7 +358,7 @@ const FreeTrialForm = () => {
               
               </div>
             <div className="" style={{display:"flex" , flexDirection:"row-reverse"}}>
-            <label style={{textWrap:"nowrap", width:"80%" }} > Metal Retouching
+            <label style={{textWrap:"nowrap", width:"80%", fontSize:"16px" }} > Metal Retouching
             </label>
             <label class="round-checkbox">
               <input
@@ -374,7 +373,7 @@ const FreeTrialForm = () => {
             </div>
             <div className="" style={{width:"30%", display:"flex", flex:"auto", flexDirection:"column", gap:"16px", justifyContent:"start"  }}>
             <div className="" style={{display:"flex" , flexDirection:"row-reverse" , justifyContent:"space-between" }}>
-            <label style={{textWrap:"nowrap", width:"80%"}}>Color Correction
+            <label style={{textWrap:"nowrap", width:"80%",fontSize:"16px"}}>Color Correction
             </label>
             <label class="round-checkbox">
               <input
@@ -387,7 +386,7 @@ const FreeTrialForm = () => {
             </div>
               
             <div className="" style={{display:"flex" , flexDirection:"row-reverse"}}>
-            <label style={{textWrap:"nowrap", width:"80%"}}>Shadow Creation
+            <label style={{textWrap:"nowrap", width:"80%", fontSize:"16px"}}>Shadow Creation
             </label>
             <label class="round-checkbox">
               <input
@@ -402,7 +401,7 @@ const FreeTrialForm = () => {
             </div>
             <div className="" style={{width:"30%", display:"flex", flex:"auto",  flexDirection:"column", gap:"16px", justifyContent:"start" }}>
             <div className="" style={{display:"flex" , flexDirection:"row-reverse", }}>
-              <label style={{textWrap:"nowrap", width:"80%"}}> Re-color
+              <label style={{textWrap:"nowrap", width:"80%", fontSize:"16px"}}> Re-color
             </label><label class="round-checkbox">
               <input
                 type="checkbox"
@@ -414,7 +413,7 @@ const FreeTrialForm = () => {
               </div>
              
             <div className="" style={{display:"flex" , flexDirection:"row-reverse"}}>
-            <label style={{textWrap:"nowrap", width:"80%"}}> Gemstone Enhancement
+            <label style={{textWrap:"nowrap", width:"80%", fontSize:"16px"}}> Gemstone Enhancement
             </label><label class="round-checkbox">
               <input
                 type="checkbox"
