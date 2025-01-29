@@ -86,11 +86,22 @@
   transform: scale(1.1);
 }
 
+.footer-container{
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+
+}
+
 /* Responsive Design */
 @media (max-width: 768px) {
   .footer-container {
-    flex-direction: column;
-    align-items: center;
+    flex-direction: column-reverse;
+    align-items: center;    
+  }
+
+  .footer-left-content{
+    width: 170px;
   }
 
   .footer-section {
@@ -98,14 +109,13 @@
     max-width: 100%;
   }
   .footer-line{
-    display:hidden;
+    display:none;
   }
 
+  .newslatter-main{
+    margin-top: 16px;
+  }
   .newsletter-form {
     align-items: center;
-
-    .social-icons{
-      justify-content: center;
-    }
   }
 }

@@ -17,7 +17,6 @@ import Bracelet3 from "../assets/BP-3.jpg";
 import Bracelet4 from "../assets/BP-4.jpg";
 import Bracelet5 from "../assets/BP-5.jpg";
 import "../styles/Portfolio.css";
-
 // Portfolio image data
 const portfolioImages = [
   { id: 1, src: watch3, category: "Clipping Path" },
@@ -46,30 +45,41 @@ const portfolioImages = [
   { id: 24, src: earrings, category: "Model + Jewelry" },
 ];
 
+// Shuffle utility function
+const shuffleArray = (array) => {
+  const shuffled = [...array];
+  for (let i = shuffled.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
+  }
+  return shuffled;
+};
+
+// Select random subset of images
+const selectRandomImages = (array, count) => {
+  return shuffleArray(array).slice(0, count);
+};
+
 const Portfolio = () => {
   const [activeCategory, setActiveCategory] = useState("All");
-  const [visibleCount, setVisibleCount] = useState(6);
-  const [showMore, setShowMore] = useState(true);  // Track if more items are shown
 
+  // Get 6 random images based on the selected category
   const filteredImages =
     activeCategory === "All"
-      ? portfolioImages.slice(0, visibleCount)
-      : portfolioImages.filter((image) => image.category === activeCategory).slice(0, 6);
+      ? selectRandomImages(portfolioImages, 6) // Randomly select 6 images for "All"
+      : selectRandomImages(
+          portfolioImages.filter((image) => image.category === activeCategory),
+          6
+        ); // Randomly select 6 images for specific category
 
+  // Categories for tabs
+  const categories = ["All", "Clipping Path", "Retouching", "Color Correction", "Model + Jewelry"];
+
+  // Intersection Observer for section visibility
   const { ref, inView } = useInView({
     triggerOnce: true,
     threshold: 0.1,
   });
-
-  const handleShowMore = () => {
-    setVisibleCount((prev) => prev + 6);
-    setShowMore(false); // Once clicked, show both "Show More" and "Show Less"
-  };
-
-  const handleShowLess = () => {
-    setVisibleCount(6); // Reset to the initial 6 images
-    setShowMore(true); // Show "Show More" again
-  };
 
   return (
     <section className="portfolio" id="portfolio" ref={ref}>
@@ -103,31 +113,13 @@ const Portfolio = () => {
           </motion.div>
         ))}
       </div>
-
-      {/* Show More / Show Less buttons logic */}
-      {activeCategory === "All" && (
-        <div className="show-buttons-container">
-          {filteredImages.length < portfolioImages.length && (
-            <button
-              
-              className="show-more"
-              onClick={handleShowMore}
-            >
-              Show More
-            </button>
-          )}
-          {visibleCount > 6 && (
-            <button
-              className="show-less"
-              onClick={handleShowLess}
-            >
-              <a href="#portfolio">Show Less</a>
-            </button>
-          )}
-        </div>
-      )}
     </section>
   );
 };
-
 export default Portfolio;
+
+
+
+
+
+
