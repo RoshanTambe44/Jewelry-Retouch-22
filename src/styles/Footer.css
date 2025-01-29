@@ -98,9 +98,12 @@
     max-width: 100%;
   }
   .footer-line{
-    display:hidden;
+    display:none;
   }
 
+  .newslatter-main{
+    margin-top: 16px;
+  }
   .newsletter-form {
     align-items: center;
 

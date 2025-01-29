@@ -23,6 +23,8 @@ const FreeTrialForm = () => {
   };
 
   const handleCheckboxChange = (e) => {
+    console.log("hii");
+    
     const { value, checked } = e.target;
     setFormData((prevState) => {
       const services = checked
@@ -346,23 +348,27 @@ const FreeTrialForm = () => {
               <label style={{textWrap:"nowrap", width:"80%"}}>
               Background removal
             </label>
+            <label class="round-checkbox">
               <input
                 type="checkbox"
                 value="Background removal"
                 onChange={handleCheckboxChange}
                 style={{width:"20%" }}
-              />
+              /><span></span>
+              </label>
               
               </div>
             <div className="" style={{display:"flex" , flexDirection:"row-reverse"}}>
             <label style={{textWrap:"nowrap", width:"80%" }} > Metal Retouching
             </label>
+            <label class="round-checkbox">
               <input
                 type="checkbox"
                 value="Metal Retouching"
                 onChange={handleCheckboxChange}
                 style={{width:"20%"}}
-              />
+              /><span></span>
+              </label>
             </div>
              
             </div>
@@ -370,46 +376,53 @@ const FreeTrialForm = () => {
             <div className="" style={{display:"flex" , flexDirection:"row-reverse" , justifyContent:"space-between" }}>
             <label style={{textWrap:"nowrap", width:"80%"}}>Color Correction
             </label>
+            <label class="round-checkbox">
               <input
                 type="checkbox"
                 value="Color Correction"
                 onChange={handleCheckboxChange}
                 style={{width:"20%"}}
-              />
+              /><span></span>
+              </label>
             </div>
               
             <div className="" style={{display:"flex" , flexDirection:"row-reverse"}}>
             <label style={{textWrap:"nowrap", width:"80%"}}>Shadow Creation
             </label>
+            <label class="round-checkbox">
               <input
                 type="checkbox"
                 value="Shadow Creation"
                 onChange={handleCheckboxChange}
                 style={{width:"20%"}}
-              />
+              /><span></span>
+              </label>
               
             </div>
             </div>
             <div className="" style={{width:"30%", display:"flex", flex:"auto",  flexDirection:"column", gap:"16px", justifyContent:"start" }}>
             <div className="" style={{display:"flex" , flexDirection:"row-reverse", }}>
               <label style={{textWrap:"nowrap", width:"80%"}}> Re-color
-            </label>
+            </label><label class="round-checkbox">
               <input
                 type="checkbox"
                 value="Re-color"
                 onChange={handleCheckboxChange}
                 style={{width:"20%"}}
-              /></div>
+              /><span></span>
+              </label>
+              </div>
              
             <div className="" style={{display:"flex" , flexDirection:"row-reverse"}}>
             <label style={{textWrap:"nowrap", width:"80%"}}> Gemstone Enhancement
-            </label>
+            </label><label class="round-checkbox">
               <input
                 type="checkbox"
                 value="Gemstone Enhancement"
                 onChange={handleCheckboxChange}
                 style={{width:"20%"}}
-              />
+              /><span></span>
+              </label>
             </div>
              
             </div>

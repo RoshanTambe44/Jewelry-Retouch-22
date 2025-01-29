@@ -2,8 +2,8 @@ import React, { useState } from "react";
 import { motion } from "framer-motion"; // Importing motion from framer-motion
 import "../styles/Testimonial.css";
 import clientImage1 from "../assets/client-1.png"; // Replace with actual image paths
-import clientImage2 from "../assets/client-2.webp";
-import clientImage3 from "../assets/client-3.webp";
+import clientImage2 from "../assets/client-2.jpg";
+import clientImage3 from "../assets/client-3.jpg";
 
 const testimonials = [
   {
