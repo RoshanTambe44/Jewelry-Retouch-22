@@ -46,66 +46,49 @@ const portfolioImages = [
   { id: 24, src: earrings, category: "Model + Jewelry" },
 ];
 
-// Shuffle utility function
-const shuffleArray = (array) => {
-  const shuffled = [...array];
-  for (let i = shuffled.length - 1; i > 0; i--) {
-    const j = Math.floor(Math.random() * (i + 1));
-    [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
-  }
-  return shuffled;
-};
-
-// Select random subset of images
-const selectRandomImages = (array, count) => {
-  return shuffleArray(array).slice(0, count);
-};
-
 const Portfolio = () => {
   const [activeCategory, setActiveCategory] = useState("All");
+  const [visibleCount, setVisibleCount] = useState(6);
+  const [showMore, setShowMore] = useState(true);  // Track if more items are shown
 
-  // Get 6 random images based on the selected category
   const filteredImages =
     activeCategory === "All"
-      ? selectRandomImages(portfolioImages, 6) // Randomly select 6 images for "All"
-      : selectRandomImages(
-          portfolioImages.filter((image) => image.category === activeCategory),
-          6
-        ); // Randomly select 6 images for specific category
+      ? portfolioImages.slice(0, visibleCount)
+      : portfolioImages.filter((image) => image.category === activeCategory).slice(0, 6);
 
-  // Categories for tabs
-  const categories = ["All", "Clipping Path", "Retouching", "Color Correction", "Model + Jewelry"];
-
-  // Intersection Observer for section visibility
   const { ref, inView } = useInView({
     triggerOnce: true,
     threshold: 0.1,
   });
 
+  const handleShowMore = () => {
+    setVisibleCount((prev) => prev + 6);
+    setShowMore(false); // Once clicked, show both "Show More" and "Show Less"
+  };
+
+  const handleShowLess = () => {
+    setVisibleCount(6); // Reset to the initial 6 images
+    setShowMore(true); // Show "Show More" again
+  };
+
   return (
     <section className="portfolio" id="portfolio" ref={ref}>
-      <motion.h2
-        initial={{ opacity: 0, y: -30 }}
-        animate={{ opacity: inView ? 1 : 0, y: inView ? 0 : -30 }}
-        transition={{ duration: 1 }}
-      >
+      <motion.h2 initial={{ opacity: 0, y: -30 }} animate={{ opacity: inView ? 1 : 0, y: inView ? 0 : -30 }} transition={{ duration: 1 }}>
         — Portfolio —
       </motion.h2>
-      <motion.p
-        initial={{ opacity: 0, y: -20 }}
-        animate={{ opacity: inView ? 1 : 0, y: inView ? 0 : -20 }}
-        transition={{ duration: 1, delay: 0.2 }}
-      >
+      <motion.p initial={{ opacity: 0, y: -20 }} animate={{ opacity: inView ? 1 : 0, y: inView ? 0 : -20 }} transition={{ duration: 1, delay: 0.2 }}>
         Making Your Jewelry Photos Look Irresistible and Beautiful
       </motion.p>
-
-      {/* Category Tabs */}
       <div className="portfolio-tabs">
-        {categories.map((category, index) => (
+        {["All", "Clipping Path", "Retouching", "Color Correction", "Model + Jewelry"].map((category, index) => (
           <motion.button
             key={index}
             className={`portfolio-tab ${activeCategory === category ? "active" : ""}`}
-            onClick={() => setActiveCategory(category)}
+            onClick={() => {
+              setActiveCategory(category);
+              setVisibleCount(6);  // Reset visible count when changing categories
+              setShowMore(true);  // Ensure "Show More" is visible again
+            }}
             whileHover={{ scale: 1.05 }}
             transition={{ duration: 0.3 }}
           >
@@ -113,21 +96,36 @@ const Portfolio = () => {
           </motion.button>
         ))}
       </div>
-
-      {/* Gallery Section */}
       <div className="portfolio-gallery">
         {filteredImages.map((image) => (
-          <motion.div
-            key={image.id}
-            className="portfolio-item"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: inView ? 1 : 0 }}
-            transition={{ duration: 0.5 }}
-          >
+          <motion.div key={image.id} className="portfolio-item" initial={{ opacity: 0 }} animate={{ opacity: inView ? 1 : 0 }} transition={{ duration: 0.5 }}>
             <img src={image.src} alt={image.category} />
           </motion.div>
         ))}
       </div>
+
+      {/* Show More / Show Less buttons logic */}
+      {activeCategory === "All" && (
+        <div className="show-buttons-container">
+          {filteredImages.length < portfolioImages.length && (
+            <button
+              
+              className="show-more"
+              onClick={handleShowMore}
+            >
+              Show More
+            </button>
+          )}
+          {visibleCount > 6 && (
+            <button
+              className="show-less"
+              onClick={handleShowLess}
+            >
+              <a href="#portfolio">Show Less</a>
+            </button>
+          )}
+        </div>
+      )}
     </section>
   );
 };
