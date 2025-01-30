@@ -21,6 +21,8 @@ body {
   z-index: 1000;
   width: 100%;
   border-bottom: 1px solid #ddd;
+  margin: 0 auto;
+  max-width: 1300px;
 }
 
 .navbar:hover{
@@ -56,7 +58,7 @@ body {
   display: flex;
   justify-content: center;
   font-family: Arial;
-  gap: 5rem; /* Adjust gap between links */
+  gap: 8rem; /* Adjust gap between links */
   padding: 0;
 }
 
