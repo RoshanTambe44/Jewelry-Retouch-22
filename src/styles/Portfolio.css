@@ -196,7 +196,8 @@
 /* Responsive Images */
 @media (max-width: 768px) {
   .portfolio-item img {
-    height: 180px;
+    height: 350px;
+    width: 550px;
   }
 }
 
