@@ -4,7 +4,7 @@ import "../styles/Hero.css";
 
 import Header1 from "../assets/Header-1.png";
 import Header2 from "../assets/Header-2.png";
-import Header3 from "../assets/Header-1.png";
+import Header3 from "../assets/Header-3.png";
 
 const Header = () => {
   const images = [Header1, Header2, Header3];
