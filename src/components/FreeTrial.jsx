@@ -342,86 +342,86 @@ const FreeTrialForm = () => {
               <h2 className="">Service Type</h2>
               <p style={{textAlign:"start", marginLeft:"10px" , width:"200px"}}>Pick One!</p>
             </div>
-            <div className="" style={{display:"flex", gap:"16px"}}>
-            <div className="" style={{width:"30%", display:"flex", flex:"auto",  flexDirection:"column", gap:"16px", justifyContent:"start"  }}>
+            <div className="main-super-main-checkbox" >
+            <div className="super-main-checkbox" >
             
-              <div className=" " style={{ display:"flex"  , flexDirection:"row-reverse"}}>
-              <label style={{textWrap:"nowrap", width:"80%", fontSize:"16px"}}>
+              <div className="main-checkbox " >
+              <label className="checkbox-label"  >
               Background removal
             </label>
             <label class="round-checkbox">
               <input
+              className="inp-checkbox"
                 type="checkbox"
                 value="Background removal"
                 onChange={handleCheckboxChange}
-                style={{width:"20%" }}
               /><span></span>
               </label>
               
               </div>
-            <div className="" style={{display:"flex" , flexDirection:"row-reverse"}}>
-            <label style={{textWrap:"nowrap", width:"80%", fontSize:"16px" }} > Metal Retouching
+            <div className="main-checkbox" >
+            <label className="checkbox-label" > Metal Retouching
             </label>
             <label class="round-checkbox">
               <input
+              className="inp-checkbox"
                 type="checkbox"
                 value="Metal Retouching"
                 onChange={handleCheckboxChange}
-                style={{width:"20%"}}
               /><span></span>
               </label>
             </div>
              
             </div>
-            <div className="" style={{width:"30%", display:"flex", flex:"auto", flexDirection:"column", gap:"16px", justifyContent:"start"  }}>
-            <div className="" style={{display:"flex" , flexDirection:"row-reverse" , justifyContent:"space-between" }}>
-            <label style={{textWrap:"nowrap", width:"80%",fontSize:"16px"}}>Color Correction
+            <div className="super-main-checkbox">
+            <div className="main-checkbox" style={{display:"flex" , flexDirection:"row-reverse" , justifyContent:"space-between" }}>
+            <label className="checkbox-label" >Color Correction
             </label>
             <label class="round-checkbox">
               <input
+              className="inp-checkbox"
                 type="checkbox"
                 value="Color Correction"
                 onChange={handleCheckboxChange}
-                style={{width:"20%"}}
               /><span></span>
               </label>
             </div>
               
-            <div className="" style={{display:"flex" , flexDirection:"row-reverse"}}>
-            <label style={{textWrap:"nowrap", width:"80%", fontSize:"16px"}}>Shadow Creation
+            <div className="main-checkbox" >
+            <label className="checkbox-label" >Shadow Creation
             </label>
             <label class="round-checkbox">
               <input
+              className="inp-checkbox"
                 type="checkbox"
                 value="Shadow Creation"
                 onChange={handleCheckboxChange}
-                style={{width:"20%"}}
               /><span></span>
               </label>
               
             </div>
             </div>
-            <div className="" style={{width:"30%", display:"flex", flex:"auto",  flexDirection:"column", gap:"16px", justifyContent:"start" }}>
-            <div className="" style={{display:"flex" , flexDirection:"row-reverse", }}>
-              <label style={{textWrap:"nowrap", width:"80%", fontSize:"16px"}}> Re-color
+            <div className="super-main-checkbox">
+            <div className="main-checkbox">
+              <label className="checkbox-label" > Re-color
             </label><label class="round-checkbox">
               <input
+              className="inp-checkbox "
                 type="checkbox"
                 value="Re-color"
                 onChange={handleCheckboxChange}
-                style={{width:"20%"}}
               /><span></span>
               </label>
               </div>
              
-            <div className="" style={{display:"flex" , flexDirection:"row-reverse"}}>
-            <label style={{textWrap:"nowrap", width:"80%", fontSize:"16px"}}> Gemstone Enhancement
+            <div className="main-checkbox" >
+            <label className="checkbox-label" > Gemstone Enhancement
             </label><label class="round-checkbox">
               <input
+              className="inp-checkbox"
                 type="checkbox"
                 value="Gemstone Enhancement"
                 onChange={handleCheckboxChange}
-                style={{width:"20%"}}
               /><span></span>
               </label>
             </div>
@@ -434,7 +434,7 @@ const FreeTrialForm = () => {
             <label className="file-upload  " style={{ marginTop:'16px' }}>
               <strong>Upload Files:</strong> JPG / JPEG / PNG / GIF / TIF / TIFF
               / PSD / DNG/RAW/CR2</label>
-              <input type="file" multiple onChange={handleFileUpload} />
+              <input type="file" className="file-input" multiple onChange={handleFileUpload} />
             
             </div>
             
