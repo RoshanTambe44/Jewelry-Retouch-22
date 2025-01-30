@@ -76,9 +76,13 @@ const WhyChooseUs = () => {
                 animate={{ opacity: inView ? 1 : 0 }}
                 transition={{ duration: 1, delay: index * 0.2 }} // Stagger the animation for each item
               >
-                <span className="choose-us-number">{point.number}</span>
-                <span className="choose-us-title">{point.title}</span>
-                <p className="choose-us-description">{point.description}</p>
+                <div className="choose-us-header">
+                  <span className="choose-us-number">{point.number}</span>
+                  <span className="choose-us-title">{point.title}</span>
+                </div>
+                <div className="">
+                  <p className="choose-us-description">{point.description}</p>
+                </div>
               </motion.li>
             ))}
           </ul>
