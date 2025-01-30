@@ -125,8 +125,10 @@ const FreeTrialForm = () => {
       <div className="form-layout">
         {/* Left Section: Contact Info */}
         <div className="contact-info">
+          <div className="contact-title">
           <h3 style={{textAlign:"start", marginBottom:"0px"}} >Contact Info</h3>
           <hr style={{width:"20%", marginBottom:"50px" }} />
+          </div>
           <div className="contact-main-div" >
             <a
               href="https://www.google.com/maps?q=Noida, India" // Link to Google Maps with the address
@@ -429,7 +431,7 @@ const FreeTrialForm = () => {
           </div>
          
           <div className="form-row" style={{display:"flex", flexDirection:'column', gap:'16px'}}>
-            <label className="file-upload  " style={{color:"white", fontSize:"20px", marginTop:'16px' }}>
+            <label className="file-upload  " style={{ marginTop:'16px' }}>
               <strong>Upload Files:</strong> JPG / JPEG / PNG / GIF / TIF / TIFF
               / PSD / DNG/RAW/CR2</label>
               <input type="file" multiple onChange={handleFileUpload} />

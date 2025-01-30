@@ -81,7 +81,7 @@
 
 
 /* Responsive Design */
-@media (max-width: 1200px) {
+/* @media (max-width: 1200px) {
 
   .footer-text p{
     font-size:16px;
@@ -107,9 +107,9 @@
 
   .last-footer {
     padding: 10px 0px; /* Add some padding for spacing */
-  }
+  /* }
   .footer-container {
-    flex-direction: column; /* Stack content on smaller screens */
-    text-align: center; /* Center-align content */
+    flex-direction: column; 
+    text-align: center; 
   }
-}
+}  */
