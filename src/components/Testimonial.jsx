@@ -4,6 +4,9 @@ import "../styles/Testimonial.css";
 import clientImage1 from "../assets/client-1.png"; // Replace with actual image paths
 import clientImage2 from "../assets/client-2.jpg";
 import clientImage3 from "../assets/client-3.jpg";
+import clientImage4 from "../assets/client-4.jpg";
+import clientImage5 from "../assets/client-5.jpg";
+
 
 const testimonials = [
   {
@@ -23,6 +26,18 @@ const testimonials = [
     image: clientImage3,
     text: "This jewelry retouching service has taken my product photos to the next level. They pay such close attention to detail, making sure each piece shines with precision. The final images look flawless, and the turnaround time is impressive. I’ll definitely continue using their services!",
     author: "Emily Roberts",
+  },
+  {
+    id: 4,
+    image: clientImage4,
+    text: "Amazing work on my watch images! The retouching highlighted every intricate detail, giving a professional, polished look.",
+    author: "Olivia Carter",
+  },
+  {
+    id: 5,
+    image: clientImage5,
+    text: "I’m beyond impressed with the quality of the jewelry retouching! Every image now looks crisp, with the right amount of brightness and clarity. They’ve made my jewelry pieces pop in a way that’s captured my audience’s attention. I’ll be returning for all my future retouching needs!",
+    author: " Ethan Bennett",
   },
 ]
 

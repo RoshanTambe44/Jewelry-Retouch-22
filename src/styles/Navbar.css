@@ -21,8 +21,6 @@ body {
   z-index: 1000;
   width: 100%;
   border-bottom: 1px solid #ddd;
-  margin: 0 auto;
-  max-width: 1300px;
 }
 
 .navbar:hover{

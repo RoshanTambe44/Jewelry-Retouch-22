@@ -57,7 +57,7 @@ const Portfolio = () => {
         Making Your Jewelry Photos Look Irresistible and Beautiful
       </motion.p>
       <div className="portfolio-tabs">
-        {["All", "Clipping Path", "Retouching", "Model + Jewelry"].map((category, index) => (
+        {["All", "Clipping Path", "Retouching","Color Correction", "Model + Jewelry"].map((category, index) => (
           <motion.button
             key={index}
             className={`portfolio-tab ${activeCategory === category ? "active" : ""}`}
