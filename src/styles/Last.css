@@ -38,8 +38,76 @@
   text-decoration: underline;
 }
 
+.last-two-things{
+  display: flex;
+  align-items: center;
+  gap: 100px;
+
+}
+
 /* Responsive Design */
 @media (max-width: 768px) {
+
+  .footer-text p{
+    font-size: 10px;
+    margin-left: 22px;
+  }
+
+  .last-two-things{
+    align-items: center;
+    margin-left: 3px;
+    justify-content: space-between;
+    gap:15px;
+  }
+
+  .last-two-things a, .last-two-things p{
+    
+    font-size:8.5px;
+    
+  }
+
+  .footer-links a {
+    margin: 0px 4px;
+  }
+
+  .last-footer {
+    padding: 10px 0px; /* Add some padding for spacing */
+  }
+  .footer-container {
+    flex-direction: column; /* Stack content on smaller screens */
+    text-align: center; /* Center-align content */
+  }
+}
+
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+
+  .footer-text p{
+    font-size:16px;
+    margin-left: 85px;
+  }
+
+  .last-two-things{
+    align-items: center;
+    margin-left: 38px;
+    justify-content: space-between;
+    gap:20px;
+  }
+
+  .last-two-things a, .last-two-things p{
+    
+    font-size:15px;
+    
+  }
+
+  .footer-links a {
+    margin: 0px 4px;
+  }
+
+  .last-footer {
+    padding: 10px 0px; /* Add some padding for spacing */
+  }
   .footer-container {
     flex-direction: column; /* Stack content on smaller screens */
     text-align: center; /* Center-align content */

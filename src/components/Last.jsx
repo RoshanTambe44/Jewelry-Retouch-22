@@ -35,8 +35,8 @@ const Last = () => {
             &copy; 2025 SNB Web Services Pvt. Ltd. | CIN: U72900UP2017PTC097495. All rights reserved.
           </p>
         </motion.div>
-
-        {/* Footer Links */}
+        <div className="last-two-things">
+           {/* Footer Links */}
         <motion.div
           className="footer-links"
           ref={linksRef} // Attach ref for triggering animation
@@ -70,6 +70,8 @@ const Last = () => {
             </a>
           </p>
         </motion.div>
+        </div>
+       
       </div>
     </footer>
   );
