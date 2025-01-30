@@ -17,53 +17,37 @@ import Bracelet3 from "../assets/BP-3.jpg";
 import Bracelet4 from "../assets/BP-4.jpg";
 import Bracelet5 from "../assets/BP-5.jpg";
 import "../styles/Portfolio.css";
+
 // Portfolio image data
 const portfolioImages = [
-  { id: 1, src: watch3, category: "Clipping Path" },
-  { id: 2, src: Bracelet1, category: "Clipping Path" },
-  { id: 3, src: Ring, category: "Clipping Path" },
-  { id: 4, src: watch1, category: "Clipping Path" },
-  { id: 5, src: Bracelet5, category: "Clipping Path" },
-  { id: 6, src: watch4, category: "Clipping Path" },
-  { id: 7, src: Bracelet2, category: "Retouching" },
-  { id: 8, src: watch, category: "Retouching" },
-  { id: 9, src: earrings, category: "Retouching" },
-  { id: 10, src: Ring, category: "Retouching" },
-  { id: 11, src: Bracelet5, category: "Retouching" },
-  { id: 12, src: necklace, category: "Retouching" },
-  { id: 13, src: Bracelet5, category: "Color Correction" },
-  { id: 14, src: Bracelet4, category: "Color Correction" },
-  { id: 15, src: watch, category: "Color Correction" },
-  { id: 16, src: earrings, category: "Color Correction" },
-  { id: 17, src: Ring, category: "Color Correction" },
-  { id: 18, src: watch3, category: "Color Correction" },
-  { id: 19, src: Bracelet3, category: "Model + Jewelry" },
-  { id: 20, src: Ring, category: "Model + Jewelry" },
-  { id: 21, src: necklace2, category: "Model + Jewelry" },
-  { id: 22, src: watch3, category: "Model + Jewelry" },
-  { id: 23, src: necklace3, category: "Model + Jewelry" },
-  { id: 24, src: earrings, category: "Model + Jewelry" },
+  { id: 1, src: necklace, category: "Clipping Path" },
+  { id: 2, src: necklace2, category: "Clipping Path" },
+  { id: 3, src: Bracelet3, category: "Clipping Path" },
+  { id: 4, src: Bracelet5, category: "Clipping Path" },
+  { id: 5, src: watch4, category: "Clipping Path" },
+  { id: 6, src: Bracelet4, category: "Retouching"},
+  { id: 7, src: watch, category: "Retouching" },
+  { id: 8, src: Ring, category: "Retouching" },
+  { id: 9, src: watch1, category: "Retouching" },
+  { id: 10, src: watch2, category: "Retouching" },
+  { id: 11, src: watch3, category: "Retouching" },
+  { id: 12, src: earrings, category: "Retouching" },
+  { id: 13, src: Bracelet1, category: "Model + Jewelry" },
+  { id: 14, src: Bracelet2, category: "Model + Jewelry" },
+  { id: 15, src: necklace3, category: "Model + Jewelry" },
 ];
+
 const Portfolio = () => {
   const [activeCategory, setActiveCategory] = useState("All");
-  const [visibleCount, setVisibleCount] = useState(6);
-  const [showMore, setShowMore] = useState(true);  // Track if more items are shown
+  const [visibleCount, setVisibleCount] = useState(6); // Initially 6 items visible
+  const { ref, inView } = useInView({ triggerOnce: true, threshold: 0.1 });
+
+  // Filter images based on category
   const filteredImages =
     activeCategory === "All"
       ? portfolioImages.slice(0, visibleCount)
-      : portfolioImages.filter((image) => image.category === activeCategory).slice(0, 6);
-  const { ref, inView } = useInView({
-    triggerOnce: true,
-    threshold: 0.1,
-  });
-  const handleShowMore = () => {
-    setVisibleCount((prev) => prev + 6);
-    setShowMore(false); // Once clicked, show both "Show More" and "Show Less"
-  };
-  const handleShowLess = () => {
-    setVisibleCount(6); // Reset to the initial 6 images
-    setShowMore(true); // Show "Show More" again
-  };
+      : portfolioImages.filter((image) => image.category === activeCategory);
+
   return (
     <section className="portfolio" id="portfolio" ref={ref}>
       <motion.h2 initial={{ opacity: 0, y: -30 }} animate={{ opacity: inView ? 1 : 0, y: inView ? 0 : -30 }} transition={{ duration: 1 }}>
@@ -73,14 +57,13 @@ const Portfolio = () => {
         Making Your Jewelry Photos Look Irresistible and Beautiful
       </motion.p>
       <div className="portfolio-tabs">
-        {["All", "Clipping Path", "Retouching", "Color Correction", "Model + Jewelry"].map((category, index) => (
+        {["All", "Clipping Path", "Retouching", "Model + Jewelry"].map((category, index) => (
           <motion.button
             key={index}
             className={`portfolio-tab ${activeCategory === category ? "active" : ""}`}
             onClick={() => {
               setActiveCategory(category);
-              setVisibleCount(6);  // Reset visible count when changing categories
-              setShowMore(true);  // Ensure "Show More" is visible again
+              setVisibleCount(6); // Reset to 6 images when a new category is selected
             }}
             whileHover={{ scale: 1.05 }}
             transition={{ duration: 0.3 }}
@@ -96,32 +79,19 @@ const Portfolio = () => {
           </motion.div>
         ))}
       </div>
-      {/* Show More / Show Less buttons logic */}
       {activeCategory === "All" && (
         <div className="show-buttons-container">
-          {filteredImages.length < portfolioImages.length && (
-            <button
-              className="show-more"
-              onClick={handleShowMore}
-            >
-              Show More
-            </button>
+          {visibleCount < portfolioImages.length && (
+            <button className="show-more" onClick={() => setVisibleCount(portfolioImages.length)}>Show More</button>
           )}
           {visibleCount > 6 && (
-            <button
-              className="show-less"
-              onClick={handleShowLess}
-            >
-              <a href="#portfolio">Show Less</a>
-            </button>
+            <button className="show-less" onClick={() => setVisibleCount(6)}>
+              <a href="#portfolio">Show Less</a></button>
           )}
         </div>
       )}
     </section>
   );
 };
+
 export default Portfolio;
-
-
-
-

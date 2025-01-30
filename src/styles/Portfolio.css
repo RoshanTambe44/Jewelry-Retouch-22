@@ -32,56 +32,6 @@
   flex-wrap: wrap; /* Allow tabs to wrap onto the next line if necessary */
 }
 
-.show-buttons-container {
-  display: flex;
-  justify-content: flex-end;
-  gap: 10px;
-  margin-top: 20px;
-  max-width: 1200px;
-  width: 100%;
-}
-.show-more, .show-less {
-  background-color: #845616;
-  color: white;
-  padding: 12px 24px;
-  border: none;
-  border-radius: 20px;
-  font-size: 16px;
-  cursor: pointer;
-  transition: background 0.3s ease;
-}
-/* Hover effect for both buttons */
-.show-more:hover, .show-less:hover {
-  background: linear-gradient(45deg, #845616, #DAA520);
-}
-/* Show less button specific styles */
-.show-less {
-  background: linear-gradient(45deg, #DAA520, #845616);
-}
-.show-less:hover {
-  background: linear-gradient(45deg, #B8860B, #6A4E1A);
-}
-.show-less a {
-  text-decoration-line: none;
-  color: white;
-}
-@media (max-width: 768px) {
-  .show-buttons-container {
-    flex-direction: column;  /* Stack buttons vertically on smaller screens */
-    align-items: center;  /* Center-align the buttons */
-    gap: 15px;
-  }
-  .show-more, .show-less {
-    width: 100%;  /* Make buttons full width on mobile */
-    padding: 12px 0;  /* Adjust padding for mobile */
-    font-size: 18px;  /* Increase font size on smaller screens */
-  }
-}
-@media (max-width: 480px) {
-  .show-more, .show-less {
-    font-size: 16px;  /* Slightly smaller font on very small screens */
-  }
-}
 
 /* Individual Tab */
 .portfolio-tab {
@@ -103,67 +53,60 @@
   background-color: #845616;
   color: #ffffff;
 }
+
 .show-buttons-container {
   display: flex;
-  justify-content: flex-end;
-  gap: 10px;
+  justify-content: center;
   margin-top: 20px;
-  max-width: 1200px;
-  width: 100%;
-  margin: 0px;
+  gap: 10px;
 }
 
-.show-more, .show-less {
-  background-color: #845616;
-  color: white;
-  padding: 12px 24px;
-  border: none;
-  border-radius: 20px;
-  font-size: 16px;
-  cursor: pointer;
-  transition: background 0.3s ease;
-}
-
-/* Hover effect for both buttons */
-.show-more:hover, .show-less:hover {
-  background: linear-gradient(45deg, #845616, #DAA520);  
-}
-
-/* Show less button specific styles */
+.show-more,
 .show-less {
-  background: linear-gradient(45deg, #DAA520, #845616); 
+  background-color: #954000;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 10px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
+.show-more:hover,
 .show-less:hover {
-  background: linear-gradient(45deg, #B8860B, #6A4E1A);  
+  background-color: #DAA520;
+  transform: scale(1.05);
 }
 
 .show-less a {
-  text-decoration-line: none;
-  color: white;
+  text-decoration: none;
+  color: inherit;
 }
 
 @media (max-width: 768px) {
   .show-buttons-container {
-    flex-direction: column;  /* Stack buttons vertically on smaller screens */
-    align-items: center;  /* Center-align the buttons */
-    gap: 15px;  
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
   }
 
-  .show-more, .show-less {
-    width: 100%;  /* Make buttons full width on mobile */
-    padding: 12px 0;  /* Adjust padding for mobile */
-    font-size: 18px;  /* Increase font size on smaller screens */
+  .show-more,
+  .show-less {
+    width: 100%;
+    padding: 12px 0;
+    font-size: 18px;
   }
 }
 
 @media (max-width: 480px) {
-  .show-more, .show-less {
-    font-size: 16px;  /* Slightly smaller font on very small screens */
+  .show-more,
+  .show-less {
+    font-size: 16px;
   }
 }
 
-/* Responsive Design for Tabs */
 
 
 @media (max-width: 768px) {
@@ -284,5 +227,6 @@
   .portfolio-item img {
     width: 100%; /* Full width for mobile */
     margin: 0 auto; /* Center images on smaller screens */
+    height: 250px;
   }
 }

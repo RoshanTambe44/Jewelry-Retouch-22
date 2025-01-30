@@ -4,7 +4,6 @@ import Header from './components/Navbar';
 import JewelryServices from "./components/JewelryServices";
 import PhotoSolutions from "./components/PhotoSolutions";
 import Retouching from "./components/Retouching";
-import JewelryService from './components/JewelryEditing';
 import WhyChooseUs from './components/WhyChooseUs';
 import Portfolio from './components/Portfolio';
 import FAQ from './components/FAQ';
