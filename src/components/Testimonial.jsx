@@ -10,19 +10,19 @@ const testimonials = [
     id: 1,
     image: clientImage1,
     text: "I’ve been using this jewelry retouching service for a few months, and the results are consistently stunning. Every image looks polished and vibrant, with attention to the finest details. I highly recommend their services to any jewelry business!",
-    author: "Rita Singh",
+    author: "Sarah Johnson",
   },
   {
     id: 2,
     image: clientImage2,
     text:"The team truly knows how to enhance jewelry photos. They manage to capture the shine and texture of each piece so beautifully. Thanks to their expert retouching, my images now look more professional and appealing!",
-    author: "Rahul Patel",
+    author: "John Anderson",
   },
   {
     id: 3,
     image: clientImage3,
     text: "This jewelry retouching service has taken my product photos to the next level. They pay such close attention to detail, making sure each piece shines with precision. The final images look flawless, and the turnaround time is impressive. I’ll definitely continue using their services!",
-    author: "Savita Khapre",
+    author: "Emily Roberts",
   },
 ]
 
