@@ -31,8 +31,8 @@ const Last = () => {
           animate={{ opacity: textInView ? 1 : 0 }}
           transition={{ duration: 1 }}
         >
-          <p>
-            &copy; 2025 SNB Web Services Pvt. Ltd. | CIN: U72900UP2017PTC097495. All rights reserved.
+          <p><a  className="footer-links" href= "https://snbwebservices.com/photo-editing/">
+           Myjewelryretouch.com</a> is a Photo Retouching Vertical of SNB Web Services Pvt. Ltd.@ All rights reserved.
           </p>
         </motion.div>
         <div className="last-two-things">
