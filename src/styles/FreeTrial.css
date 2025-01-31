@@ -75,12 +75,11 @@
   max-width: 800px;
   margin: 0 auto;
 }
-
 .contact-info {
   flex: 1;
-  min-width: 280px;
-  padding: 20px;
-  border-right: 1px solid rgba(255, 255, 255, 0.2);
+  min-width: 291px;
+  padding: 25px;
+  border-right: 1px solid rgba(255, 255, 255, .2);
   margin-bottom: 20px;
 }
 

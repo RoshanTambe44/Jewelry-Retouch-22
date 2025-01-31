@@ -161,7 +161,7 @@ const FreeTrialForm = () => {
           </div>
           <div className="contact-main-div" >
             <a
-              href="mailto:info@snwbswebservices.com" // Open default mail client
+              href="prashant@myjewelryretouch.com" // Open default mail client
                className="contact-item"
             >
               <img
@@ -170,7 +170,7 @@ const FreeTrialForm = () => {
               />
             </a>
             <p>
-              <strong>Email:</strong>  prashant@myjewelryretouch.com
+              <strong>Email:</strong>prashant@myjewelryretouch.com
             </p>
           </div>
         </div>
