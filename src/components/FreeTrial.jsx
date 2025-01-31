@@ -1,6 +1,7 @@
 import emailjs from "@emailjs/browser";
 import { useState } from "react";
 import "../styles/FreeTrial.css";
+import { ToastContainer, toast } from 'react-toastify';
 
 const FreeTrialForm = () => {
   const [formData, setFormData] = useState({
@@ -91,11 +92,11 @@ const FreeTrialForm = () => {
         .then(
           (response) => {
             console.log("SUCCESS!", response.status, response.text);
-            alert("Form submitted successfully, we'll get in touch soon!");
+            toast.success("Form submitted successfully.")
           },
           (error) => {
             console.error("FAILED...", error);
-            alert("Form submission failed. Please try again.");
+            toast.error("Form submission failed.")
           }
         );
 
@@ -374,7 +375,7 @@ const FreeTrialForm = () => {
              
             </div>
             <div className="super-main-checkbox">
-            <div className="main-checkbox" style={{display:"flex" , flexDirection:"row-reverse" , justifyContent:"space-between" }}>
+            <div  className="main-checkbox" >
             <label className="checkbox-label" >Color Correction
             </label>
             <label class="round-checkbox">
@@ -401,8 +402,8 @@ const FreeTrialForm = () => {
               
             </div>
             </div>
-            <div className="super-main-checkbox">
-            <div className="main-checkbox">
+            <div id="supeer-main-checkbox-ID" className="super-main-checkbox">
+            <div id="main-checkbox-ID" className="main-checkbox">
               <label className="checkbox-label" > Re-color
             </label><label class="round-checkbox">
               <input
@@ -414,7 +415,7 @@ const FreeTrialForm = () => {
               </label>
               </div>
              
-            <div className="main-checkbox" >
+            <div  className="main-checkbox" >
             <label className="checkbox-label" > Gemstone Enhancement
             </label><label class="round-checkbox">
               <input
@@ -455,6 +456,7 @@ const FreeTrialForm = () => {
           </button>
         </form>
       </div>
+      <ToastContainer/>
     </section>
   );
 };

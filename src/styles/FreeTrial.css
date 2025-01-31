@@ -12,8 +12,8 @@
 }
 
 .round-checkbox span {
-  width: 20px;
-  height: 20px;
+  width: 15px;
+  height: 15px;
   border-radius: 50%; /* Makes it round */
   border: 2px solid #333; /* Border color */
   display: inline-block;
@@ -191,8 +191,11 @@ form {
 
 .checkbox-label{
   text-wrap: nowrap;
+  display: flex;
+  justify-content: start;
   width: 80%;
-  font-size: 5px;
+  margin-right: 5px;
+  font-size: 1px;
 
 }
 
@@ -207,9 +210,8 @@ form {
 
 .main-super-main-checkbox{
   display: flex;
-
-  padding: 10px;
-  gap: 16px;
+  flex-wrap: wrap;
+  gap: 20px;
 }
 .main-checkbox{
   display: flex;
@@ -297,10 +299,24 @@ form {
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 600px) {
   .free-trial-form h2 {
     font-size: 2rem;
     margin-bottom: 10px;
+  }
+
+  #supeer-main-checkbox-ID{
+    display: flex;
+    flex-direction: row-reverse;
+    gap: 20px;
+  }
+
+
+  #main-checkbox-ID{
+    width: 50px;
+    display: flex;
+    justify-content: start;
+    padding-left: 5px;
   }
 
   
