@@ -56,10 +56,10 @@ const FreeTrialForm = () => {
 
     if (!formData.phone.trim()) {
       newErrors.phone = "Phone number is required";
-    } else if (!/^\d{10}$/.test(formData.phone)) {
-      newErrors.phone = "Phone number must be in 10 digits";
-
+    } else if (!/^\d+$/.test(formData.phone)) {
+      newErrors.phone = "Phone number must not contain alphabets";
     }
+    
 
     if (!formData.state) {
       newErrors.state = "Please select your state";
@@ -392,8 +392,7 @@ const FreeTrialForm = () => {
               <strong>Upload Files:</strong> JPG / JPEG / PNG / GIF / TIF / TIFF
               / PSD / DNG/RAW/CR2</label>
               <input type="file" className="file-input" multiple onChange={handleFileUpload} />
-            
-            </div>
+              </div>
             
 
           <div className="form-row">
