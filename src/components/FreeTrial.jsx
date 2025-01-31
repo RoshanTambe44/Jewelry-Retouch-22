@@ -375,7 +375,7 @@ const FreeTrialForm = () => {
              
             </div>
             <div className="super-main-checkbox">
-            <div className="main-checkbox" style={{display:"flex" , flexDirection:"row-reverse" , justifyContent:"space-between" }}>
+            <div  className="main-checkbox" >
             <label className="checkbox-label" >Color Correction
             </label>
             <label class="round-checkbox">
@@ -402,8 +402,8 @@ const FreeTrialForm = () => {
               
             </div>
             </div>
-            <div className="super-main-checkbox">
-            <div className="main-checkbox">
+            <div id="supeer-main-checkbox-ID" className="super-main-checkbox">
+            <div id="main-checkbox-ID" className="main-checkbox">
               <label className="checkbox-label" > Re-color
             </label><label class="round-checkbox">
               <input
@@ -415,7 +415,7 @@ const FreeTrialForm = () => {
               </label>
               </div>
              
-            <div className="main-checkbox" >
+            <div  className="main-checkbox" >
             <label className="checkbox-label" > Gemstone Enhancement
             </label><label class="round-checkbox">
               <input
