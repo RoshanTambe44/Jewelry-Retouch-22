@@ -8,6 +8,20 @@
   align-items: center;
 }
 
+
+/* plane */
+.newsletter-button:hover > .fa-plane{
+  transition: all;
+  transition-duration: 200ms;
+  rotate: -45deg;
+}
+
+.newsletter-button:hover{
+  transition: all;
+  transition-duration: 200ms;
+  background: #7D5115;
+}
+
 .footer-container {
   display: flex;
   /* flex-direction: row-reverse; */

@@ -67,7 +67,7 @@ const Footer = () => {
         <form className="newsletter-form" onSubmit={handleSubmit}>
           <div className="input-wrapper ">
             <input type="email" placeholder="Enter your email" className="newsletter-input" value={email} onChange={(e) => setEmail(e.target.value)} required />
-            <button type="submit" className="newsletter-button"><i className="fa-solid fa-plane"></i></button>
+            <button type="submit" className="newsletter-button"><i className="fa-solid fa-plane " ></i></button>
           </div>
         </form>
         {error && <p className="error-message">{error}</p>}
