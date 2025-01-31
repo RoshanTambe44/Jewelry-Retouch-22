@@ -1,7 +1,13 @@
 /* Footer Styles */
 .last-footer {
   background-color: #f8f9fa;
-  padding: 10px 5%;
+  padding: 5px 10px;
+}
+
+.last-two-things{
+  display: flex;
+  align-items: center;
+  gap:10px
 }
 
 /* Footer Container */
@@ -11,6 +17,9 @@
   justify-content: space-between; /* Evenly distribute elements */
   flex-wrap: wrap;
   gap: 20px;
+}
+.footer-containers a {
+  color: #954000;
 }
 
 /* Footer Sections */
@@ -74,6 +83,17 @@
     justify-content: center;
     gap: 15px;
   }
+
+  .last-two-things{
+    gap: 0;
+    flex-direction: column !important; 
+  }
+
+  .last-footer {
+  padding: 5px;
+
+  }
+
 
   .footer-text, .footer-links, .footer-credits {
     flex: none;
