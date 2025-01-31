@@ -246,61 +246,16 @@ const FreeTrialForm = () => {
           <div className="form-row">
             <div className="" style={{display:"flex", flexDirection:"column", flex:"auto", width:"50%"  }}>
               <label htmlFor="state">State</label>
-            <select
+              <input 
               name="state"
               id="state"
+              placeholder="Enter Your State"
               value={formData.state}
               onChange={handleInputChange}
               style={{boxShadow: "inset 2px 2px 10px rgba(0, 0, 0, 0.3)", }}
               required
-            >
-              <option value="" disabled>
-                Select Your State
-              </option>
-              {/* India */}
-              <option value="Uttar Pradesh">Uttar Pradesh</option>
-              <option value="Maharashtra">Maharashtra</option>
-              <option value="Delhi">Delhi</option>
-              <option value="Karnataka">Karnataka</option>
-
-              {/* USA */}
-              <option value="New York">New York</option>
-              <option value="California">California</option>
-              <option value="Texas">Texas</option>
-              <option value="Florida">Florida</option>
-
-              {/* UK */}
-              <option value="England">England</option>
-              <option value="Scotland">Scotland</option>
-              <option value="Wales">Wales</option>
-              <option value="Northern Ireland">Northern Ireland</option>
-
-              {/* Canada */}
-              <option value="Ontario">Ontario</option>
-              <option value="Quebec">Quebec</option>
-              <option value="British Columbia">British Columbia</option>
-              <option value="Alberta">Alberta</option>
-
-              {/* Australia */}
-              <option value="New South Wales">New South Wales</option>
-              <option value="Victoria">Victoria</option>
-              <option value="Queensland">Queensland</option>
-              <option value="Western Australia">Western Australia</option>
-
-              {/* Germany */}
-              <option value="Bavaria">Bavaria</option>
-              <option value="Berlin">Berlin</option>
-              <option value="Hamburg">Hamburg</option>
-              <option value="North Rhine-Westphalia">
-                North Rhine-Westphalia
-              </option>
-
-              {/* Japan */}
-              <option value="Tokyo">Tokyo</option>
-              <option value="Osaka">Osaka</option>
-              <option value="Kyoto">Kyoto</option>
-              <option value="Hokkaido">Hokkaido</option>
-            </select>
+/>
+              
             </div>
 
             <div className="" style={{display:"flex", flexDirection:"column", flex:"auto",  width:"50%" }}>
