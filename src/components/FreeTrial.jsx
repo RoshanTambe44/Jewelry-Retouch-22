@@ -93,7 +93,7 @@ const FreeTrialForm = () => {
         .then(
           (response) => {
             console.log("SUCCESS!", response.status, response.text);
-            toast.success("Form submitted successfully.")
+            toast.success("thank you for filling the form, we will get back to you shortly.")
           },
           (error) => {
             console.error("FAILED...", error);
