@@ -170,7 +170,7 @@ const FreeTrialForm = () => {
               />
             </a>
             <p>
-              <strong>Email:</strong> info@snwbswebservices.com
+              <strong>Email:</strong>  prashant@myjewelryretouch.com
             </p>
           </div>
         </div>
