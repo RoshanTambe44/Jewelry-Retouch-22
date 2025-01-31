@@ -8,6 +8,7 @@ import {
   FaTwitter,
 } from "react-icons/fa";
 import { motion } from "framer-motion";
+import { ToastContainer, toast } from 'react-toastify';
 
 const Footer = () => {
   const [email, setEmail] = useState("");
@@ -22,11 +23,13 @@ const Footer = () => {
 
     if (!email) {
       setError("Email is required.");
+      toast.error("Email is required.")
     } else if (!emailPattern.test(email)) {
       setError("Please enter a valid email address.");
+      toast.error("Please enter a valid email address.")
     } else {
       setError(""); // Clear error if email is valid
-      alert("Subscribed successfully!");
+      toast.success("Subscribed successfully!")
       setEmail(""); // Clear the email input field after success
     }
   };
@@ -70,6 +73,7 @@ const Footer = () => {
         {error && <p className="error-message">{error}</p>}
       </motion.div>
     </div>
+    <ToastContainer/>
   </motion.footer>
   );
 };

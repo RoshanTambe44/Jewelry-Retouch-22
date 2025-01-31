@@ -1,6 +1,7 @@
 import emailjs from "@emailjs/browser";
 import { useState } from "react";
 import "../styles/FreeTrial.css";
+import { ToastContainer, toast } from 'react-toastify';
 
 const FreeTrialForm = () => {
   const [formData, setFormData] = useState({
@@ -91,11 +92,11 @@ const FreeTrialForm = () => {
         .then(
           (response) => {
             console.log("SUCCESS!", response.status, response.text);
-            alert("Form submitted successfully, we'll get in touch soon!");
+            toast.success("Form submitted successfully, we'll get in touch soon!")
           },
           (error) => {
             console.error("FAILED...", error);
-            alert("Form submission failed. Please try again.");
+            toast.error("Form submission failed. Please try again.")
           }
         );
 
@@ -455,6 +456,7 @@ const FreeTrialForm = () => {
           </button>
         </form>
       </div>
+      <ToastContainer/>
     </section>
   );
 };
