@@ -57,8 +57,7 @@ const FreeTrialForm = () => {
     if (!formData.phone.trim()) {
       newErrors.phone = "Phone number is required";
     } else if (!/^\d{10}$/.test(formData.phone)) {
-      newErrors.phone = "Phone number must be exactly 10 digits";
-      toast.error("number must be in 10 digits")
+      newErrors.phone = "Phone number must be in 10 digits";
 
     }
 
